@@ -1,0 +1,5 @@
+>git add *Filename
+>git push
+>git commit -m "comment"
+>git status / git log
+
