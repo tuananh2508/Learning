@@ -1,0 +1,52 @@
+#Cat
+-View contain of file
+-Create single/multi files.
+-Redirect out/input
+1.View content
+cat test
+2.Create files
+cat >test
+3.View More/Less
+cat test | less
+4.View with lines
+cat -n test
+5.View multi files
+cat test1 test2
+6.Redir output to file
+cat test > test1
+( Overwrite )
+7.Redir output to file
+cat test >> test1
+( Append)
+8.Redir multi output >> 1 file
+cat test test1 test 2 >> test3
+
+----------------------------------------------
+#Join
+join 2 files on a common field
+> join test1 test2
+
+1.-a filenum ( join pair +  unpair lines from filenum)
+>join test1 test2 -a 1
+=> join unpair lines from file test1 to test2
+
+2.-v filenum ( join only unpair lines)
+> join test1 test2 -v 1
+=> only show unpair lines from file test1 compare to file test 2
+
+3.-1 -2 -j
+>join -1 2 -2 2 test1 test2
+take 2nd collumn of file 1 and same for file 2 for joining
+( can be replace with -j >join -j2 test1 test2)
+
+4.-i (ignore case sensitive)
+
+
+-------------------------------------------------------------------
+#Paste
+Join Lines
+
+1. -d
+> paste -d "|,"
+
+-------------------------------------------------------------------
