@@ -1,13 +1,13 @@
 #Title
-># for the Big Title
->## for the Smaller one
+>"#" for the Big Title
+>"##" for the Smaller one
 ( Rememmber the " " after ## )
 
 ---------------------------------------------
 
 #Line break
 
-Enter x2
+>Enter x2
 
 ---------------------------------------------
 #Get a Bullet
@@ -20,7 +20,7 @@ Enter x2
 
 ---------------------------------------------
 #Add code
->Syntax: ```html // ```javascript
+>Syntax:" ```html" //" ```javascript "
 
 --------------------------------------------
 #Add image
@@ -39,4 +39,6 @@ Enter x2
 --------------------------------------------
 #Bold / Italic /
 >Syntax : ** Word ** --> bold
+
+
 >Syntax : * Word * --> Italic
