@@ -32,9 +32,9 @@
 
 --------------------------------------------
 #Create Table
-|first|second|third|
+"|first|second|third|
 |---|---|---|
-|1st|2nd|3rd|
+|1st|2nd|3rd|"
 
 --------------------------------------------
 #Bold / Italic /
