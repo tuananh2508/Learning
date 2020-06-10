@@ -1,0 +1,48 @@
+#Git
+Luu tru thay doi Source Code	
+Revert code
+---------
+#repo: Noi chua toan bo file ( Repo Local / Repo Remote(may chu) )
+#Commit: viec thay doi ( them, xoa file ) la 1 commit. Se duoc luu vao repo
+-------------------------
+#Github
+Dich vu luu tru Git Repo onl
+
+-------------------------
+#Basic Git command
+
+1.git init
+- Tao repo trong may
+2.git clone
+- Lay tu tren mang ve
+3.git pull
+- Dong bo tren mang ve
+4.git add / git add .
+-Sua source code
+5.git commit
+-Sua source code ( append ? )
+6.git push
+-Dong bo tu may len mang
+7.git log
+-Lay log
+-----------------------------
+#Upload Files
+>git add *Filename
+>git push
+>git commit -m "comment"
+>git status / git log
+
+---------------------------------
+#Create a branch
+>git checkout -b "*name of branch"
+>git commit -m "comment"
+>git push
+
+--------------------------------
+#Delete a branch
+-Local:
+>git branch -d *branch_name
+
+-Remote
+>git push origin --delete *branch_name
+
