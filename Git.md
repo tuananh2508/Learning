@@ -37,48 +37,99 @@ Tiếp đó chúng ta sẽ đến với bước tạo 1 Repo trong máy
 
 > git init
 
-![git_init](https://drive.google.com/file/d/1riPN0dDDPoTscCGMR8fEaomZ5gJ4lpNr/view?usp=sharing)
- 
+Nếu thành công sẽ hiển thị trạng thái ví dụ như: Initialized empty Git repository in /home/.git/
+
 Bước này sẽ tạo trên máy tính của chúng ta 1 reposit
  
--Sau đó chúng ta sẽ kiếm tra lại xem trên máy đã có 1 repo hay chưa thông qua lệnh:
+- Sau đó chúng ta sẽ kiếm tra lại xem trên máy đã có 1 repo hay chưa thông qua lệnh:
 
 >git status
-![alt_text](https://imgur.com/a/ynHN0dQ)
+
+ - Nếu đã thực hiện được bước 1 sẽ có thông báo như sau : On branch master // No commits yet
+
+Vậy là chúng ta đã tạo được repo trên ubuntu đang sử dụng 
+
+## 2. Các lệnh Git cơ bản
+
+ - Lệnh:
+ 
+ `git init`
+ 
+ Như đã biết ở trên thì chúng ta sử dụng lệnh này để tạo 1 repo ở máy đang sử dụng.
+
+- Lệnh: 
+
+`git clone`
+ 
+ Lệnh này sẽ giúp chúng ta copy bất kì repo trên internet về máy tính đang sử dụng 
+
+- Lệnh:
+
+`git pull`
+
+ Lệnh này sẽ giúp chúng ta tải xuống 1 repo tại 1 remote về máy tính của mình
+ 
+ -Lệnh:
+ 
+ `git add`
+ 
+ Lệnh này giúp chúng ta lưu thay đổi chúng ta vừa tạo ra vào trạng thái chờ ( stagin arena )
+ 
+- Lệnh:
+
+`git commit`
+
+Câu lệnh này sẽ giúp chúng ta lưu thay đổi tại local repo ( trên máy tính đang sử dụng)
+
+- Lệnh: 
+
+`git push`
+
+Sau khi lưu thay đổi tại local repo thì câu lệnh này sẽ giúp chúng ta tải những thay đổi tại local repo(trên máy tính) lên remote repo(trên internet)
+
+- Lệnh: 
+
+`git log`
+ 
+Trong một vài trường hợp muốn xem log của git thì đây chính là lệnh chúng ta cần sử dụng
+
+## 3. Các bước thực hiện khi upload file lên remote repo
+
+Trong một vài trường hợp sau khi sử dụng lệnh `git pull` hoặc `git clone` để lấy dữ liệu từ trên remote repo xuống máy tính của chúng ta. Sau khi chỉnh sửa xong các file thì đây là các bước giúp các bạn tải các file ( đã có sự thay đổi ) lên remote repo: 
+
+`git add *Filename`
+
+chuyển file sang staging arena
+
+`git push`
+
+Tải lên dữ liệu vào remote repo
+
+`git commit -m "comment` 
+- lưu ý việc comment là quan trọng, việc này sẽ giúp chúng ta theo dõi được sự thay đổi của các lần commit
+
+`git status / git log`
+
+Sau khi hoàn thành các bước trên bạn nên kiểm tra lại sự thay đổi bằng `git status` hoặc `git log` ( nơi mà git sẽ thường xuyên update trạng thái của các sự thay đổi )
 
 
 
-## 2 Git Commands
+## 4.Tạo 1 nhánh ( Branch )
 
-- git init
- -Tao repo trong may
-- git clone
- -Lay tu tren mang ve
-- git pull
- -Dong bo tren mang ve
--git add / git add .
- -Sua source code
-- git commit
- -Sua source code 
-- git push
- -Dong bo tu may len mang
-- git log
- -Lay log
+Trong rất nhiều trường hợp và cũng như trong thực tế, việc quản lí dự án là vô cùng quan trọng và không thể cho phép ai cũng có thể chỉnh sửa trực tiếp lên nhánh master ( nhánh chính của dự án ). Sau đây là cách chúng ta có thể tự tạo một nhánh để có thể tạo ra một nhánh ( branch ) để test một vài tính năng trước khi đồng nhất ( merge ) vào dự án chính thuộc nhánh master:
 
-## 3 Upload Files
->git add *Filename
->git push
->git commit -m "comment"
->git status / git log
+`git checkout -b "*name of branch"`
 
-## 4 Create a branch
->git checkout -b "*name of branch"
->git commit -m "comment"
->git push
+đây là lệnh giúp bạn tạo một nhánh ( branch ) riêng trong remote repo của mình.
 
-## 5 Delete a branch
-- Local:
->git branch -d *branch_name
 
-- Remote
->git push origin --delete *branch_name
+## 5.Xóa 1 nhánh
+Tại máy tính của mình nếu bạn muốn xóa 1 nhánh thì có thể sử dụng lệnh sau
+>Local: 
+
+`git branch -d *branch_name`
+
+- Còn đối với remote repo thì có thể sử dụng lệnh sau để xóa 1 branch:
+
+`git push origin --delete *branch_name`
+
