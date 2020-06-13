@@ -67,7 +67,7 @@ Vậy là chúng ta đã tạo được repo trên ubuntu đang sử dụng
 
 `git pull`
 
- Lệnh này sẽ giúp chúng ta tải xuống 1 repo tại 1 remote về máy tính của mình
+ Lệnh này sẽ giúp chúng ta tải xuống 1 repo tại 1 remote về máy tính của mình và update các thông tin trong repo đó.
  
  -Lệnh:
  
