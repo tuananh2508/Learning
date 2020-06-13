@@ -37,7 +37,7 @@ Tiếp đó chúng ta sẽ đến với bước tạo 1 Repo trong máy
 
 > git init
 
-![git_init](https://imgur.com/a/ocGOgE4)
+![git_init](https://drive.google.com/file/d/1riPN0dDDPoTscCGMR8fEaomZ5gJ4lpNr/view?usp=sharing)
  
 Bước này sẽ tạo trên máy tính của chúng ta 1 reposit
  
