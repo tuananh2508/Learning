@@ -1,0 +1,13 @@
+:q - quit & save
+:q! - quit & not save
+:wq: - save and quit
+i - insert mode
+esc - command mode
+d d - del a line
+*x d d - del x lines
+u - undo
+ctrl + r - redo
+/*x - searching for x
+%s/*x/*y/g - replace x with y /g replace all
+
+
