@@ -44,7 +44,7 @@ Bước này sẽ tạo trên máy tính của chúng ta 1 reposit
 -Sau đó chúng ta sẽ kiếm tra lại xem trên máy đã có 1 repo hay chưa thông qua lệnh:
 
 >git status
-![git_status](https://imgur.com/a/ynHN0dQ)
+![alt_text](https://imgur.com/a/ynHN0dQ)
 
 
 
