@@ -56,4 +56,20 @@ Các binaries thiết yếu của hệ thống như fsck, init, route. Gần tư
 
 eg : iptable, ifconfig
 
-## / [https://www.geeksforgeeks.org/linux-file-hierarchy-structure/]
+## /srv
+
+Nơi chứa data và script cho web sever và đồng thời cũng là nơi lưu trữ các repo của Version Control Sys ( Git
+
+## /tmp
+
+Nơi lưu trữ các file temp được tạo bởi hệ thống hay user
+
+## /usr
+
+Phân cấp thứ cấp cho dữ liệu người dùng chỉ đọc; chứa phần lớn (nhiều) tiện ích và ứng dụng người dùng.
+
+## /proc
+
+Hệ thống tập tin ảo cung cấp quá trình và thông tin kernel dưới dạng tập tin
+
+
