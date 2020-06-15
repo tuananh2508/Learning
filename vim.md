@@ -7,7 +7,7 @@
 ## Các lệnh cơ bản
 
 > Trong mode Command 
-```
+
 `:q!` - Thoát và **không** lưu 
 
 `:wq` - Xác nhận thay đổi và thoát 
@@ -27,5 +27,5 @@
 
 `%s/*x/*y/g` - Tìm kiếm x và thay thế bằng y , có thể thêm /g để thay tất cả /c để confirm từng dòng
 
-```
+
 
