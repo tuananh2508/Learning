@@ -22,6 +22,11 @@ Nơi chưa file boot, lõi kernel
 
 Các file thiết yếu của hệ thống được đặt tại đây, eg : /dev/null
 
+## /var
+
+Nơi lưu các Variables files
+i.e: var/log/syslog - kiểm tra file log
+
 ## /etc
 
 Các config của hệ thống được lưu trữ tại đây. Các config này được sử dụng bởi tất cả các phần mềm trên hệ thống. Cũng là nơi lưu trữ các Shell script để bắt đầu và ngừng các chương trình.
