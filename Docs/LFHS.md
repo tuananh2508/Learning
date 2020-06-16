@@ -10,9 +10,18 @@ Chỉ có user root mới có quyền chỉnh sửa trong /root
 
 `/root` khác với `/`. `/root` là phẩn thư muc home của user root
 
+## /var
+
+Nơi lưu các Variables files
+i.e: var/log/syslog - kiểm tra file log
+
 ## /bin
 
 Là nơi chứa các lệnh như cp, cat, ..
+
+## /sbin
+
+Các binaries thiết yếu của hệ thống như fsck, init, route. Gần tương tự với `/bin` nhưng với các lệnh ở đây thường được sử dụng bởi người quản trị hệt thống ( admin ) và thường được sử dụng khi bảo trì
 
 ## /boot 
 
@@ -22,10 +31,6 @@ Nơi chưa file boot, lõi kernel
 
 Các file thiết yếu của hệ thống được đặt tại đây, eg : /dev/null
 
-## /var
-
-Nơi lưu các Variables files
-i.e: var/log/syslog - kiểm tra file log
 
 ## /etc
 
@@ -55,9 +60,6 @@ Bao gồm các package từ các Vendor khác nhau
 
 Các ứng dụng add-on sẽ được cài đặt tại `/opt` hoặc `/opt - sub`
 
-## /sbin
-
-Các binaries thiết yếu của hệ thống như fsck, init, route. Gần tương tự với `/bin` nhưng với các lệnh ở đây thường được sử dụng bởi người quản trị hệt thống ( admin ) và thường được sử dụng khi bảo trì
 
 eg : iptable, ifconfig
 
