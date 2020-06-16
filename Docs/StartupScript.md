@@ -28,13 +28,29 @@ Sau đó sẽ xuất hiện 3 mục như
 > Unit , Service , Install 
 
 
-Ví dụ như trong mục 
+Một số thuộc tính của file:
 
-`Unit` : `Description: My Sh Script` - mô tả
+Unit : Description: My Sh Script - mô tả
 
-`Service` : `ExecStart: /usr/local/sbin/my-startup.sh` - Nơi lưu script
+```
+Service: 
 
-`Install` : `WantedBy=multi-user.target`
+ExecStart: /usr/local/sbin/my-startup.sh - Nơi lưu script
+
+Type=forking - Bật ở chế độ *nền* sau đó tự thoát và kết thúc sau khi thực thi thành công
+
+PIDFile=/run/start.pid - Nơi systemd có thể tìm thấy file process id của tiến trình
+
+ExecStartPre=/usr/local/openresty/bin/start -t -q -g 'daemon on; master_process on;' - chạy các lệnh của start mà ko cần khởi động nó 
+với các option như -t ( kiểm tra cấu hình ) -g 'dae ... on' khởi đồng process start dưới chế độ nền ở dạng daemon( trước khi thực sự khởi động ) . 
+
+ExecStart=/usr/local/openresty/bin/start -g 'daemon on; master_process on;' - khởi động start 
+
+```
+
+Install : WantedBy=multi-user.target - sử dụng bởi các user khác nhau 
+
+
 
 - B3 : Bật Service
 
