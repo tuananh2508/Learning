@@ -28,7 +28,9 @@ Sau đó sẽ xuất hiện 3 mục như
 > Unit , Service , Install 
 
 
-Ví dụ như trong mục `Unit` : `Description: My Sh Script` - mô tả
+Ví dụ như trong mục 
+
+`Unit` : `Description: My Sh Script` - mô tả
 
 `Service` : `ExecStart: /usr/local/sbin/my-startup.sh` - Nơi lưu script
 
