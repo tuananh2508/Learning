@@ -2,6 +2,10 @@
 
 Hệ thống phân cấp bậc file trong linux
 
+![image](https://user-images.githubusercontent.com/66721505/84873798-f2f20700-b0ad-11ea-8302-ab95b742f816.png)
+
+
+
 ##  /(root)
 
 Mọi file và đường đẫn đều bắt đầu từ root
