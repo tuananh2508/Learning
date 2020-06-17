@@ -41,10 +41,15 @@ Type=forking - Bật ở chế độ *nền* sau đó tự thoát và kết thú
 
 PIDFile=/run/start.pid - Nơi systemd có thể tìm thấy file process id của tiến trình
 
-ExecStartPre=/usr/local/openresty/bin/start -t -q -g 'daemon on; master_process on;' - chạy các lệnh của start mà ko cần khởi động nó 
+ExecStartPre=/usr/local/proc1/bin/start -t -q -g 'daemon on; master_process on;' - chạy các lệnh của start mà ko cần khởi động nó 
 với các option như -t ( kiểm tra cấu hình ) -g 'dae ... on' khởi đồng process start dưới chế độ nền ở dạng daemon( trước khi thực sự khởi động ) . 
 
-ExecStart=/usr/local/openresty/bin/start -g 'daemon on; master_process on;' - khởi động start 
+ExecStart=/usr/local/proc1/bin/start -g 'daemon on; master_process on;' - khởi động start 
+
+ExecReload=/usr/local/proc1/bin/start -g 'daemon on; master_process on;' -s reload - chạy lệnh này khi systemd reload 
+
+ExecStop - thực thi lệnh này khi systemd stop với các option khác nhau
+
 
 ```
 
