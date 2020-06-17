@@ -1,28 +1,28 @@
 # OS ( Open source)
 
-## OS là gì ?
+## 1. OS là gì ?
 
 - Open Source là một sản phẩm bao gồm quyền sử dụng code, tài liệu thiết kế hay nội dung của nó. 
 Phong trào nguồn mở là phong trào hỗ trợ sử dụng giấy phép cho các phần mềm. 
 Các nhà phát triển và lập trình viên đóng góp những mã code của mình và trao đổi chúng để phát triển phần mềm. 
 Thuật ngữ Open Source code không phân biệt bất kỳ nhóm hay cá nhân nào khi lấy hay chỉnh sửa code của OSS
 
-## Các lưu ý khi cài đặt OS
+## 1.1Các lưu ý khi cài đặt OS
 
 - Kiểm tra source trước khi cài đặt vì có thể cài từ một trang source lừa đảo.
 
-## Các bước cài đặt 1 OS
+## 2. Các bước cài đặt 1 OS
 
-# Nginx 
+# 2.1 Nginx 
 
-## NginX là gì và dùng để làm gì ?
+## 2.1.1 NginX là gì và dùng để làm gì ?
 
 - Nginx là một máy chủ proxy ngược mã nguồn mở (open source reverse proxy server) sử dụng phổ biến giao thức HTTP, HTTPS, SMTP, POP3 và IMAP , 
 cũng như dùng làm cân bằng tải (load balancer), HTTP cache và máy chủ web (web server). 
 Dự án Nginx tập trung vào việc phục vụ số lượng kết nối đồng thời lớn (high concurrency), hiệu suất cao và sử dụng bộ nhớ thấp. 
 Nginx được biết đến bởi sự ổn định cao, nhiều tính năng, cấu hình đơn giản và tiết kiệm tài nguyên.
 
-## Cài đặt nginx như thế nào ?
+## 2.1.2 Cài đặt nginx như thế nào ?
 
 ### Trên ubuntu 18.04 LTS
 
@@ -32,6 +32,8 @@ Kiểm tra phiên bản ubuntu thông qua lệnh: `lsb_release -ds`
 - B1: Tải xuống source
 
 Có thể tải xuống thông qua lệnh : `wget https://nginx.org/download/nginx-1.15.12.tar.gz`
+
+> Note: Lệnh naỳ sẽ thực hiện tải xuống source từ trang chủ nginx.org 
 
 - B2: Giải nén source
 
@@ -112,5 +114,91 @@ sẽ thấy thông  báo chạy thành công nginx
 
 có thể tiến hành ngừng service thông qua lệnh `sudo ./nginx -s stop`
 
+
+## 2.2 Openresty
+
+## 2.2.1 Openresty là gì ? dùng để làm gì ?
+
+OpenResty là một máy chủ web mở rộng Nginx bằng cách gộp nó với nhiều mô-đun Nginx và thư viện Lua hữu ích. OpenResty vượt trội trong việc mở rộng các ứng dụng và dịch vụ web
+
+## Cài đặt Openresty như thế nào ?
+
+- B1 : Tải trực tiếp Openresty từ trên trang chủ:
+
+`wget https://openresty.org/download/openresty-1.11.2.2.tar.gz`
+
+Các phiên bản khác có thể tải thông qua trang : > https://openresty.org
+
+Sau khi tải về, chuyển sang thư mục tải file tar.gz về: 
+
+`cd /home/user/Downloads`
+
+Tiếp đó tiến hành giải nén:
+
+` tar xvf openresty-1.11.2.2.tar.gz`
+
+Chuyển đến file vừa giải nén:
+
+` cd cd openresty-1.11.2.2`
+
+( *Optional*) : Bạn sẽ phải  cài thêm 1 số compiler và thư viện cho openresty: 
+
+```
+sudo apt-get install build-essential
+sudo apt-get install libreadline-dev libncurses5-dev libpcre3-dev libssl-dev perl
+```
+
+Khi đã ở trong thư mục giải nén, thực hiện lệnh: 
+`./configure -j2` - note: j2 - thực hiện 2 công việc cùng lúc
+
+`make -j2` - note: tiến hành compile 
+
+`sudo make install` - tiến hành cài đặt onpenresty
+
+`sudo ufw allow http` - cho phép các kết nối http để máy chủ web hoạt động
+
+`sudo ufw status` - check lại 1 lần nữa trạng thái
+
+`sudo /usr/local/openresty/bin/openresty` - tiến hành bật openresty
+
+
+`sudo /usr/local/openresty/bin/openresty -s quit` - tiến hành tắt openresty
+
+Và bạn đã hoàn thành cài đặt Openresty !
+
+
+
+
+
+## Tiến hành tạo 1 script bật nginx khi boot máy
+
+### Sử dụng systemd
+
+Chuyến đến thư mục etc/init.d/
+
+> Note: thư mục này là nơi lưu các script của hầu hết các hệ điều hành Linux hiện này
+
+
+Tiến hành khởi tạo 1 file script thông qua lệnh nano ( hoặc bạn có thể sử dụng bất kì 1 chương trình text editor nào khác)
+` sudo nano nginx-passenger.sh` 
+
+Sau khi màn hình text editor hiện ra, thực hiện chỉnh sửa file với nội dung như sau:
+
+```
+#!/bin/bash/
+sudo /usr/local/nginx/sbin/nginx
+```
+
+> Note: lệnh `sudo ...` sẽ tiến hành chạy các lệnh binaries của nginx ngay khi bắt đầu boot máy
+
+Sau đó cần cấp quyền  chạy file ( execute )thông qua lệnh : `sudo chmod +x /etc/init.d/nginx-passenger.sh`
+
+sau đó có thể test thông qua lệnh: `sudo /etc/init.d/nginx-passenger.sh`
+
+> Note: Lệnh này sẽ tiến hành chạy script 
+
+Tiếp theo đó chạy thêm lệnh : `sudo update-rc.d nginx-passenger.sh defaults`
+
+> Note: Lệnh `update-rc.d` thực hiện thêm hoặc bớt các lệnh theo kiểu init script
 
 
