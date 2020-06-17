@@ -31,17 +31,32 @@ Kiểm tra phiên bản ubuntu thông qua lệnh: `lsb_release -ds`
 
 - B1: Tải xuống source
 
-Có thể tải xuống thông qua lệnh : `wget https://nginx.org/download/nginx-1.15.12.tar.gz`
+Có thể tải xuống thông qua lệnh : `wget https://nginx.org/download/nginx-1.15.12.tar.gz
 
+![image](https://user-images.githubusercontent.com/66721505/84874220-80355b80-b0ae-11ea-8e10-b77d21c6e8a4.png)
+
+`
 > Note: Lệnh naỳ sẽ thực hiện tải xuống source từ trang chủ nginx.org 
+
+
 
 - B2: Giải nén source
 
 Thực hiện giải nén thông qua lệnh `tar -zxvf nginx-1.15.12.tar.gz`
 
+
+![image](https://user-images.githubusercontent.com/66721505/84874337-a6f39200-b0ae-11ea-8cba-783b2f2bf7d4.png)
+
+
 Kiểm tra lại thư mục đã được giải nén chưa thông qua lệnh ` ls -l`
 
+![image](https://user-images.githubusercontent.com/66721505/84874418-c1c60680-b0ae-11ea-854f-e9245edacbbc.png)
+
+
 Tiếp đó chuyển tới thư mực vừa giải nén: `cd nginx-1.15.12/`
+
+![image](https://user-images.githubusercontent.com/66721505/84874471-d60a0380-b0ae-11ea-8515-043a43730e54.png)
+
 
 - B3: cài Compiler và Dev Tool:
 
@@ -71,7 +86,7 @@ Với
 
 hoặc đơn giản hơn có thể thông qua lệnh: `./configure` 
 
-lệnh này sẽ cái các đường dẫn mặc định.
+ và lệnh này sẽ cái các đường dẫn mặc định.
 
 Sau khi chạy xong custom config, thực hiện lệnh compile source như sau
 
@@ -85,9 +100,15 @@ nếu cài đặt thành công sẽ nhận được 1 msg như sau:
 
 > nginx version: nginx/1.15.12
 
+![image](https://user-images.githubusercontent.com/66721505/84874627-11a4cd80-b0af-11ea-896b-12b8d574ffca.png)
+
+
 ## Tiến hành chạy thử 1 sever
 
 - Vào file config của nginx: `sudo vi /usr/local/nginx/conf/nginx.conf`
+
+![image](https://user-images.githubusercontent.com/66721505/84874863-6a746600-b0af-11ea-93fc-e81e97e7cf59.png)
+
 
 tiến hành tìm kiếm
 ```
@@ -114,6 +135,8 @@ sẽ thấy thông  báo chạy thành công nginx
 
 có thể tiến hành ngừng service thông qua lệnh `sudo ./nginx -s stop`
 
+![image](https://user-images.githubusercontent.com/66721505/84875042-a3143f80-b0af-11ea-9d75-8019039399a2.png)
+
 
 ## 2.2 Openresty
 
@@ -127,6 +150,9 @@ OpenResty là một máy chủ web mở rộng Nginx bằng cách gộp nó vớ
 
 `wget https://openresty.org/download/openresty-1.11.2.2.tar.gz`
 
+![image](https://user-images.githubusercontent.com/66721505/84875528-436a6400-b0b0-11ea-9626-b64d02b566d7.png)
+
+
 Các phiên bản khác có thể tải thông qua trang : > https://openresty.org
 
 Sau khi tải về, chuyển sang thư mục tải file tar.gz về: 
@@ -136,6 +162,9 @@ Sau khi tải về, chuyển sang thư mục tải file tar.gz về:
 Tiếp đó tiến hành giải nén:
 
 ` tar xvf openresty-1.11.2.2.tar.gz`
+
+![image](https://user-images.githubusercontent.com/66721505/84875671-7a407a00-b0b0-11ea-828f-f405ee38cdfc.png)
+
 
 Chuyển đến file vừa giải nén:
 
@@ -151,7 +180,13 @@ sudo apt-get install libreadline-dev libncurses5-dev libpcre3-dev libssl-dev per
 Khi đã ở trong thư mục giải nén, thực hiện lệnh: 
 `./configure -j2` - note: j2 - thực hiện 2 công việc cùng lúc
 
+![image](https://user-images.githubusercontent.com/66721505/84875816-ae1b9f80-b0b0-11ea-9c7f-4af89f91df4f.png)
+
+
 `make -j2` - note: tiến hành compile 
+
+![image](https://user-images.githubusercontent.com/66721505/84876147-1a969e80-b0b1-11ea-8f96-a31c207a0e82.png)
+
 
 `sudo make install` - tiến hành cài đặt onpenresty
 
@@ -188,6 +223,8 @@ Sau khi màn hình text editor hiện ra, thực hiện chỉnh sửa file với
 #!/bin/bash/
 sudo /usr/local/nginx/sbin/nginx
 ```
+![image](https://user-images.githubusercontent.com/66721505/84876391-5d587680-b0b1-11ea-99b7-e742d901ada8.png)
+
 
 > Note: lệnh `sudo ...` sẽ tiến hành chạy các lệnh binaries của nginx ngay khi bắt đầu boot máy
 
