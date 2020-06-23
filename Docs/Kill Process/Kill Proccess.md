@@ -7,4 +7,4 @@
         - Sau khi có được id của tiến trình muốn ngừng thông qua lệnh `ps` , ta tiến hành ngừng tiến trình thông qua lệnh : `kill -9 process id`
         - Ở đây có thể thấy ta sử dụng option 9 với ý nghĩa là SIGKILL, sau đây là một số các option hay được sử dụng mà ta có thể tham khảo :
 
-            [Các option ](Kill%20Proccess%20763f72e393c54b769fc1e9d6c1a67323/C%20c%20option%202866dd67d06341008a165157a39f500b.csv)
+            [Các option ](Kill%20Proccess/C%20c%20option%202866dd67d06341008a165157a39f500b.csv)
