@@ -1,0 +1,26 @@
+#!/bin/bash
+
+is_alive_ping()
+{
+  ping -c 1 $1 > /dev/null
+  [ $? -eq 0 ] && echo Node with IP: $i is up.
+}
+
+os()
+{
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+echo ${machine}
+}
+
+for i in 192.168.1.{1..255} 
+do
+is_alive_ping $i & os $i & disown
+done
+
