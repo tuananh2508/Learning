@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+
+if [ -z $1 ] ; then  # Kiểm tra nếu input rỗng
+    echo "Please enter Network Address and Subnet Mask" #Hướng dẫn nhập
+    echo "Input form A.B.C.D/E"
+    exit 1 
+fi #kết thúc trong trường hợp k có input
+
 #Ví dụ : 192.168.10.128/27
 base=${1%/*}        # Kết quả nhận được 192.168.10.0
 masksize=${1#*/}    #Kết quả nhận được 24
