@@ -37,6 +37,7 @@ seq $ipstart $ipend | while read i; do # Vòng lặp
     #Nếu có thì ... 
     ttl="${ttlstr#*=}"     # lấy giá trị từ bên trên đặt vào biến ttl      
     #in ra kết quả nếu có ttl 
+    #thực hiện phép so sánh AND nhị phân với 16 bit >> tiếp theo là 8 bit tiếp và tiếp.
     printf "%s is Online, ttl=%d\n" "$a.$(( ($i & 0xFF0000) >> 16 )).$(( ($i & 0xFF00) >> 8 )).$(( $i & 0x00FF ))" "$ttl"
     if [ $ttl -eq 64 ] # vòng điều kiện
             then
