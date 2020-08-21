@@ -189,5 +189,3 @@ Sau khi đã làm quen với các thao tác quản lí Nginx, chúng ta sẽ là
 [https://www.hostinger.vn/huong-dan/nginx-la-gi-no-hoat-dong-nhu-the-nao/](https://www.hostinger.vn/huong-dan/nginx-la-gi-no-hoat-dong-nhu-the-nao/)
 
 [https://serverguy.com/comparison/apache-vs-nginx/#4](https://serverguy.com/comparison/apache-vs-nginx/#4)
-
--
