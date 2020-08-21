@@ -182,6 +182,10 @@ Sau khi đã làm quen với các thao tác quản lí Nginx, chúng ta sẽ là
 3. `/etc/nginx/sites-available/` : Nơi các cấu hình của các website khác nhau được lưu. Nginx sẽ không sử dụng các tệp cấu hình được tìm thấy trong thư mục này trừ khi chúng được liên kết với thư mục `sites-enabled`
 4. `/etc/nginx/sites-enabled/` :  Thư mục lưu trữ các khối máy chủ cho mỗi trang web. Thông thường, chúng được tạo bằng cách liên kết đến các tệp cấu hình được tìm thấy trong `sites-available`
 
+### Server Logs
+
+1. `/var/log/nginx/access.log` :  File log lưu trữ mọi truy cập vào server Nginx 
+2. `/var/log/nginx/error.log` : File log lưu trữ các lỗi của Nginx
 ### Nguồn tài liệu tham khảo
 
 [https://docs.nginx.com](https://docs.nginx.com/)
