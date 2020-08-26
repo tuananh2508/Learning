@@ -1,8 +1,6 @@
 # NGINX LOAD BALANCER
 
-## Load Balancer
-
-### *HTTP LOAD BALANCING*
+## *HTTP LOAD BALANCING*
 
 ![NGINX%20LOAD%20BALANCER%2079f187b3bd9c4d79aae7dff7550d8d70/Untitled.png](NGINX%20LOAD%20BALANCER/Untitled.png)
 
@@ -102,7 +100,7 @@ Lưu ý : Khi cài đặt cần thêm option `--with-stream`
 
 Để thực hiện, ta cần mở file cấu hình của Nginx ( thường được chứa tại /etc/nginx ), tiến hành thêm các syntax như sau :
 
-Bước 1: Thêm `stream block` 
+- Bước 1: Thêm `stream block` 
 
 Lưu ý mục stream này được đặt ngoài `http{}` 
 
@@ -112,7 +110,7 @@ stream {
 }
 ```
 
-Bước 2: Thêm các `server block` trong `stream block`
+- Bước 2: Thêm các `server block` trong `stream block`
 
 ```bash
 stream {
@@ -130,7 +128,7 @@ stream {
 }
 ```
 
-Bước 3: Thêm `proxy pass` để chuyển tiếp yêu cầu tới các khối server khác nhau
+- Bước 3: Thêm `proxy pass` để chuyển tiếp yêu cầu tới các khối server khác nhau
 
 ```bash
 stream {
@@ -162,7 +160,7 @@ stream {
 
 Để cấu hình Nginx chuyển tiếp các yêu cầu, bản tin UDP & TCP, ta lần lượt thực hiện các bước sau
 
-Bước 1:
+- Bước 1:
 
 Khởi tạo 1 khối server để nhận các yêu cầu hay bản tin UDP & TCP được chuyển tiếp tới
 
@@ -183,7 +181,7 @@ stream {
 }
 ```
 
-Bước 2:
+- Bước 2:
 
 Thêm các server cùng địa chỉ IP, Port nhận của server, ở đây ta không cần định nghĩa giao thức TCP hay UDP do phần này đã được định nghĩa trong phần Reverse Proxy ( Giao thức đó sẽ được áp dụng cho toàn bộ các server:
 
@@ -207,7 +205,7 @@ stream {
 }
 ```
 
-Bước 3:
+- Bước 3:
 
 Nginx cung cấp cho nguời dùng các giao thức vòng lặp như: Round Robin, Least Connection ( ít kết nối nhất ) , Hash,...
 
