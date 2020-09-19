@@ -1,7 +1,6 @@
 # PROJECT LINUX
 
-Date Created: Sep 15, 2020 12:49 PM
-Status: Doing
+## LPIC 1 ( updated )
 
 [LINUX SHELL](PROJECT%20LINUX%20e6bd3ec0395f414ca539aed031f642a0/LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de.md)
 
