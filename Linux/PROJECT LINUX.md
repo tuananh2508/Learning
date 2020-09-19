@@ -18,7 +18,7 @@
 
 [LVM ( Tìm hiểu về Logical Volume Management )](PROJECT%20LINUX/LVM.md)
 
-[ADMINISTERING SYSTEM(Sử dụng useradd, chgrp và chown , ... ](PROJECT%20LINUX/ADMINISTERING%20SYSTEM.md)
+[ADMINISTERING SYSTEM(Sử dụng useradd, chgrp và chown , ... ) ](PROJECT%20LINUX/ADMINISTERING%20SYSTEM.md)
 
 [FILE SYSTEM & LFHS (Các file hệ thống và Sơ đồ cấu trúc hệ thống )  ](PROJECT%20LINUX/FILE%20SYSTEM%20&%20LFHS.md)
 
