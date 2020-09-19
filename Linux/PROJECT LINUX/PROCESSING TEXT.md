@@ -1,6 +1,6 @@
-# PROCESSING TEXT
+# PROCESSING%20TEXT TEXT
 
-![PROCESSING/Untitled.png](PROCESSING/Untitled.png)
+![PROCESSING%20TEXT/Untitled.png](PROCESSING%20TEXT/Untitled.png)
 
 ## 1. Giới thiệu
 
@@ -35,7 +35,7 @@ Qua ví dụ trên hoàn toàn có thể thấy việc sử dụng lệnh `cat` 
 
 ### 2.2 Lệnh `join`
 
-![PROCESSING/Untitled%201.png](PROCESSING/Untitled%201.png)
+![PROCESSING%20TEXT/Untitled%201.png](PROCESSING%20TEXT/Untitled%201.png)
 
 Lệnh này được sử dụng để join 2 file text dựa trên 1 cột có nội dung chung. Cú pháp câu lệnh này có dạng như sau:
 
@@ -138,7 +138,7 @@ $ paste number state capital
 
 ### 3.1 Lệnh `head` :
 
-![PROCESSING/Untitled%202.png](PROCESSING/Untitled%202.png)
+![PROCESSING%20TEXT/Untitled%202.png](PROCESSING%20TEXT/Untitled%202.png)
 
 Lệnh này được sử dụng khi người dùng muốn in ra N dòng đầu của file. Mặc định lệnh này sẽ in ra 10 dòng đầu tiên của file nếu không có option đi kèm chỉ thị. Cú pháp :
 
@@ -245,7 +245,7 @@ c.txt
 
 ### 3.2 Lệnh `tail`
 
-![PROCESSING/Untitled%203.png](PROCESSING/Untitled%203.png)
+![PROCESSING%20TEXT/Untitled%203.png](PROCESSING%20TEXT/Untitled%203.png)
 
 Lệnh này thực hiện in ra N dòng cuối của 1 file . Là phiên bản đổi lập của lệnh `head`. Cú pháp sử dụng:
 
@@ -317,7 +317,7 @@ West Bengal
 
 ### 4.1 Lệnh `grep` :
 
-![PROCESSING/Untitled%204.png](PROCESSING/Untitled%204.png)
+![PROCESSING%20TEXT/Untitled%204.png](PROCESSING%20TEXT/Untitled%204.png)
 
 Lệnh grep cho phép người sử dụng tìm kiếm các file theo 1 khuôn mẫu xác định. Cú pháp sử dụng:
 
@@ -366,7 +366,7 @@ drwxr-xr-x 2 vutuananh vutuananh    4096 Thg 5  22 19:46 Music
 
 ### 4.2 Lệnh `sed` :
 
-![PROCESSING/Untitled%205.png](PROCESSING/Untitled%205.png)
+![PROCESSING%20TEXT/Untitled%205.png](PROCESSING%20TEXT/Untitled%205.png)
 
 Lệnh này có thể sử dụng để thực hiện 1 số các yêu cầu khác nhau như tìm kiếm file, tìm kiếm và thay thế hay xóa. Đây là 1 câu lệnh mạnh mẽ cung cấp khả năng tìm kiếm và thay thế. Cú pháp
 
