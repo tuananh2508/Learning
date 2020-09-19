@@ -3,9 +3,9 @@
 Date Created: Aug 27, 2020 2:25 PM
 Status: Done 🙌
 
-[MYSQL Replication Brief](https://www.notion.so/MYSQL-Replication-Brief-9e78fe3087a94f61b3de0f1cd16aef6e)
+[MYSQL Replication Brief](PROJECT%20MYSQL%2059fed12e5c414cd1bdf37a725a701529/MYSQL%20Replication%20Brief.md)
 
-[MySQL Cluster](PROJECT%20MYSQL%2059fed12e5c414cd1bdf37a725a701529/MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3.md)
+[MySQL Cluster](PROJECT%20MYSQL%2059fed12e5c414cd1bdf37a725a701529/MySQL%20Cluster.md)
 
 # Docs
 
@@ -42,6 +42,7 @@ Status: Done 🙌
 [MySQL :: MySQL NDB Cluster 7.5 :: 5.3.1 NDB Cluster Configuration: Basic Example](https://dev.mysql.com/doc/mysql-cluster-excerpt/5.7/en/mysql-cluster-config-example.html#mysql-cluster-config-ini-sections)
 
 ```bash
+#Script xoa MySQL 
 apt-get -f install -o Dpkg::Options::="--force-overwrite"
 apt-get purge mysql\*
 rm -rf /var/lib/mysql

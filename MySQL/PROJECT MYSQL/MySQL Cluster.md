@@ -1,16 +1,16 @@
 # MySQL Cluster
 
-![MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled.png](MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled.png)
+![MySQL%20Cluster/Untitled.png](MySQL%20Cluster/Untitled.png)
 
 ---
 
 # NDB Cluster Overview
 
-![MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%201.png](MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%201.png)
+![MySQL%20Cluster/Untitled%201.png](MySQL%20Cluster/Untitled%201.png)
 
 ## Ý tưởng cốt lõi
 
-![MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/NDB_Core.png](MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/NDB_Core.png)
+![MySQL%20Cluster/NDB_Core.png](MySQL%20Cluster/NDB_Core.png)
 
 - NDB Cluster Engine lưu trữ dữ liệu trong bộ nhớ cung cấp khả năng HA+ LB
 - Các phần tử của cluster được gọi là 1 Node và độc lập vs nhau
@@ -48,14 +48,14 @@
 - **Replica** : Phần copy của partition trên các node. 1 node có thể có 1 hay nhiều replica khác nhau
 - Ví dụ với mô hình
 
-![MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%202.png](MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%202.png)
+![MySQL%20Cluster/Untitled%202.png](MySQL%20Cluster/Untitled%202.png)
 
 - 1 Group có thể sao chép nhiều các partition khác nhau
 - Mỗi partition có thể chọn node làm primary node và các node còn lại làm backup
 
     Cơ chế ?
 
-![MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%203.png](MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%203.png)
+![MySQL%20Cluster/Untitled%203.png](MySQL%20Cluster/Untitled%203.png)
 
 - Với mỗi Node group thì việc có 1 node hoạt động là đủ để cluster hoạt động
 - Nếu toàn bộ node trong group offline → mất partition → mất dữ liệu.
@@ -70,7 +70,7 @@
 - Việc sao chép không bắt buộc phải chạy engine NDB Cluster
 - Xét mô hình:
 
-    ![MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%204.png](MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%204.png)
+    ![MySQL%20Cluster/Untitled%204.png](MySQL%20Cluster/Untitled%204.png)
 
     - Các thay đổi trong cluster được NDB Binary Log ghi lại và sao chép.
 - **NDB API replica status variables**: Cung cấp các thông số giám sát tại cluster replica.
@@ -94,7 +94,7 @@
 
 # Cài đặt mô hình NDB Cluster
 
-![MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%205.png](MySQL%20Cluster%201960fd9257014e0d81965aeabed85aa3/Untitled%205.png)
+![MySQL%20Cluster/Untitled%205.png](MySQL%20Cluster/Untitled%205.png)
 
 ## Giới thiệu
 
