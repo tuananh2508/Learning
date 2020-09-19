@@ -1,6 +1,6 @@
 # ADMINISTERING SYSTEM
 
-![ADMINISTERING%20SYSTEM%206e6b1486d3044c42b64bc37433310e11/Untitled.png](ADMINISTERING%20SYSTEM/Untitled.png)
+![ADMINISTERING%20SYSTEM/Untitled.png](ADMINISTERING%20SYSTEM/Untitled.png)
 
 Ngày nay, các quản trị viên ngày càng cần phải chú trọng đến quy trình quản lý hệ thống cùng với đó là những công cụ hỗ trợ quản lý để tạo sự thiện tiện cũng như tiết kiệm thời gian. Thông qua bài viết này chúng ta sẽ có cái nhìn cơ bản về quản lý user, group trên hệ thống và 1 vài công cụ backup hỗ trợ cho nguời quản trị.
 
@@ -39,7 +39,7 @@ Cần lưu ý trong quá trình tạo user thì thông tin về user sẽ đư�
 
 - `/etc/passwd` : Nơi lưu thông tin login của user, được chia làm 7 phần
 
-    ![ADMINISTERING%20SYSTEM/Untitled%201.png](ADMINISTERING%20SYSTEM%206e6b1486d3044c42b64bc37433310e11/Untitled%201.png)
+    ![ADMINISTERING%20SYSTEM/Untitled%201.png](ADMINISTERING%20SYSTEM/Untitled%201.png)
 
     - UID : User ID
     - GID : Group ID
@@ -220,7 +220,7 @@ Thông qua 2 ví dụ trên chúng ta đã có nhìn tổng quan về chức nă
 
 ## 5. Backup hệ thống `rsnapshot` `rsync`
 
-![ADMINISTERING%20SYSTEM/Untitled%202.png](ADMINISTERING%20SYSTEM%206e6b1486d3044c42b64bc37433310e11/Untitled%202.png)
+![ADMINISTERING%20SYSTEM/Untitled%202.png](ADMINISTERING%20SYSTEM/Untitled%202.png)
 
 `rsync` là một công cụ vô cùng hữu ích bất kể với người dùng Linux mới bắt đầu hay với người đã sử dụng thành thạo có kinh nghiệm. `rsync` có rất nhiều công dụng khác nhau mà chúng ta sẽ cùng đi tìm hiểu. Nó tiết kiệm rất nhiều thiều gian cho người sử dụng hơn so với việc copy backup thủ công. Và đồng thời giữa 2 hệ thống có băng thông không được lớn thì việc sử dụng `rsync` sẽ vô cùng nhanh. Trong 1 thử nghiệm của `Chris Titus Tech` thì việc backup 100GB thì dữ liệu từ server remote chỉ mất hơn 5 phút. `rsync` thường được cài đặt sẵn trên rất nhiều bản Linux hiện nay. Và cùng với đó chúng ta sẽ tìm hiểu thêm cả vê `rsnapshot` ( dựa trên công nghệ của `rsync` ) 
 
