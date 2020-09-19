@@ -1,7 +1,6 @@
 # PROJECT MYSQL
 
 Date Created: Aug 27, 2020 2:25 PM
-Status: Done 🙌
 
 [MYSQL Replication Brief](PROJECT%20MYSQL/MYSQL%20Replication%20Brief.md)
 
