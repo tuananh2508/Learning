@@ -16,7 +16,7 @@
 
 [BOOT PROCESS ( Tìm hiểu cách hệ thống bootup )](PROJECT%20LINUX/BOOT%20PROCESS.md)
 
-[LVM ( Tìm hiểu về Logical Volume Management ](PROJECT%20LINUX/LVM.md)
+[LVM ( Tìm hiểu về Logical Volume Management )](PROJECT%20LINUX/LVM.md)
 
 [ADMINISTERING SYSTEM(Sử dụng useradd, chgrp và chown , ... ](PROJECT%20LINUX/ADMINISTERING%20SYSTEM.md)
 
