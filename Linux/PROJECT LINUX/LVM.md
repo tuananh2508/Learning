@@ -136,13 +136,13 @@ Ta thực hiện tạo 2 Volume : Project và Backup, trong đó Project có dun
   Logical volume "backups" created.
 
 ```
+```
+Trong đó :  -n Tên `Logical Volume`
 
-Trong đó : `-n` Tên `Logical Volume`
+            -L Kích thước cụ thể của Volume
 
-            `-L` Kích thước cụ thể của Volume
-
-       `-l` Phần trăm kích thước của không gian còn lại trên Volume
-
+            -l Phần trăm kích thước của không gian còn lại trên Volume
+```
 Thực hiện kiểm tra (nếu muốn xem các thông số cụ thể của Volume thì có thể sử dụng lệnh `lvdisplay` ):
 
 ```bash
