@@ -1,6 +1,6 @@
 # FILE SYSTEM & LFHS
 
-![FILE%20SYSTEM/Untitled.png](FILE%20SYSTEM/Untitled.png)
+![FILE%20SYSTEM%20&%20LFHS/Untitled.png](FILE%20SYSTEM%20&%20LFHS/Untitled.png)
 
 Nếu bạn là một người sử dụng Window OS lâu năm và khi mới bắt đầu sử dụng các Unix-like OS thì có thể sẽ gặp 1 số khó khăn cơ bản. Do hệ thống Linux quản lý các tệp tin hoàn toàn khác với Window. Do nó coi toàn bộ các thiết bị và file đều như 1 ổ đĩa và quản lý tất cả dưới 1 thư mục chung là `/` ( hay còn được gọi là root directory ). Nhưng trước đó, chúng ta sẽ cùng tìm hiểu về các loại file hệ thống mà Linux làm việc cùng rồi sau đó sẽ đến với LFHS ( Linux File Hierchy Structure ). Cuối cùng là tìm hiểu sơ qua về hard disk và 1 số lệnh cơ bản để giám sát disk.
 
@@ -61,7 +61,7 @@ Vậy là ta đã có cái nhìn khá bao quát về File hệ thống. Sau đâ
 
 Hệ thống Linux quản lý tát cả các file và thiết bị dưới dạng như ổ đĩa. Hệ thống sẽ tiến hành quản lý 1 sơ đồ cây ( bao gồm tất cả các phần tử của máy ). Nếu một thiết bị như chuột, bàn phím, etc kết nối tới hệ thống sẽ được mount tới `/dev` . Để tìm hiểu sâu hơn ta xét mô hình sau :
 
-![FILE%20SYSTEM/Untitled%201.png](FILE%20SYSTEM/Untitled%201.png)
+![FILE%20SYSTEM%20&%20LFHS/Untitled%201.png](FILE%20SYSTEM%20&%20LFHS/Untitled%201.png)
 
 Ở đây chúng ta sẽ chỉ xét 1 vài thư mục quan trọng, nếu có nhu cầu tìm hiểu sâu bạn có thể tham khảo link sau:
 
@@ -144,7 +144,7 @@ Các option cơ bản :
 
 ## 5. Quản lý các phân vùng ổ cứng ( Partition ) của disk
 
-![FILE%20SYSTEM/Untitled%202.png](FILE%20SYSTEM/Untitled%202.png)
+![FILE%20SYSTEM%20&%20LFHS/Untitled%202.png](FILE%20SYSTEM%20&%20LFHS/Untitled%202.png)
 
 Thường trong các ổ lưu trữ hard disk có dung lượng lớn, thì nó sẽ được chia làm các phần nhỏ hơn được gọi phân vùng ( Partition ). Mỗi Partition sẽ hoạt động như một một hard disk thực sự. Để quản lý các phân vùng thì Linux cung cấp cho người sử dụng 1 công cụ vô cùng hữu ích và cũng tương đối dễ sử dụng đó chính là `fsdisk` . Cho phép người sử dụng có thể thêm, xóa , copy các partition.
 
