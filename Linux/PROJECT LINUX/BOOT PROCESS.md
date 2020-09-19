@@ -1,16 +1,16 @@
 # BOOT PROCESS
 
-![BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled.png](BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled.png)
+![BOOT%20PROCESS/Untitled.png](BOOT%20PROCESS/Untitled.png)
 
 Việc hiểu về quá tình bootup và startup của Linux sẽ giúp người sử dụng có cái nhìn sâu hơn về hệ điều hành này và từ đó có thể cấu hình và đưa ra các giải pháp phù hợp khi gặp vấn đề startup. Quá trình này tương đối đơn giản và sẽ được giải thích ở phần dưới
 
 Đầu tiên chúng ta sẽ bắt đầu với mô hình tổng quan khi bootup 1 hệ thống Linux và rồi từ đó sẽ đi sâu vào từng quá trình :
 
-![BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%201.png](BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%201.png)
+![BOOT%20PROCESS/Untitled%201.png](BOOT%20PROCESS/Untitled%201.png)
 
 ## 1. Quá trình BIOS:
 
-![BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%202.png](BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%202.png)
+![BOOT%20PROCESS/Untitled%202.png](BOOT%20PROCESS/Untitled%202.png)
 
 `BIOS` có nghĩa là " Basic I/O System " . Về cơ bản, BIOS được cài đặt sẵn trên ROM của máy tính và là phần tử đầu tiên khởi động. Sau khi khởi động, BIOS sẽ thực hiện POST ( Quá trình kiểm tra bộ nhớ, hard disk, etc ) Tiếp đó nó sẽ tìm kiếm các `bootable disk` ( thường sẽ là MBR ). MBR thuộc phần đầu tiên của disk. 
 
@@ -24,7 +24,7 @@ Tại giai đoạn này có nó có chức năng load phần code `boot loader` 
 
 ## 3. Quá trình GRUB:
 
-![BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%203.png](BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%203.png)
+![BOOT%20PROCESS/Untitled%203.png](BOOT%20PROCESS/Untitled%203.png)
 
 Sau khi được load từ MBR thì `GRUB2` sẽ có nhiệm vụ đọc các Kernel Image. Nếu trên máy tính của bạn có sử dụng nhiều Kernel image khác nhau ( thường được lưu trữ tại `/boot/vmlinuz` ) thì `GRUB2` sẽ hiển thị 1 màn hình để bạn chọn. Nếu không được chọn hoặc người sử dụng chỉ có 1 Kernel Image thì `GRUB2` sẽ tự động load lõi Kernel được cấu hình theo mặc định trong file cấu hình của nó ( Tại đường dẫn `/boot/grub/grub2.conf` ). Sau đây là 1 file cấu hình ví dụ của `GRUB2` ( Lưu ý để chỉnh sửa cấu hình của `GRUB2` cần sử dụng các câu lệnh cụ thế, bạn có thể tự tìm hiểu thêm) :
 
@@ -51,7 +51,7 @@ set root='hd0,msdos1'
 
 ## 4. Quá trình khởi động lõi Kernel
 
-![BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%204.png](BOOT%20PROCESS%205362c39fde8640d589c2f2d9fb9ef24b/Untitled%204.png)
+![BOOT%20PROCESS/Untitled%204.png](BOOT%20PROCESS/Untitled%204.png)
 
 Lõi Kernel - "trái tim" của rất nhiều hệ thống Linux khác nhau - sau khi được giải nén và load từ `GRUB2` thì sẽ thực hiện mount phần dữ liệu `root` ra hard disk theo đường dẫn có trong `grub2.cnf`
 

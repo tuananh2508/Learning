@@ -2,7 +2,7 @@
 
 ## 1. Giới thiệu
 
-![STREAM,%20REDIRECTION%20,%20PIPES%2011ef8b0c36aa428bbebeae0d5dc73cd0/Untitled.png](STREAM,%20REDIRECTION%20,%20PIPES%2011ef8b0c36aa428bbebeae0d5dc73cd0/Untitled.png)
+![STREAM,%20REDIRECTION%20,%20PIPES/Untitled.png](STREAM,%20REDIRECTION%20,%20PIPES/Untitled.png)
 
 Trong hệ điều hành Linux, để tiết kiệm khoảng thời gian thực hiện các lệnh, cơ chế ống lệnh thường được sử dụng rất nhiều.
 
@@ -16,7 +16,7 @@ Trước khi đến với định nghĩa của hệ thống ống lệnh (pipeli
 2. STDOUT ( OUTPUT) : Phần dữ liệu được xuất ra bởi chương trình sau khi đã thực hiện xong 1 số yêu cầu. Mặc định sẽ được in ra tại cửa sổ Terminal
 3. STDERR ( ERROR) : Phần thông báo hiển thị lỗi
 
-![STREAM,%20REDIRECTION%20,%20PIPES%2011ef8b0c36aa428bbebeae0d5dc73cd0/Untitled%201.png](STREAM,%20REDIRECTION%20,%20PIPES%2011ef8b0c36aa428bbebeae0d5dc73cd0/Untitled%201.png)
+![STREAM,%20REDIRECTION%20,%20PIPES/Untitled%201.png](STREAM,%20REDIRECTION%20,%20PIPES/Untitled%201.png)
 
 Kỹ thuật ống lệnh có thể hiểu đơn giản là cách chúng ta nối các data stream này của các chương trình ứng dụng theo cách người dùng mong muốn để có được kết quả.
 

@@ -1,6 +1,6 @@
 # LVM
 
-![LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled.png](LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled.png)
+![LVM/Untitled.png](LVM/Untitled.png)
 
 ## 1. Tổng quan
 
@@ -10,7 +10,7 @@ LVM là viết tắt của "Logical Volume Control" được sử dụng để t
 
 Cấu tạo chính của LVM được mô tả như hình sau :
 
-![LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled%201.png](LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled%201.png)
+![LVM/Untitled%201.png](LVM/Untitled%201.png)
 
 Trong đó có một số khái niệm cơ bản như :
 
@@ -86,7 +86,7 @@ Nếu bạn cần kiểm tra lại trạng thái của `Physical Volume` có th�
 
 ### Bước 2 : Tạo Volume Group :
 
-![LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled%202.png](LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled%202.png)
+![LVM/Untitled%202.png](LVM/Untitled%202.png)
 
 Người sử dụng có thể thực hiện việc ghép các `Physical Volume` thành 1 `Volume Group` thông qua lệnh :
 
@@ -125,7 +125,7 @@ Trong đó PE có ý nghĩa là Physical Extent. Từ đó ta thấy được vi
 
 ### Bước 3 : Tạo Logical Volume
 
-![LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled%203.png](LVM%20cfca6f5256c1419385eff12871bea0ee/Untitled%203.png)
+![LVM/Untitled%203.png](LVM/Untitled%203.png)
 
 Ta thực hiện tạo 2 Volume : Project và Backup, trong đó Project có dung lượng 10Gb và Backup sẽ có dung lượng bằng 100% dung lượng còn lại
 

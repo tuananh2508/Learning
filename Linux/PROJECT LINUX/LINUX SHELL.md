@@ -1,6 +1,6 @@
 # LINUX SHELL
 
-![LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled.png](LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled.png)
+![LINUX%20SHELL/Untitled.png](LINUX%20SHELL/Untitled.png)
 
 ## 1. Giới thiệu cơ bản
 
@@ -30,7 +30,7 @@ Thông qua các dữ liệu bên trên ta hoàn toàn có thể thấy, lõi `ke
 
 `Shell` tuy không phải là một thành phần nhân của hệ thống tuy nhiên nó lại sử dụng nhân hệ thống để xử lý các yêu cầu khác nhau từ người dùng. `Shell` thu thập dữ liệu từ người dùng thông qua cửa sổ `Terminal` ( Trên Ubuntu ) và dịch dữ liệu đó giúp cho lõi `Kernel` hiểu được và xử lý yêu cầu một cách linh hoạt.  Shell có thể ở hai dạng : Command Line Shell và Graphic Shell.
 
-![LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled%201.png](LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled%201.png)
+![LINUX%20SHELL/Untitled%201.png](LINUX%20SHELL/Untitled%201.png)
 
 ### 3.1 Shell Prompt :
 
@@ -46,7 +46,7 @@ $ ls -al | grep mysql #
 
 ### 3.2 Các loại Shell cơ bản
 
-![LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled%202.png](LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled%202.png)
+![LINUX%20SHELL/Untitled%202.png](LINUX%20SHELL/Untitled%202.png)
 
 **Có 2 loại shell phổ biến nhất đó chính là** :
 
@@ -69,7 +69,7 @@ $ ls -al | grep mysql #
 
 ## 4. Shell script :
 
-![LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled%203.png](LINUX%20SHELL%200f3c1cb9536a444dbca8d9abcba1d2de/Untitled%203.png)
+![LINUX%20SHELL/Untitled%203.png](LINUX%20SHELL/Untitled%203.png)
 
 Đôi khi có 1 công việc ( task ) mà người sử dụng cần làm hằng ngày như backup log hay in ra các thông số của hệ thống,... Các task đó thường không chỉ là vài dòng lệnh đơn giản mà là sự kết hợp của rất nhiều câu lệnh khác nhau. Nếu phải thực hiện thủ công mỗi giờ , mỗi ngày thì thực sự vô cùng kém hiệu quả. Giải pháp được đưa ra đó chính là tạo `Shell script` . Ý tưởng cốt lõi đó chính là việc kết hợp các câu lệnh với nhau vào 1 file script. Và khi cần sử dụng, thì ta chỉ cần thực thi script thì vẫn thực hiện được công việc mà tốn ít công sức và thời gian hơn rất nhiều.
 

@@ -1,6 +1,6 @@
 # MANAGE SOFTWARE
 
-![MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled.png](MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled.png)
+![MANAGE%20SOFTWARE/Untitled.png](MANAGE%20SOFTWARE/Untitled.png)
 
 ## 1. Khái niệm về Package
 
@@ -8,7 +8,7 @@ Một Package là 1 tập hợp các file phối hợp với nhau có nhiệm v�
 
 ## 2. Cách sử dụng Package
 
-![MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled%201.png](MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled%201.png)
+![MANAGE%20SOFTWARE/Untitled%201.png](MANAGE%20SOFTWARE/Untitled%201.png)
 
 Trên ubuntu có các loại trình quản lý Package như : `dpkg` , `apt` , `apt-get` , `apt-get` . Việc cài đặt cũng như xóa gói tin hoàn toàn có thể thực hiện thông qua các trình quản lý này. 
 
@@ -32,7 +32,7 @@ Trên ubuntu có các loại trình quản lý Package như : `dpkg` , `apt` , `
 
 ## 3. Cài đặt service systemd
 
-![MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled%202.png](MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled%202.png)
+![MANAGE%20SOFTWARE/Untitled%202.png](MANAGE%20SOFTWARE/Untitled%202.png)
 
 Sau khi cài đặt package thì 1 số gói tin sẽ không tự động cài đặt nó làm service của `systemd` → Không tự khởi động khi hệ thống bootup. Việc cài đặt service sẽ làm cho process dễ quản lý hơn và đồng thời dễ dàng khôi phục nếu xảy ra lỗi. Các bước thực hiện có thứ tự như sau:  
 
@@ -80,7 +80,7 @@ systemctl start test
 
 ## 4. Cài đặt ứng dụng từ Source
 
-![MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled%203.png](MANAGE%20SOFTWARE%20ddbdc2648e704a52950dbd8e437cb791/Untitled%203.png)
+![MANAGE%20SOFTWARE/Untitled%203.png](MANAGE%20SOFTWARE/Untitled%203.png)
 
 Ngoài ra nếu người sử dụng không muốn cài đặt gói tin binary đã được compiled sẵn thì hoàn toàn có thể tự cài đặt gói tin từ Source để có thể có khả năng tùy chỉnh một số tính năng của ứng dụng. Việc cài đặt khá đơn giản và theo các bước sau:
 

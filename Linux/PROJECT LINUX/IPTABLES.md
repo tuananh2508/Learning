@@ -1,6 +1,6 @@
 # IPTABLES
 
-![IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled.png](IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled.png)
+![IPTABLES/Untitled.png](IPTABLES/Untitled.png)
 
 ## 1. Giới thiệu
 
@@ -8,13 +8,13 @@ Khái niệm `Iptables` hiện nay xuất hiện khá phổ biến trên các h�
 
 ## 2. Khái niệm `iptables`
 
-![IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%201.png](IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%201.png)
+![IPTABLES/Untitled%201.png](IPTABLES/Untitled%201.png)
 
 `Iptables` là một firewall có thể cài đặt trên các hệ thống OS sử dụng lõi Kernel. Nó là 1 giao diện CLI để người sử dụng tương tác với `Packet Filtering` trong framework `Network Filtering`  ( Netfilter Hooks) của lõi Kernel.  Ở đây chúng ta cần lưu ý rằng `Iptables` sẽ nằm ở ngoài nhân hệ thống, khi được sử dụng, `Iptables` sẽ thực hiện giao tiếp với dữ liệu của người dùng sau đó chuyển dữ liệu này cho `Netfilter` nằm trong nhân xử lý bằng các thao tác nhanh gọn. 
 
 ### 2.1 Ý tưởng cốt lõi của `Iptables` ( Core concepts)
 
-![IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%202.png](IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%202.png)
+![IPTABLES/Untitled%202.png](IPTABLES/Untitled%202.png)
 
 Đầu tiên chúng ta cần làm quen với các khái niệm (Terminology )cơ bản của `Iptables` như :
 
@@ -36,13 +36,13 @@ Qua phần trên thì chúng ta đã có cái nhìn khá tổng quan về khái 
 
 ### 2.1.2 Chain
 
-![IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%203.png](IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%203.png)
+![IPTABLES/Untitled%203.png](IPTABLES/Untitled%203.png)
 
 `Chain` có thể được xem xét như các điểm checkpoint trên đường truyền của gói tin. Tại mỗi điểm thì gói tin sẽ được thực hiện đánh giá ( evalutated ). Thông qua việc đánh giá đó thì sẽ quyết định đường đi tiếp theo của gói tin.
 
 Có 5 `Chain` cơ bản đó chính là: `PRE-ROUTING` , `INPUT`, `FORWARD` , `OUTPUT` và `POST-ROUTING`. Các `Chain` này hoạt động dựa trên các hook của `Netfilter Hooks` . Các `Chain` khác nhau thì sẽ sử dụng các `table` khác nhau. Hoạt động của các `Chain` có thể được hiểu đơn giản qua hình bên dưới :
 
-![IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%204.png](IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%204.png)
+![IPTABLES/Untitled%204.png](IPTABLES/Untitled%204.png)
 
 **2.1.2.1** `PRE-ROUTING` :
 
@@ -114,7 +114,7 @@ Tiếp theo chúng ta  sẽ đến với một số ví dụ đơn giản để 
 
 ## 5. Sử dụng `Iptables` trong 1 vài ví dụ cơ bản :
 
-![IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%205.png](IPTABLES%2073516f722af547688a7ddff8adfd447b/Untitled%205.png)
+![IPTABLES/Untitled%205.png](IPTABLES/Untitled%205.png)
 
 Đầu tiên chúng ta cần thử liệt kê các quy tắc đang được áp dụng trên máy tính của bạn thông qua 
 
