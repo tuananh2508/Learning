@@ -3,9 +3,9 @@
 Date Created: Aug 27, 2020 2:25 PM
 Status: Done 🙌
 
-[MYSQL Replication Brief](PROJECT%20MYSQL%2059fed12e5c414cd1bdf37a725a701529/MYSQL%20Replication%20Brief.md)
+[MYSQL Replication Brief](PROJECT%20MYSQL/MYSQL%20Replication%20Brief.md)
 
-[MySQL Cluster](PROJECT%20MYSQL%2059fed12e5c414cd1bdf37a725a701529/MySQL%20Cluster.md)
+[MySQL Cluster](PROJECT%20MYSQL/MySQL%20Cluster.md)
 
 # Docs
 
