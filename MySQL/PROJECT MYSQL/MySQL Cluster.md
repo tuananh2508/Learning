@@ -86,10 +86,6 @@
 - Các node cần kết nối với nhau để trao đổi thông tin → Độ trễ ảnh hưởng tới performance
     - Trong mạng LAN độ trễ sẽ lớn hơn → set up thời gian timeout lớn hơn
 
-## Giải pháp khi gặp xung đột
-
-[NDB Conflict Resolve](https://www.notion.so/NDB-Conflict-Resolve-79b4820fd8394817807da55a6cda7743)
-
 ---
 
 # Cài đặt mô hình NDB Cluster
