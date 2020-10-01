@@ -3,7 +3,7 @@
 Date Created: Sep 17, 2020 9:16 AM
 
 
-[OSI và TCP/IP](NETWORK/OSI%20va%CC%80%20TCP%20IP.md)
+
 
 [Tìm hiểu về mô hình OSI và TCP/IP](NETWORK/OSI%20TCP%20IP.md)
 
@@ -16,8 +16,6 @@ Date Created: Sep 17, 2020 9:16 AM
 [Tìm hiểu cơ bản về ROUTING POLICY BASE](NETWORK/ROUTING%20POLICY%20BASE.md)
 
 [Tìm hiểu cơ bản về KEEPALIVED](NETWORK/KEEPALIVED.md)
-
-[TRAFFIC CONTROL](NETWORK/TRAFFIC%20CONTROL.md)
 
 [Cách giới hạn băng thông bằng TRAFFIC CONTROL](NETWORK/TRAFFIC%20CONTROL.md)
 
