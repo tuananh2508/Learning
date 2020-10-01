@@ -22,11 +22,15 @@ Các server thực hiện quảng bá trạng thái của mình qua địa chỉ
 
 ![KEEPALIVED/Untitled%202.png](KEEPALIVED/Untitled%202.png)
 
-Thực hiện xét mô hình như sau:
+Thực hiện xét mô hình MASTER - BACKUP như sau:
 
-- 2 Server đã được cài sẵn Nginx
+- 2 Server đã được cài sẵn Nginx với các thông số sau
 
-⇒ 2 server này sau khi được thiết lập Keepalived sẽ có chung 1 địa chỉ VIP 
+![KEEPALIVED/Untitled%203.png](KEEPALIVED/Untitled%203.png)
+
+⇒ Mục tiêu : 2 server này sau khi được thiết lập Keepalived sẽ có chung 1 địa chỉ VIP `123.30.234.145`
+
+### Bước 1 : Cài đặt Keepalived trên cả 2 Server
 
 1. Cài đặt dịch vụ Keepalived trên 2 server ( Với Ubuntu 18.04 ) :
 
@@ -34,76 +38,93 @@ Thực hiện xét mô hình như sau:
     sudo apt install keepalived
     ```
 
-2. 2. Tạo file cấu hình cho Keepalived
-    1. Trên server số 1 :
+### Bước 2 : Tiến hành cấu hình trên Server được đặt làm MASTER
 
-        ```bash
-        nvim /etc/keepalived/keepalived.conf
-        ```
-
-        ```bash
-        vrrp_instance com238 {
-          state MASTER
-          interface eth1
-          mcast_src_ip 123.30.234.238
-          priority 200
-          virtual_router_id 100
-          advert_int 1
-          authentication {
-                auth_type PASS
-                auth_pass 1234
-                }
-          virtual_ipaddress {
-             123.30.234.145
-          }
-        }
-        ```
-
-    2. Trên server số 2 :
-
-        ```bash
-        nvim /etc/keepalived/keepalived.conf
-        ```
-
-        ```bash
-        vrrp_instance com188 {
-         state BACKUP
-         interface eth1
-         mcast_src_ip 123.30.234.188
-         advert_int 1
-         virtual_router_id 100
-         priority 100
-         authentication {
-                auth_type PASS
-                auth_pass 1234
-                }
-         virtual_ipaddress {
-            123.30.234.145
-          }
-        }
-        ```
-
-        - Trong đó có một số mục cần lưu ý như sau:
-            - `vrrp_instance` : Mục chứa thông tin về 1 server vật lý
-            - `state` : Trạng thái mặc định của Sever ( có thể là MASTER hoặc BACKUP )
-            - `interface` : Giao diện mạng được sử dụng
-            - `mcast_src_ip` : Địa chỉ mạng thực tế của server
-            - `advert_int` : Thời gian gửi bản tin quảng bá
-            - `virtual_router_id` : Định danh cho các router thuộc cùng 1 nhóm VRRP.
-            - `priority` : Mức độ ưu tiên của server
-            - `authentication` : Chỉ định hình thức xác thực trong VRRP. Có thể sử dụng AH hoặc PASS
-            - `virtual_ipaddress` : Địa chỉ IP ảo được thiết lập giữa các server
-3. Chạy tiên trình Keepalived :
+1. Tạo file cấu hình cho Keepalived do mặc định Keepalived sẽ không tạo file này
 
     ```bash
-    systemctl start keepalived
+    nvim /etc/keepalived/keepalived.conf
     ```
+
+    Thực hiện cấu hình như sau :
 
     ```bash
-    systemctl enable keepalived
+    vrrp_instance com238 {
+      state MASTER
+      interface eth1
+      mcast_src_ip 123.30.234.238
+      priority 200
+      virtual_router_id 100
+      advert_int 1
+      authentication {
+            auth_type PASS
+            auth_pass 1234
+            }
+      virtual_ipaddress {
+         123.30.234.145
+      }
+    }
     ```
 
-- Kiểm tra lại trạng thái của 2 server
+    - Trong đó có một số mục cần lưu ý như sau:
+        - `vrrp_instance` : Mục chứa thông tin về 1 server vật lý
+        - `state` : Trạng thái mặc định của Sever ( có thể là MASTER hoặc BACKUP )
+        - `interface` : Giao diện mạng được sử dụng
+        - `mcast_src_ip` : Địa chỉ mạng thực tế của server
+        - `advert_int` : Thời gian gửi bản tin quảng bá
+        - `virtual_router_id` : Định danh cho các router thuộc cùng 1 nhóm VRRP.
+        - `priority` : Mức độ ưu tiên của server
+        - `authentication` : Chỉ định hình thức xác thực trong VRRP. Có thể sử dụng AH hoặc PASS
+        - `virtual_ipaddress` : Địa chỉ IP ảo được thiết lập giữa các server
+
+    Sau đó lưu lại file cấu hình 
+
+### Bước 3 : Tiến hành được cấ hình trên Server Backup
+
+1. Tạo file cấu hình Keepalived tương tự tại bước 2 :
+
+    ```bash
+    nvim /etc/keepalived/keepalived.conf
+    ```
+
+2. Tiến hành thêm nội dung như sau vào cuối file :
+
+    ```bash
+    vrrp_instance com188 {
+     state BACKUP
+     interface eth1
+     mcast_src_ip 123.30.234.188
+     advert_int 1
+     virtual_router_id 100
+     priority 100
+     authentication {
+            auth_type PASS
+            auth_pass 1234
+            }
+     virtual_ipaddress {
+        123.30.234.145
+      }
+    }
+    ```
+
+    Sau đó tiến hành lưu file cấu hình lại
+
+### Bước 4 : Trên cả 2 Server tiến hành bật dịch vụ Keepalived
+
+Thực hiện bật dịch vụ Keepalived
+
+```bash
+systemctl start keepalived
+```
+
+Thực hiện lệnh sau để Keepalived tự động bật cho các lần boot sau 
+
+```bash
+systemctl enable keepalived
+```
+
+Sau đó ta tiến hành kiểm tra lại trạng thái của 2 server 
+
 - Tại Server MASTER
 
     ```bash
@@ -164,7 +185,56 @@ Thực hiện xét mô hình như sau:
     Sep 26 09:54:25 ubuntu-1vcpu-2gb-01-01 Keepalived_vrrp[24460]: VRRP_Instance(com188) Entering BACKUP STATE
     ```
 
-    ### **Việc cài đặt và cấu hình 2 server sử dụng Keepalived đã hoàn tất**
+    ### **Việc cài đặt và cấu hình 2 server sử dụng Keepalived theo mô hình đã hoàn tất**
+
+    ### Mở rộng : Trong trường hợp bạn muốn thiết lập mô hình BACKUP - BACKUP
+
+    Các bước được thực hiện như đã trình bày ở trên, tuy nhiên file cấu hình tại các Server có chút thay đổi như sau :
+
+    - Tất cả STATE tại các Server được đặt là BACKUP
+    - Có thêm `nopreempt` → Không khôi phục quyền master
+    - Vậy trong trường hợp đối với mô hình của ta sẽ có dạng như sau :
+        - Tại Server 1
+
+            ```bash
+            vrrp_instance com238 {
+              state BACKUP
+              nopreempt
+              interface eth1
+              mcast_src_ip 123.30.234.238
+              priority 200
+              virtual_router_id 100
+              advert_int 1
+              authentication {
+                    auth_type PASS
+                    auth_pass 1234
+                    }
+              virtual_ipaddress {
+                 123.30.234.145
+              }
+            }
+            ```
+
+        - Tại Server 2
+
+            ```bash
+            vrrp_instance com188 {
+             state BACKUP
+             interface eth1
+             nopreempt
+             mcast_src_ip 123.30.234.188
+             advert_int 1
+             virtual_router_id 100
+             priority 100
+             authentication {
+                    auth_type PASS
+                    auth_pass 1234
+                    }
+             virtual_ipaddress {
+                123.30.234.145
+              }
+            }
+            ```
 
     ---
 

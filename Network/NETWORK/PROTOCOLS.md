@@ -62,6 +62,8 @@ Là hoạt động trả lời yêu cầu của người sử dụng từ Server
 4. 4xx : Loại code trả về trạng thái lỗi cho Clients với lỗi xảy ra ở bên Clients
 5. 5xx : Loại code trả về trạng thái thành công cho Clients với lỗi xảy ra ở bên Server
 
+( Với xx : từ 0 đến 99 )
+
 Ví dụ : Khi thực hiện tải thành công 1 nội dung Web thì sẽ được trả về code 200 → Thực hiện Request thành công
 
 ### 1.2.2 HTTP Response header
@@ -118,9 +120,22 @@ Tại đây sau khi nhận được yêu cầu của Resolver nó sẽ thực hi
 
 ![PROTOCOLS/Untitled%2013.png](PROTOCOLS/Untitled%2013.png)
 
-Sau khi nhận được phản hồi từ A.N thì Resolver sẽ đưa trả kết quả này về với máy tính của người sử dụng. Được minh họa như sau:
+Sau khi nhận được phản hồi từ Authorative  Nameserver thì Resolver sẽ đưa trả kết quả này về với máy tính của người sử dụng. 
+
+Toàn bộ quá trình được minh họa như sau với quá trình tìm kiếm cho trang web `[example.com](http://example.com)` :
 
 ![PROTOCOLS/Untitled%2014.png](PROTOCOLS/Untitled%2014.png)
+
+1. Máy tính thực hiện Request tới DNS Resolver ( hay còn được gọi là Recursive DNS )
+2. Nếu trong kho cache của DNS Resolver không có địa chỉ domain cần tìm, Server này sẽ thực hiện gửi Request tới Root Server.
+3. Root Server thực hiện gửi trả cho DNS Resolver địa chỉ Top Level Domain Server ( Server chứa thông tin về các tên miền như .com .vn , ... )
+4. DNS Resolver gửi Request lên TLD Server nhận được từ Root Server
+5. TLD Server nhận Request và gửi trả cho DNS Resolver địa chỉ của Authorative Server
+6. DNS Resolver gửi Request lên Authorative Nameserver chứa thông tin về Example.com
+7. Server AN gửi trả cho DNS Resolver địa chỉ IP của trang web đang cần tìm kiếm
+8. DNS Resolver gửi lại yêu cầu cho máy Client, đồng thời sẽ lưu lại cache ( đề phòng cho các lần dùng sau → Giảm thời gian tìm kiếm) 
+9. Client gửi các yêu cầu khác nhau tới server ( HTTP: GET,POST,PUT,...)
+10. Server thực hiện gửi trả bản tin trả lời tương ứng với yêu cầu từ bên máy tính Client.
 
 ### 2.1.5 Các loại DNS query :
 
