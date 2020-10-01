@@ -93,7 +93,7 @@ Thực hiện xét mô hình như sau:
             - `priority` : Mức độ ưu tiên của server
             - `authentication` : Chỉ định hình thức xác thực trong VRRP. Có thể sử dụng AH hoặc PASS
             - `virtual_ipaddress` : Địa chỉ IP ảo được thiết lập giữa các server
-3. Chạy tiên trình Keepalived :
+3. Chạy tiến trình Keepalived :
 
     ```bash
     systemctl start keepalived
