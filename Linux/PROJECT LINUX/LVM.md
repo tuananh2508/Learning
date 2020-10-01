@@ -35,8 +35,8 @@ Sau đây chúng ta sẽ cùng thực hiện 1 số câu lệnh cơ bản để 
   /dev/cl/swap [       1.60 GiB]
   /dev/sda2    [     <19.00 GiB] LVM physical volume
   /dev/sdb     [      16.00 GiB]
-	/dev/sdc     [      16.00 GiB]
-	/dev/sdd     [      16.00 GiB]
+  /dev/sdc     [      16.00 GiB]
+  /dev/sdd     [      16.00 GiB]
   5 disks
   1 partition
   0 LVM physical volume whole disks

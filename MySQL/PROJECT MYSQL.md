@@ -1,11 +1,10 @@
 # PROJECT MYSQL
 
 Date Created: Aug 27, 2020 2:25 PM
-Status: Done 🙌
 
-[MYSQL Replication Brief](PROJECT%20MYSQL/MYSQL%20Replication%20Brief.md)
+[ Tìm hiểu cơ bản về MYSQL Replication](PROJECT%20MYSQL/MYSQL%20Replication%20Brief.md)
 
-[MySQL Cluster](PROJECT%20MYSQL/MySQL%20Cluster.md)
+[ Tìm hiểu về MySQL Cluster ](PROJECT%20MYSQL/MySQL%20Cluster.md)
 
 # Docs
 
