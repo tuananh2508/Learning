@@ -1,7 +1,6 @@
 # NETWORK
 
 Date Created: Sep 17, 2020 9:16 AM
-Status: Done 🙌
 
 [OSI và TCP/IP](NETWORK/OSI%20va%CC%80%20TCP%20IP.md)
 
