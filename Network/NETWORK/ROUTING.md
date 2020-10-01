@@ -86,4 +86,4 @@ Việc cấu hình static route được thực hiện đơn giản qua các bư
 
     Trong đó 192.168.10.125 là interface để chuyển tiếp.
 
-[SWITCH](ROUTING/SWITCH%20521b8c0eee014a2e9904f35cc57899f7.md)
+[SWITCH](ROUTING/SWITCH.md)

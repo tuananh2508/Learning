@@ -2,7 +2,7 @@
 
 Việc tìm hiểu về 2 mô hình lý thuyết và thực tế là OSI và TCP/IP sẽ giúp chúng ta có cái nhìn cơ bản về cách hệ thống mạng hoạt động và từ đó có thể áp dụng 2 mô hình này để xử lý khi gặp lỗi. Cùng với đó so sánh để thấy được sự khá tương đồng giữa 2 mô hình mạng này
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled.png](OSI%20va%CC%80%20TCP%20IP/Untitled.png)
+![OSI%20TCP%20IP/Untitled.png](OSI%20TCP%20IP/Untitled.png)
 
 ## 1. Mô hình OSI ( Open System Interconnection )
 
@@ -10,19 +10,19 @@ Việc tìm hiểu về 2 mô hình lý thuyết và thực tế là OSI và TCP
 
 ⇒ Cung cấp cái nhìn cơ bản về hệ thống mạng hiện nay 
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%201.png](OSI%20va%CC%80%20TCP%20IP/Untitled%201.png)
+![OSI%20TCP%20IP/Untitled%201.png](OSI%20TCP%20IP/Untitled%201.png)
 
 Sau đây chúng ta sẽ đi qua các chức năng của các lớp, việc phân tích sẽ được thực hiện từ lớp trên cùng xuống dưới ( Giả sử trong trường hợp chúng ta gửi gói tin đi . Với bên thu quá trình này sẽ là ngược lại ) :
 
 ### 7. Application ( Lớp ứng dụng )
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%202.png](OSI%20va%CC%80%20TCP%20IP/Untitled%202.png)
+![OSI%20TCP%20IP/Untitled%202.png](OSI%20TCP%20IP/Untitled%202.png)
 
 Đây là lớp hoạt động gần với người sử dụng nhất. Một số ứng dụng như Web hoặc Mail dựa trên lớp ứng dụng này để giao tiếp dữ liệu. Không nên nhầm lẫn ứng dụng của người sử dụng không thuộc vào lớp này → Nó chỉ có nhiệm vụ thực hiện các giao thức và điều khiển dữ liệu để chương trình thể hiện dữ liệu với người dùng.
 
 ### 6. Presentation ( Lớp trình diễn )
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%203.png](OSI%20va%CC%80%20TCP%20IP/Untitled%203.png)
+![OSI%20TCP%20IP/Untitled%203.png](OSI%20TCP%20IP/Untitled%203.png)
 
 Nhiệm vụ chính của lớp này là việc " phiên dịch " dữ liệu từ lớp ứng dụng xuống. Lớp này có thể thực hiện " phiên dịch " lại dữ liệu, mã hóa và  nén dữ liệu lại.
 
@@ -38,13 +38,13 @@ Cuối cùng, Lớp trình diễn sẽ thực hiện việc nén dữ liệu tr�
 
 ### 5. Session ( Lớp phiên )
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%204.png](OSI%20va%CC%80%20TCP%20IP/Untitled%204.png)
+![OSI%20TCP%20IP/Untitled%204.png](OSI%20TCP%20IP/Untitled%204.png)
 
 Trong hệ thống Internet toàn cầu, việc một Server có thể nhận được hàng trăm thậm chí hàng nghìn kết nối là hoàn toàn có thể. Lớp phiên sẽ đảm bảo rằng mỗi dữ liệu truyền đi sẽ có 1 phiên phân biệt với các người dùng khác và sẽ thống báo lúc mở đầu và kết thúc của 1 phiên. Bạn có thể hiểu tại giai đoạn này dữ liệu sẽ được đánh dấu ( tag ) trước khi chuyển xuoogs
 
 ### 4. Transport ( Lớp vận chuyển )
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%205.png](OSI%20va%CC%80%20TCP%20IP/Untitled%205.png)
+![OSI%20TCP%20IP/Untitled%205.png](OSI%20TCP%20IP/Untitled%205.png)
 
 Hai giao thức vô cùng nổi tiếng trên lớp này đó chính là TCP và UDP. Tuy còn rất nhiều các giao thức khác nhưng cơ bản đều xây dựng trên 2 giao thức này. Lớp này sẽ làm việc chủ yếu với các port và sẽ chia nhỏ dữ liệu thành các phần gọi là segment. Lớp này tại bên phía thu sẽ có nhiệm vụ lắp ghép các phần segment hoàn chỉnh ( theo thứ tự ( sequence ) ) trước khi chuyển lên lớp trên.
 
@@ -55,13 +55,13 @@ Tại lớp này có 2 cơ chế là : Kiểm soát luồng và Kiểm soát l�
 
 ### 3.  Network ( Lớp mạng )
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%206.png](OSI%20va%CC%80%20TCP%20IP/Untitled%206.png)
+![OSI%20TCP%20IP/Untitled%206.png](OSI%20TCP%20IP/Untitled%206.png)
 
 Tại đây, thứ quan trọng nhất đó là địa chỉ IP của bên đích và nguồn → đảm bảo việc truyền dúng dữ liệu đúng địa chỉ. Tiếp đó, các segment lại được chia nhỏ làm các các packet và được gán địa chỉ IP đích/nguồn để truyền đi. Lớp mạng cũng sẽ tìm đường đi tối ưu thông qua các thuật toán khác nhau ( OSPF , EGIRG , BGP , ... ) 
 
 ### 2. Data Link ( Lớp liên kết dữ liệu )
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%207.png](OSI%20va%CC%80%20TCP%20IP/Untitled%207.png)
+![OSI%20TCP%20IP/Untitled%207.png](OSI%20TCP%20IP/Untitled%207.png)
 
 Lớp này hoạt động tương đối giống với lớp mạng. Tuy nhiên, nó không làm việc với địa chỉ IP, mà làm việc với địa chỉ vật lý hay còn được gọi là MAC Address ( Mỗi máy tính sẽ có 1 địa chỉ này và không bị nhầm lẫn ) . 
 
@@ -71,7 +71,7 @@ Lớp này hoạt động tương đối giống với lớp mạng. Tuy nhiên,
 
 ### 1. Physical ( Lớp vật lý )
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%208.png](OSI%20va%CC%80%20TCP%20IP/Untitled%208.png)
+![OSI%20TCP%20IP/Untitled%208.png](OSI%20TCP%20IP/Untitled%208.png)
 
 Các dữ liệu ở lớp trên sẽ được chuyển thành các bit 0 - 1 và được truyền trên các phương tiện trung gian như: cáp quang, cáp đồng, sóng radio, ... 
 
@@ -81,7 +81,7 @@ Các dữ liệu ở lớp trên sẽ được chuyển thành các bit 0 - 1 v�
 
 ## 2. Mô hình TCP/IP
 
-![OSI%20va%CC%80%20TCP%20IP/Untitled%209.png](OSI%20va%CC%80%20TCP%20IP/Untitled%209.png)
+![OSI%20TCP%20IP/Untitled%209.png](OSI%20TCP%20IP/Untitled%209.png)
 
 Trên đây là mô hình tổng quan của TCP/IP, do 2 mô hình có tính tương đồng khá cao nên việc hiểu cách thức hoạt động của TCP/IP sẽ khá đơn giản :
 
