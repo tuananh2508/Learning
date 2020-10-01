@@ -144,7 +144,7 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
             - `authentication` : Chỉ định hình thức xác thực trong VRRP. Có thể sử dụng AH hoặc PASS
             - `virtual_ipaddress` : Địa chỉ IP ảo được thiết lập giữa các server
 3. Chạy tiến trình Keepalived :
->>>>>>> 1658095a36e78a348243c7116151ee7d6595dfb3
+
 
     ```bash
     nvim /etc/keepalived/keepalived.conf
