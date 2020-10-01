@@ -62,8 +62,6 @@ Là hoạt động trả lời yêu cầu của người sử dụng từ Server
 4. 4xx : Loại code trả về trạng thái lỗi cho Clients với lỗi xảy ra ở bên Clients
 5. 5xx : Loại code trả về trạng thái thành công cho Clients với lỗi xảy ra ở bên Server
 
-( Với xx : từ 0 đến 99 )
-
 Ví dụ : Khi thực hiện tải thành công 1 nội dung Web thì sẽ được trả về code 200 → Thực hiện Request thành công
 
 ### 1.2.2 HTTP Response header
