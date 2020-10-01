@@ -14,7 +14,7 @@
 
 [Cách thức hoạt động và sử dụng Iptable cơ bản ](PROJECT%20LINUX/IPTABLES.md)
 
-[Cách hệ thống Linux bootup ](PROJECT%20LINUX/BOOT%20PROCESS.md)
+[Cách hệ thống Linux Bootup ](PROJECT%20LINUX/BOOT%20PROCESS.md)
 
 [Tìm hiểu về Logical Volume Management(LVM) ](PROJECT%20LINUX/LVM.md)
 
