@@ -88,4 +88,5 @@ Việc cấu hình static route được thực hiện đơn giản qua các bư
 
     Trong đó 192.168.10.125 là interface để chuyển tiếp.
 
+# Tìm hiểu về VLAN
 [SWITCH](ROUTING/SWITCH.md)
