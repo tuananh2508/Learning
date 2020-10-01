@@ -120,7 +120,7 @@ Kĩ thuật này có thể áp dụng trên nhiều các OS khác nhau, nhưng �
 
         Kết quả có dạng :
 
-        ![SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%204.png](SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%204.png)
+        ![SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%204.png](SWITCH/Untitled%204.png)
 
     *Quá trình bonding 2 giao diện mạng đã thành công !*
 
