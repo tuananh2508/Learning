@@ -57,6 +57,8 @@ Trái ngược với đó, định tuyến động thực hiện chuyển tuyế
 
 # Cách cấu hình Static Route
 
+![ROUTING/Untitled%202.png](ROUTING/Untitled%202.png)
+
 Việc cấu hình static route được thực hiện đơn giản qua các bước sau:
 
 1. Truy cập vào file cấu hình `netplan` :

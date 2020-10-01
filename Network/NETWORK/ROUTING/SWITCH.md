@@ -1,12 +1,12 @@
 # SWITCH
 
-![SWITCH/Untitled.png](SWITCH/Untitled.png)
+![SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled.png](SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled.png)
 
 Ở đây chúng ta sẽ sẽ tìm hiểu cơ bản về VLAN , các cách kết nối các VLAN với nhau và sẽ tìm hiểu thêm về kĩ thuật Etherchanel, Bonding
 
 ## 1. VLAN
 
-![SWITCH/Untitled%201.png](SWITCH/Untitled%201.png)
+![SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%201.png](SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%201.png)
 
 Để tìm hiểu về VLAN chúng ta sẽ cùng tìm hiểu qua các câu hỏi cơ bản :
 
@@ -34,7 +34,7 @@
 
 ### 1.3 VLAN trunking
 
-![SWITCH/Untitled%202.png](SWITCH/Untitled%202.png)
+![SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%202.png](SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%202.png)
 
 Đây là công nghệ truyền tải dữ liệu giữa 2 Switch, được chia làm 2 loại, đó chính là :
 
@@ -45,7 +45,7 @@ Trong đó Trunking có 2 chuẩn hiện nay đang được sử dụng là 802.
 
 ## 2. Kỹ thuật Bonding
 
-![SWITCH/Untitled%203.png](SWITCH/Untitled%203.png)
+![SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%203.png](SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%203.png)
 
 Về mặt ý tưởng cốt lõi ( Core Concept ) thì đây là loại kĩ thuật kết hợp 2 hoặc nhiều các giao diện mạng với nhau 
 
@@ -120,7 +120,7 @@ Kĩ thuật này có thể áp dụng trên nhiều các OS khác nhau, nhưng �
 
         Kết quả có dạng :
 
-        ![SWITCH/Untitled%204.png](SWITCH/Untitled%204.png)
+        ![SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%204.png](SWITCH%20521b8c0eee014a2e9904f35cc57899f7/Untitled%204.png)
 
     *Quá trình bonding 2 giao diện mạng đã thành công !*
 
