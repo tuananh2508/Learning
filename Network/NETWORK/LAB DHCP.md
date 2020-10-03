@@ -1,6 +1,6 @@
-# LAB DHCP
+# LAB%20DHCP%20DHCP DHCP
 
-![LAB/Untitled.png](LAB/Untitled.png)
+![LAB%20DHCP%20DHCP%20DHCP/Untitled.png](LAB%20DHCP%20DHCP/Untitled.png)
 
 # Yêu cầu
 
@@ -10,7 +10,7 @@
 
 ## Mô hình
 
-![LAB/Untitled%201.png](LAB/Untitled%201.png)
+![LAB%20DHCP%20DHCP/Untitled%201.png](LAB%20DHCP/Untitled%201.png)
 
 # Bước thực hiện trên Ubuntu 18.04
 
@@ -18,7 +18,7 @@ Việc cấu hình DHCP được thực hiện theo 2 bước. Bước thứ 2 c
 
 ## Cấu hình Server sử dụng làm DHCP server
 
-![LAB/Untitled%202.png](LAB/Untitled%202.png)
+![LAB%20DHCP%20DHCP/Untitled%202.png](LAB%20DHCP/Untitled%202.png)
 
 ### Thực hiện cài DHCP Server thông qua apt :
 
@@ -71,7 +71,7 @@ sudo systemctl status isc-dhcp-server.service
 
 ## Cấu hình trên Server Clients
 
-![LAB/Untitled%203.png](LAB/Untitled%203.png)
+![LAB%20DHCP%20DHCP/Untitled%203.png](LAB%20DHCP/Untitled%203.png)
 
 Nêu máy tính Client không tự thực hiện nhận IP từ Server DHCP, ta có thể thực hiện lệnh sau , interface đang xét ở đây là `ens38` 
 
