@@ -9,7 +9,7 @@ Linux cung cấp cho người sử dụng 1 giải pháp để giải quyết v�
 Các *table* và *rule* tạo nên khái niệm `Routing Policy Database` 
 
 # 1.IP RULE
-Đây là 1 tập các quy tắc được Linux áp dụng xét tới khi thực hiện Routing. 
+Đây đơn giản là 1 tập các quy tắc được Linux áp dụng xét tới khi thực hiện Routing. Quá trình xét được dựa vào Priority và loại điều kiện được áp dụng
 ## 1.1 Xem các Rule:
 
 Để thực hiện xem các rule hiện đang có trên hệ thống, ta sử dụng lệnh:
