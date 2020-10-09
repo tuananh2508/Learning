@@ -325,7 +325,15 @@ Sau đó cần sử dụng `wget` kèm theo link tải Image để tải về .
 
 # Thực hiện chạy VM bằng Virt-manager
 
+
 Việc thực hiện chạy VM có thể thực hiện bằng Virt-manager. Sau đây chúng ta sẽ tìm hiểu cách boot VM bằng Virt-manager hỗ trợ giao diện GUI ( Graphical User Interface )
+Đầu tiên chúng ta cần cài đặt `virt-manager` thông qua lệnh sau:
+
+```
+sudo apt install virt-manager
+```
+
+Lưu ý: Sau khi cài đặt bạn cần reboot máy tính để daemon `libvrtd` có thể được khởi động 
 
 Thực hiện bật cửa số lệnh Terminal thông qua tổ hợp phím `ctrl + alt  + t` , sau đó tiến hành nhập như sau:
 
