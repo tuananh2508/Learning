@@ -380,7 +380,7 @@ Kết quả nhận được sáu bước cuối cùng
 ![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%2010.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%2010.png)
 
 ### *Vậy là quá trình Boot VM bằng **Virt-manager** đã kết thúc thành công !*
-
+---
 **Mở rộng** : *Tiến hành boot VM từ Terminal*
 
 Chúng ta sẽ tiến hành Boot VM thông qua câu lệnh *virt-install* có dạng như sau:
