@@ -93,6 +93,7 @@ Sau khi lưu thay đổi tại local repo thì câu lệnh này sẽ giúp chún
  
 Trong một vài trường hợp muốn xem log của git thì đây chính là lệnh chúng ta cần sử dụng
 
+
 ## 3. Các bước thực hiện khi upload file lên remote repo
 
 Trong một vài trường hợp sau khi sử dụng lệnh `git pull` hoặc `git clone` để lấy dữ liệu từ trên remote repo xuống máy tính của chúng ta. Sau khi chỉnh sửa xong các file thì đây là các bước giúp các bạn tải các file ( đã có sự thay đổi ) lên remote repo: 
@@ -124,12 +125,19 @@ Trong rất nhiều trường hợp và cũng như trong thực tế, việc qu�
 
 
 ## 5.Xóa 1 nhánh
-Tại máy tính của mình nếu bạn muốn xóa 1 nhánh thì có thể sử dụng lệnh sau
+- Nếu bạn đang ở Branch muốn xóa thì cần Checkout trước khi có thể thực hiện xóa Branch thông qua lệnh sau :
+
+`git checkout master` 
+
+Trong đó *master* là nhánh chính trong Git của bạn
+
+
+- Tiếp tục, trong trường hợp bạn tạo Branch nhưng chưa thực hiện Merge lên Git thì có thể thực hiện như sau để xóa Branch 
 >Local: 
 
 `git branch -d *branch_name`
 
-- Còn đối với remote repo thì có thể sử dụng lệnh sau để xóa 1 branch:
+- Trong trường hợp bạn muốn xóa 1 Branch ở trên Repo Online của bạn thì thực hiện lệnh sau để thực hiện xóa Branch :
 
 `git push origin --delete *branch_name`
 
