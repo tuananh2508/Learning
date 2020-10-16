@@ -21,6 +21,12 @@ Chúng ta sẽ thực hiện tìm hiểu về chức năng mô hình hóa toàn 
 sudo apt-get update && sudo apt-get install qemu -y
 ```
 
+hoặc sử dụng :
+
+```jsx
+sudo apt-get install qemu-kvm -y
+```
+
 Các Packages nhận được sau khi cài đặt:
 
 ```bash
@@ -325,15 +331,13 @@ Sau đó cần sử dụng `wget` kèm theo link tải Image để tải về .
 
 # Thực hiện chạy VM bằng Virt-manager
 
-
 Việc thực hiện chạy VM có thể thực hiện bằng Virt-manager. Sau đây chúng ta sẽ tìm hiểu cách boot VM bằng Virt-manager hỗ trợ giao diện GUI ( Graphical User Interface )
-Đầu tiên chúng ta cần cài đặt `virt-manager` thông qua lệnh sau:
 
-```
+Việc cài đặt Virt Manager được cài đặt thông qua :
+
+```jsx
 sudo apt install virt-manager
 ```
-
-Lưu ý: Sau khi cài đặt bạn cần reboot máy tính để daemon `libvrtd` có thể được khởi động 
 
 Thực hiện bật cửa số lệnh Terminal thông qua tổ hợp phím `ctrl + alt  + t` , sau đó tiến hành nhập như sau:
 
@@ -345,56 +349,56 @@ root@Computer:~/Desktop/QEMU# virt-manager
 
 Sau khi thực hiện xử lý, ngưởi sử dụng sẽ nhận được giao diện như sau:
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled.png)
 
 Tiếp đó, để thực hiện tạo và chạy máy ảo, chúng ta thực hiện chọn **File** và N**ew Virtual Machine:**
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%201.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%201.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%201.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%201.png)
 
 Nhận được cửa số mới như sau:
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%202.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%202.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%202.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%202.png)
 
 Tại đây chúng ta sẽ chọn **Import existing disk image** do đã có các file Image vừa tạo ở các bước trên, sau khi chọn xong bạn click **Forward** :
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%203.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%203.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%203.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%203.png)
 
 Tại đây Virt-manager yêu cầu chúng ta xác định đường dẫn tới file Image của máy ảo, bạn chọn **Browse** và chọn đường dẫn tới file Image có được từ các bước trên:
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%204.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%204.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%204.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%204.png)
 
 Sau khi xác định được đường dẫn bạn thực hiện chọn **Choose Volume** và nhận được màn hình sau:
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%205.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%205.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%205.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%205.png)
 
 Tại mục **Chose the operating system ...** , tùy thuộc vào loại Image bạn tạo là loại OS nào thì bạn sẽ điền OS đó vào mục này, nếu mặc định bạn sẽ để **Generic default** , sau khi hoàn tất tiếp tục chọn **Forward** 
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%206.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%206.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%206.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%206.png)
 
 Ở bước tiếp theo thì chúng ta sẽ cần thiết lập các thông số thiết yếu của máy ảo như *Memory và CPU* ( Bộ nhớ ảo và CPU ảo cấp cho máy ảo ), ở đây lấy ví dụ là 1024MB Memory và 1 CPU ảo, sau khi thiết lập xong thông số chọn **Forward**
 
 Ở bước cuối cùng chúng ta sẽ thiết lập tên của máy ảo và đường mạng ảo cho máy:
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%207.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%207.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%207.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%207.png)
 
 Tại múc Network selection chúng ta chọn **default ( hoặc nêu không có bạn chỉ cần bỏ qua và click Finish thì hệ thống sẽ tự tạo mạng ảo mới )**
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%208.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%208.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%208.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%208.png)
 
 Kết quả nhận được sáu bước cuối cùng
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%209.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%209.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%209.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%209.png)
 
-![Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%2010.png](Chuong-1-Tong-quan-ve-QEMU-&-KVM/Untitled%2010.png)
+![Chuong-1-Tong-quan-QEMU-KVM/Untitled%2010.png](Chuong-1-Tong-quan-QEMU-KVM/Untitled%2010.png)
 
 ### *Vậy là quá trình Boot VM bằng **Virt-manager** đã kết thúc thành công !*
----
+
 **Mở rộng** : *Tiến hành boot VM từ Terminal*
 
 Chúng ta sẽ tiến hành Boot VM thông qua câu lệnh *virt-install* có dạng như sau:
 
 ```bash
-virt-install --name deb --ram 512 --vcpus 1 --disk path=/home/vutuananh/Desktop/test/debian 
+virt-install --name deb --ram 512 --vcpus 1 --disk path=/home/vutuananh/Desktop/test/debian --import
 ```
 
 Trong đó: 
