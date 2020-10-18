@@ -205,5 +205,3 @@ virsh console ubuntu
 ![Chuong-2-Su-dung-libvrt/Untitled%204.png](Chuong-2-Su-dung-libvrt/Untitled%204.png)
 
 **Vậy là quá trình cài đặt đã hoàn tất !**
-
-# 5. Tạo Linux Bridge
