@@ -50,6 +50,7 @@ vutuananh@Localhost:~$ virsh migrate --live debian qemu+ssh://tuananh@192.168.15
 Trong đó các option có ý nghĩa như sau:
 
 - live : Thực hiện Live Migrate
+- qemu+ssh : Thực hiện kết nối tới Server cần thực hiện di chuyển VM
 
 Sau khi quá trình di chuyển VM hoàn tất, ta thực hiện kiểm tra lại trạng thái của VM tại Server mà VM đã được chuyển tới ( `192.168.150.129` ):
 
@@ -96,6 +97,7 @@ Trong đó các option có ý nghĩa như sau  :
 
 - offline : Thực hiện Offline Migrate
 - persistent: Giữ nguyên các trạng thái của VM tại Server đích
+- qemu+ssh : Thực hiện kết nối tới Server cần thực hiện di chuyển VM
 
 Ta kiểm tra trạng thái của VM tại Server đích :
 
