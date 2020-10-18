@@ -125,7 +125,7 @@ Sau đó, bạn thực hiện lưu lại file. Việc cấu hình file XML của
 
 Việc thực hiện các thao tác được liệt kê ở trên có thể thực hiện thông qua virsh - management user interface được cung cấp qua package qemu-kvm mà chúng ta đã thực hiện cài đặt ở :
 
-[Copy of Chương 1: Tổng quan về QEMU-KVM](Chuong-2-Su-dung-libvrt/Copy%20of%20Chu%CC%9Bo%CC%9Bng%201%20To%CC%82%CC%89ng%20quan%20ve%CC%82%CC%80%20QEMU-KVM%20a372c69de53c4a5083d98dde7de94ccd.md)
+[Chương 1: Tổng quan về QEMU-KVM](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-1-Tong-quan-QEMU-KVM.md)
 
 Để thực hiện bật ( start ) 1 VM đã có sẵn Image ( Việc tạo / tải Image xem tại Chương 1)  :
 
