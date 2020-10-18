@@ -6,7 +6,7 @@ Trong trường hợp chúng ta cần thực hiện di chuyển các VM thì QEM
 
 Với khái niệm và việc thiết lập Shared Storage thì chúng ta đã tìm hiểu thông qua:
 
-[Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2-Su-dung-libvrt.md)
+[Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md)
 
 # Online Migrate với Shared Storage
 
