@@ -1,4 +1,4 @@
-# Virtualization & Hypervisor
+# Virtualization & Hypervisor và CPU Virtualization
 
 Ngày nay với sự phát triển ngày càng lớn của công nghệ ảo hóa, việc tìm hiểu về ảo hóa và công nghệ giám sát các hệ điều hành ảo ( Hypervisor ) là ngày càng cần thiết. Bất kể dù bạn có đang làm bất cứ công việc gì thì cũng ít nhất 1 lần sử dụng các ứng dụng của công nghệ ảo hóa. Với sự phát triển của nó, ảo hóa đang thu hút sự chú ý của hàng loạt các công ty lớn như Amazon, Microsoft hay VMWare, .... 
 Thông qua bài này chúng ta sẽ tìm hiểu 2 khái niệm của công nghệ này là Virtualization và Hypervisor
