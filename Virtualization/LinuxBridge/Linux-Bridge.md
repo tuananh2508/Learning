@@ -50,9 +50,9 @@ Yêu cầu
 
 ```jsx
 root@localcomputer:/home/tuananh# brctl show
-bridge name	bridge id		         STP enabled	 interfaces
-virbr0		  8000.5254005d2d4b	   yes		       virbr0-nic
-							                                 vnet0
+bridge name	  bridge id		         STP enabled	 interfaces
+virbr0		  8000.5254005d2d4b	         yes		 virbr0-nic
+							         vnet0
 ```
 
 *Do ở đây mình đã tiến hành cài sẵn 1 máy ảo với QEMU-KVM nên trên đây sẽ xuất hiện mạng ảo của VM là `vnet0`*
@@ -101,9 +101,9 @@ Kết quả nhận được :
 ```jsx
 root@localcomputer:/home/tuananh# brctl show
 bridge name	   bridge id		         STP enabled	interfaces
-test		       8000.fe5400c4ee18	   no		        vnet0
-                                                  ens34
-virbr0		     8000.5254005d2d4b	   yes		      virbr0-nic
+test		   8000.fe5400c4ee18	         no		vnet0
+                                                                ens34
+virbr0		   8000.5254005d2d4b	         yes		virbr0-nic
 ```
 
 → *Nhận thấy có 1 Linux Bridge mới đã được thêm*
@@ -239,10 +239,10 @@ Sau khi thực hiện lại thành công việc thêm 2 Interface, ta nhậ đư
 ```jsx
 root@localcomputer:/home/tuananh# brctl show
 bridge name	   bridge id		         STP enabled	interfaces
-test		       8000.fe5400c4ee18	   no		        vnet0
-                                                  ens34
-                                                  ens39
-virbr0		     8000.5254005d2d4b	   yes		      virbr0-nic
+test		   8000.fe5400c4ee18	         no		vnet0
+                                                                ens34
+                                                                ens39
+virbr0		   8000.5254005d2d4b	          yes		virbr0-nic
 ```
 
 *Trong đó `ens34` và `ens39` là 2 giao diện mạng trên máy Host*
