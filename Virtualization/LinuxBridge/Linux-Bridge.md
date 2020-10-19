@@ -22,7 +22,7 @@ Các chức năng được cung cấp bởi Linux Bridge
 2. FDB : Thực hiện gửi tin theo Database → tăng tốc độ truyền dẫn của Switch
 3. Vlan : Có thể thực hiện cấu hình chia các máy ảo làm các Vlan để quản lý dễ hơn
 
-# Thực hiện cấu hình cơ bản với Linux Bridge
+# Thực hiện cấu hình cơ bản với Linux Bridge trên Ubuntu 20.04
 
 Ta thực hiện xét mô hình dưới để thực hiện cấu hình Linux bridge :
 
@@ -226,7 +226,7 @@ rtt min/avg/max/mdev = 0.376/0.973/2.078/0.782 ms
 
 *Vậy quá trình thiết lập Linux Bridge đã thành công !*
 
-# Thiết lập mức độ ưu tiên trên Linux Bridge
+# Thiết lập mức độ ưu tiên trên Linux Bridge trên Ubuntu 20.04
 
 Nếu hệ thống của bạn có nhiều hơn 1 Interface, chúng ta có thể tiến hành thiết lập các mức độ ưu tiên để VM sử dụng các Interface này . Ta thực hiện xét mô hình tương tự ở trên :
 
