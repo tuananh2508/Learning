@@ -12,6 +12,8 @@ Ta thực hiện tải Package `libvrt` trên **Ubuntu 20.04** như sau
 sudo apt-get install libvirt-daemon-system libvirt-clients bridge-utils
 ```
 
+Sau khi cài đặt xong bạn nên tiến hành reboot lại hệ thống để Libvrtd Daemon thực hiện khởi động
+
 Quá trình cài đặt sẽ diễn ra tự động và sau khi cài đặt xong trên hệ thống chúng ta sẽ có thể sử dụng các công cụ của `libvrt`
 
 
