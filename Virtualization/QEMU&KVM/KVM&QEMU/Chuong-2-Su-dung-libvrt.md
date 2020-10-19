@@ -9,7 +9,7 @@ Trong mô hình của hệ thống QEMU-KVM thì *libvrt* nằm tại tầng th�
 Ta thực hiện tải Package `libvrt` trên **Ubuntu 20.04** như sau
 
 ```
-sudo apt-get install libvirt-bin libvirt-doc
+sudo apt-get install libvirt-daemon-system libvirt-clients bridge-utils
 ```
 
 Quá trình cài đặt sẽ diễn ra tự động và sau khi cài đặt xong trên hệ thống chúng ta sẽ có thể sử dụng các công cụ của `libvrt`
