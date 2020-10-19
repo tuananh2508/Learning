@@ -93,7 +93,8 @@ root@localcomputer:/home/tuananh# brctl addif test ens34
 Giải thích:
 
 - Đầu tiên chúng ta sẽ thực hiện xóa interface `vnet0` khỏi Linux Bridge `virbr0`
-- Tiếp đó chúng ta tạo ra 1 Linux Bridge mới với câu lệnh thứ 2 ( Nếu bạn muốn thay đổi tên Bridge thì có thể thực hiện đổi `test` thành tên mong muốn )
+- Tiếp đó chúng ta tạo ra 1 Linux Bridge mới với câu lệnh thứ 2 ( Nếu 
+muốn thay đổi tên Bridge thì có thể thực hiện đổi `test` thành tên mong muốn )
 - Cuối cùng chúng ta thực hiện thêm interface `vnet0` và `ens34` vào Linux Bridge `test`
 
 Kết quả nhận được :
@@ -188,7 +189,7 @@ Do đã thiết lập thành công Linux Bridge từ các bước trước, vậ
     root@debian:~# dhclient ens3
     ```
 
-    *Đầu tiên chúng ta thực hiện xóa địa chỉ hiện tại ( Flush ) của giao diện mạng `ens3` ( có thể thay đổi tùy trên VM của bạn*
+    *Đầu tiên chúng ta thực hiện xóa địa chỉ hiện tại ( Flush ) của giao diện mạng `ens3` ( có thể thay đổi tùy trên VM của bạn)
 
     *Tiếp đó là yêu cầu IP từ DHCP Server*
 
