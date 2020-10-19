@@ -6,7 +6,7 @@ Trong trường hợp chúng ta cần thực hiện di chuyển các VM thì QEM
 
 Với khái niệm và việc thiết lập Shared Storage thì chúng ta đã tìm hiểu thông qua:
 
-[Chương 2.5: Tổng quan về Shared Storage](https://www.notion.so/Ch-ng-2-5-T-ng-quan-v-Shared-Storage-9eaa54a728844ad8b045ef5cbd50cd0e)
+[Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md)
 
 # Online Migrate với Shared Storage
 
@@ -50,6 +50,7 @@ vutuananh@Localhost:~$ virsh migrate --live debian qemu+ssh://tuananh@192.168.15
 Trong đó các option có ý nghĩa như sau:
 
 - live : Thực hiện Live Migrate
+- qemu+ssh : Thực hiện kết nối tới Server cần thực hiện di chuyển VM
 
 Sau khi quá trình di chuyển VM hoàn tất, ta thực hiện kiểm tra lại trạng thái của VM tại Server mà VM đã được chuyển tới ( `192.168.150.129` ):
 
@@ -96,6 +97,7 @@ Trong đó các option có ý nghĩa như sau  :
 
 - offline : Thực hiện Offline Migrate
 - persistent: Giữ nguyên các trạng thái của VM tại Server đích
+- qemu+ssh : Thực hiện kết nối tới Server cần thực hiện di chuyển VM
 
 Ta kiểm tra trạng thái của VM tại Server đích :
 

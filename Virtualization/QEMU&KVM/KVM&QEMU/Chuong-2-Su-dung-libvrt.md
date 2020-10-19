@@ -6,6 +6,16 @@ Trong mô hình của hệ thống QEMU-KVM thì *libvrt* nằm tại tầng th�
 
 ![Chuong-2-Su-dung-libvrt/687474703a2f2f696d6775722e636f6d2f777341356846372e6a7067.png](Chuong-2-Su-dung-libvrt/687474703a2f2f696d6775722e636f6d2f777341356846372e6a7067.png)
 
+Ta thực hiện tải Package `libvrt` trên **Ubuntu 20.04** như sau
+
+```
+sudo apt-get install libvirt-bin libvirt-doc
+```
+
+Quá trình cài đặt sẽ diễn ra tự động và sau khi cài đặt xong trên hệ thống chúng ta sẽ có thể sử dụng các công cụ của `libvrt`
+
+
+
 # 2. Sử dụng File XML để tạo 1 VM
 
 Mỗi khi chúng ta thực hiện tạo 1 VM thì tại thư mục `/etc/libvrt/qemu/` sẽ xuất hiện 1 file XML lưu giữ cấu hình của VM đó. Ở chương trước, chúng ta đã thực hiện tạo VM thông qua giao diện GUI của `virt-manager` ( hoặc qua CLI trong phần mở rộng )
@@ -115,7 +125,7 @@ Sau đó, bạn thực hiện lưu lại file. Việc cấu hình file XML của
 
 Việc thực hiện các thao tác được liệt kê ở trên có thể thực hiện thông qua virsh - management user interface được cung cấp qua package qemu-kvm mà chúng ta đã thực hiện cài đặt ở :
 
-[Copy of Chương 1: Tổng quan về QEMU-KVM](Chuong-2-Su-dung-libvrt/Copy%20of%20Chu%CC%9Bo%CC%9Bng%201%20To%CC%82%CC%89ng%20quan%20ve%CC%82%CC%80%20QEMU-KVM%20a372c69de53c4a5083d98dde7de94ccd.md)
+[Chương 1: Tổng quan về QEMU-KVM](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-1-Tong-quan-QEMU-KVM.md)
 
 Để thực hiện bật ( start ) 1 VM đã có sẵn Image ( Việc tạo / tải Image xem tại Chương 1)  :
 
