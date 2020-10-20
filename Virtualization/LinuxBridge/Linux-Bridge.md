@@ -149,6 +149,7 @@ root@localcomputer:/home/tuananh# ip a s
 *Ta có thể thấy :*
 
 - Địa chỉ MAC của interface `ens34` đã trùng với Bridge `test` : 00:0c:29:30:2f:c0
+- Địa chỉ của Tap Interface của VM là : fe:54:00:c4:ee:18 brd
 
 Cuối cùng là các thao tác trên máy ảo để thực hiện nhận địa chỉ IP mới. Chúng ta sẽ thực hiện đăng nhập sử dụng console của máy ảo :
 
