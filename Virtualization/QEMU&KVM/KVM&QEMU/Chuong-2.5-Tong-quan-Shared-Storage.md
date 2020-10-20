@@ -4,7 +4,7 @@
 
 Trong quá trình sử dụng các VM, sẽ có các trường hợp chúng ta muốn thực hiện chia sẻ 1 tập các file hoặc thư mục để các VM có thể sử dụng chung ( Do đặc tính của Hypervisor khiến cho các VM độc lập và không thể truy cập vào tài nguyên của các VM khác )
 
-Để thực hiện mục đính đó thì chúng ta cần sử dụng các tiện ích mở rộng như : GlusterFS,NFS hoặc tận dụng khả năng DRBD,... Tất cả các tiện ích này đều cung cấp cho ngưởi sử dụng khả năng chia sẻ kho dữ liệu chung ( Shared Storage ). Ở chương này chúng ta sẽ thực hiện tìm hiểu 2 công cụ đó là **NFS** và **DRBD** để thực hiện tạo Shared Storage giữa 2 máy ảo .
+Để thực hiện mục đính đó thì chúng ta cần sử dụng các tiện ích mở rộng như : GlusterFS,NFS hoặc tận dụng khả năng DRBD,... Tất cả các tiện ích này đều cung cấp cho ngưởi sử dụng khả năng chia sẻ kho dữ liệu chung ( Shared Storage ). Ở chương này chúng ta sẽ thực hiện tìm hiểu 2 công cụ đó là **NFS** và **DRBD** .
 
 # NFS
 
