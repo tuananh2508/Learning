@@ -20,7 +20,7 @@ Server có địa chỉ IP : `192.168.98.129` là server mà VM sẽ được ch
 
     ( Có thể tham khảo việc thiết lập NFS Shared Storage tại : 
 
-    [Chương 2.5: Tổng quan về Shared Storage](https://www.notion.so/Ch-ng-2-5-T-ng-quan-v-Shared-Storage-9eaa54a728844ad8b045ef5cbd50cd0e)
+    [Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md)
 
     )
 
