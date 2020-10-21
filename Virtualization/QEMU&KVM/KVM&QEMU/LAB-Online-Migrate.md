@@ -1,6 +1,6 @@
 # LAB Migrate VM với QEMU/KVM kết hợp với Linux Bridge
 
-### Bài Lab thực hiện Live Mirgrate QEMU/KVM với Shared Storage sử dụng NFS
+### Bài Lab thực hiện Live Mirgrate QEMU/KVM với Shared Storage sử dụng NFS trên Ubuntu 20.04
 
 ## Mô hình bài LAB thực hiện :
 
