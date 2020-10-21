@@ -7,3 +7,5 @@
 [Chương 2.5: Tổng quan về Shared Storage](KVM&QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md)
 
 [Chương 3 : Migrate VM](KVM&QEMU/Chuong-3-Migrate-VM.md)
+
+[LAB ONLINE MIGRATE](KVM&QEMU/LAB-Online-Migrate.md)
