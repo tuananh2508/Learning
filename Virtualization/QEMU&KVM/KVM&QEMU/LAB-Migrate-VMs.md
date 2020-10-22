@@ -27,7 +27,7 @@ Server có địa chỉ IP : `192.168.98.129` là server mà VM sẽ được ch
 - 1 file Image VM  ( *đã được cấu hình User* ) chứa trên NFS Server
 - Kết nối SSH giữa 2 Server sẽ sử dụng VM
 - 1 đường kết nối mạng chung giữa 2 Server ( Ở đây là dải mạng `192.168.98.0` )
-- Kiến thức cơ bản cũng như cấu hình Linux Bridge
+- Kiến thức cơ bản cũng như cách cấu hình Linux Bridge
 
 ***Chú ý : Bài Lab được thực hiện trên Ubuntu 20.04 !***
 
