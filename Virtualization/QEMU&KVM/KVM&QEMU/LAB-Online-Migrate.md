@@ -172,8 +172,8 @@ root@client-1:/etc/libvirt/qemu# brctl addif testbr ens38
 ```bash
 root@client-1:/etc/libvirt/qemu# brctl show
 bridge name	bridge id		         STP enabled	interfaces
-testbr		8000.000c2919da6e      no		        ens38
-virbr0		8000.525400a87b08	     yes		      virbr0-nic
+testbr		8000.000c2919da6e        no		        ens38
+virbr0		8000.525400a87b08	     yes		    virbr0-nic
 ```
 
 **Tại VM-1 và 2, ta thực hiện thiết lập tường lửa** :
