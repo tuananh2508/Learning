@@ -1,6 +1,6 @@
 # LAB Migrate VM với QEMU/KVM kết hợp với Linux Bridge
 
-### Bài Lab thực hiện Live Mirgrate QEMU/KVM với Shared Storage sử dụng NFS
+### Bài Lab thực hiện Live Mirgrate QEMU/KVM với Shared Storage sử dụng NFS trên Ubuntu 20.04
 
 ## Mô hình bài LAB thực hiện :
 
@@ -20,7 +20,7 @@ Server có địa chỉ IP : `192.168.98.129` là server mà VM sẽ được ch
 
     ( Có thể tham khảo việc thiết lập NFS Shared Storage tại : 
 
-    [Chương 2.5: Tổng quan về Shared Storage](https://www.notion.so/Ch-ng-2-5-T-ng-quan-v-Shared-Storage-9eaa54a728844ad8b045ef5cbd50cd0e)
+    [Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md)
 
     )
 
@@ -169,15 +169,15 @@ root@client-1:/etc/libvirt/qemu# brctl addbr testbr
 root@client-1:/etc/libvirt/qemu# brctl addif testbr ens38
 ```
 
-*Trong đó `ens38` (tại VM-2 ) là Interface cùng dải mạng với `ens34` ( tại VM-1)*
+*Trong đó `ens38` (tại VM-2 ) là Interface cùng dải mạng với `ens34`* ( tại VM-1) và **lưu ý tên Linux Bridge tại VM-2 BẮT BUỘC PHẢI CÙNG TÊN với Linux Bridge tại VM-1**
 
 *Ta nhận được 1 Linux Bridge `testbr`*
 
 ```bash
 root@client-1:/etc/libvirt/qemu# brctl show
 bridge name	bridge id		         STP enabled	interfaces
-testbr		8000.000c2919da6e      no		        ens38
-virbr0		8000.525400a87b08	     yes		      virbr0-nic
+testbr		8000.000c2919da6e        no		        ens38
+virbr0		8000.525400a87b08	     yes		    virbr0-nic
 ```
 
 **Tại VM-1 và 2, ta thực hiện thiết lập tường lửa** :
