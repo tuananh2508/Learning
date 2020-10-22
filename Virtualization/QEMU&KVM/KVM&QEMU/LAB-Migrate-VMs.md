@@ -265,7 +265,7 @@ root@localcomputer:/etc/libvirt/qemu# virt-install --name debian10 --ram 1024 --
 - name : Tên VM
 - ram : Lượng RAM cung cấp cho VM
 - vcpus : CPU được cung cấp cho VM
-- disk path : Đường dẫn tưới file IMG của VM
+- disk path : Đường dẫn tới file IMG của VM
 - boot : Xác định việc boot VM sẽ được boot từ Hard Disk
 - network : Xác định loại Network sẽ được sử dụng. Trong trường hợp của chúng ta là sử dụng Bridge tên là `testbr`
 
@@ -349,7 +349,7 @@ root@client-1:/etc/libvirt/qemu# virsh list --all
 
 ***⇒ Việc Migrate đã thành công***
 
-Ta kiểm tra trạng thái ping trên VM-1 :
+Ta kiểm tra trạng thái ping tại cửa sổ đã tạo từ trước trên VM-1 :
 
 ```bash
 ...
