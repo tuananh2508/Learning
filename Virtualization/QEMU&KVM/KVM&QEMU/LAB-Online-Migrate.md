@@ -165,7 +165,7 @@ root@client-1:/etc/libvirt/qemu# brctl addbr testbr
 root@client-1:/etc/libvirt/qemu# brctl addif testbr ens38
 ```
 
-*Trong đó `ens38` (tại VM-2 ) là Interface cùng dải mạng với `ens34` ( tại VM-1)*
+*Trong đó `ens38` (tại VM-2 ) là Interface cùng dải mạng với `ens34` ( tại VM-1) và **lưu ý tên Linux Bridge tại VM-2 BẮT BUỘC PHẢI CÙNG TÊN với Linux Bridge tại VM-1**
 
 *Ta nhận được 1 Linux Bridge `testbr`*
 
