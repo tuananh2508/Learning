@@ -4,15 +4,15 @@
 
 ## Mô hình bài LAB thực hiện :
 
-![LAB-Online-Migrate/Untitled.png](LAB-Online-Migrate/Untitled.png)
+![LAB-Migrate-VMs/Untitled.png](LAB-Migrate-VMs/Untitled.png)
 
 *Trong đó :*
 
 Server có địa chỉ IP : `192.168.150.136` được sử dụng làm NFS Server thực hiện chia sẻ Image 
 
-Server có địa chỉ IP : `192.168.98.128` là server hiện đang sử dụng VM (VM-1)
+Server có địa chỉ IP : `192.168.98.128` là server hiện đang sử dụng VM ( **Ở các phần bên dưới bài viết sẽ được gọi là VM-1**)
 
-Server có địa chỉ IP : `192.168.98.129` là server mà VM sẽ được chuyển tới(VM-2)
+Server có địa chỉ IP : `192.168.98.129` là server mà VM sẽ được chuyển tới( **Ở các phần bên duối bài viết sẽ được gọi là VM-2**)
 
 *Yêu cầu :*
 
@@ -44,6 +44,10 @@ root@localcomputer:/home/tuananh# mount 192.168.150.136:/home/tuananh/Desktop/Qe
 ---
 
 ### Thiết lập Linux Bridge
+
+Ở đây chúng ta sẽ thực hiện cấu hình Linux Bridge tại 2 Server VM -1 và 2 . Lý do chúng ta phải thiết lập điều này là bởi mặc định, khi khởi tạo VM, các giao diện mạng của VM sẽ được thiết lập sử dụng 1 Linux Bridge mặc định có tên là `virbr0` . Linux Bridge này mặc định có giao thức NAT khiến cho địa chỉ IP của máy ảo chúng ta là không cố định ( Persistent ). 
+
+→ Dẫn đến việc gây ra Downtime trong quá trình Live Migrate ( là điều không được chấp nhận đối với QoS hiện nay ). Quá trình Live Migrate trong trường hợp nói tới ở trên vẫn thành công tuy nhiên  đối với **bản chất** hay **ý nghĩa** của việc Migrate là hoàn toàn sai. Do việc thực hiện Migrate để phục vụ 1 mục đích duy nhất chính là trong trường hợp xảy ra lỗi hệ thống vật lý, thì dịch vụ trên máy ảo được nói tới vẫn sẽ duy trì tại một hệ thống vật lý khác để đảm bảo QoS.
 
 **Tại VM-1** , ta tiếp tục thực hiện liệt kê các giao diện mạng hiện thời đang có :
 
@@ -183,11 +187,13 @@ root@client-1:/home/tuananh# ufw allow 49152
 root@localcomputer:/home/tuananh# ufw allow 49152
 ```
 
-*Do ta sẽ thực hiện Migrate thông qua Port 49152*
+*Do ta sẽ thực hiện Migrate thông qua Port 49152, nếu không thực hiện thiết lập thì khi thực hiện việc Migrate ở bên dưới thì các Server sẽ từ chối ( Đơn giản là do việc từ chối truy cập Port )*
 
 ---
 
 ### Tạo VM từ Image nhận được từ NFS-Server :
+
+**Cách 1 : Thiết lập VM thông qua `virt-manager`**
 
 Ta thực hiện tạo máy ảo thông qua `virt-manager` từ **máy VM-1** để tự động hóa quá trình, cũng như giảm thiểu số lượng lỗi gặp phải :
 
@@ -197,27 +203,27 @@ tuananh@localcomputer:~$ sudo -s
 root@localcomputer:/home/tuananh# virt-manager
 ```
 
-![LAB-Online-Migrate/Untitled%201.png](LAB-Online-Migrate/Untitled%201.png)
+![LAB-Migrate-VMs/Untitled%201.png](LAB-Migrate-VMs/Untitled%201.png)
 
 Chúng ta chọn option *Import existing disk image* và chọn *Forward*
 
-![LAB-Online-Migrate/Untitled%202.png](LAB-Online-Migrate/Untitled%202.png)
+![LAB-Migrate-VMs/Untitled%202.png](LAB-Migrate-VMs/Untitled%202.png)
 
 Tại bước này chúng ta thực hiện chọn Browse và tìm đường dẫn tới thư mục chứa Image được chia sẻ từ NFS Server:
 
-![LAB-Online-Migrate/Untitled%203.png](LAB-Online-Migrate/Untitled%203.png)
+![LAB-Migrate-VMs/Untitled%203.png](LAB-Migrate-VMs/Untitled%203.png)
 
 Sau khi hoàn tất, ta chọn *Choose Volume* 
 
-![LAB-Online-Migrate/Untitled%204.png](LAB-Online-Migrate/Untitled%204.png)
+![LAB-Migrate-VMs/Untitled%204.png](LAB-Migrate-VMs/Untitled%204.png)
 
 Tại mục này chúng ta thực hiện nhập tên OS , dưới đây là một số tên OS tiêu biểu để tham khảo:
 
-![LAB-Online-Migrate/Untitled%205.png](LAB-Online-Migrate/Untitled%205.png)
+![LAB-Migrate-VMs/Untitled%205.png](LAB-Migrate-VMs/Untitled%205.png)
 
 Nếu không rõ về OS đang sử dụng với Image , bạn có thể nhập **Generic default và chọn Forward** Tại ví dụ này sẽ thực hiện nhập Debian 10. 
 
-![LAB-Online-Migrate/Untitled%206.png](LAB-Online-Migrate/Untitled%206.png)
+![LAB-Migrate-VMs/Untitled%206.png](LAB-Migrate-VMs/Untitled%206.png)
 
 Tại đây có 2 mục 
 
@@ -226,13 +232,13 @@ Tại đây có 2 mục
 
 Sau khi điền các tham số phù hợp, tiếp tục tiến hành chọn *Forward*
 
-![LAB-Online-Migrate/Untitled%207.png](LAB-Online-Migrate/Untitled%207.png)
+![LAB-Migrate-VMs/Untitled%207.png](LAB-Migrate-VMs/Untitled%207.png)
 
 Ở bước cuối cùng, bạn thực hiện đặt tên cho máy ảo, cũng như có thể thiết lập giao diện mạng  : **Thực hiện chọn giao diện Linux Bridge chúng ta đã khởi tạo ở bước 1***.* 
 
 Sau khi hoàn tất, chúng ta chọn *Finish* để quá trình cài đặt diễn ra
 
-![LAB-Online-Migrate/Untitled%208.png](LAB-Online-Migrate/Untitled%208.png)
+![LAB-Migrate-VMs/Untitled%208.png](LAB-Migrate-VMs/Untitled%208.png)
 
 *Màn hình nhận được khi kết thúc cài đặt !*
 
@@ -245,6 +251,23 @@ root@localcomputer:/home/tuananh# virsh list --all
  1    debian10   running
  -    debian     shut off
 ```
+
+**Cách 2: Thực hiện thiết lập VM thông qua cửa sổ Terminal**
+
+Nếu bạn không muốn sử dụng giao diện GUI, bạn có thể cài đặt thông qua cửa sổ Terminal với câu lệnh :
+
+```bash
+root@localcomputer:/etc/libvirt/qemu# virt-install --name debian10 --ram 1024 --vcpus 1 --disk path=/var/nfs/images/kvm1.img --boot hd --network bridge=testbr
+```
+
+*Trong đó :*
+
+- name : Tên VM
+- ram : Lượng RAM cung cấp cho VM
+- vcpus : CPU được cung cấp cho VM
+- disk path : Đường dẫn tưới file IMG của VM
+- boot : Xác định việc boot VM sẽ được boot từ Hard Disk
+- network : Xác định loại Network sẽ được sử dụng. Trong trường hợp của chúng ta là sử dụng Bridge tên là `testbr`
 
 ---
 
@@ -306,6 +329,7 @@ PING 192.168.98.133 (192.168.98.133) 56(84) bytes of data.
 64 bytes from 192.168.98.133: icmp_seq=1 ttl=64 time=0.438 ms
 64 bytes from 192.168.98.133: icmp_seq=2 ttl=64 time=0.161 ms
 64 bytes from 192.168.98.133: icmp_seq=3 ttl=64 time=0.231 ms
+...
 ```
 
 Sau đó thực hiện lệnh Migrate VM **trên VM-1** theo lệnh sau trên cửa sổ Terminal:
@@ -328,6 +352,7 @@ root@client-1:/etc/libvirt/qemu# virsh list --all
 Ta kiểm tra trạng thái ping trên VM-1 :
 
 ```bash
+...
 64 bytes from 192.168.98.133: icmp_seq=336 ttl=64 time=1.31 ms
 64 bytes from 192.168.98.133: icmp_seq=337 ttl=64 time=0.764 ms
 64 bytes from 192.168.98.133: icmp_seq=338 ttl=64 time=0.384 ms

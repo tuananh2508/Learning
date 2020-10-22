@@ -8,4 +8,4 @@
 
 [Chương 3 : Migrate VM](KVM&QEMU/Chuong-3-Migrate-VM.md)
 
-[LAB ONLINE MIGRATE](KVM&QEMU/LAB-Online-Migrate.md)
+[LAB ONLINE MIGRATE](KVM&QEMU/LAB-Migrate-VMs.md)
