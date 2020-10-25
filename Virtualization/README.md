@@ -4,4 +4,4 @@
 
 [Ghi chép kiến thức về QEMU-KVM ](QEMU&KVM/KVM%26QEMU.md)
 
-[Tổng quan về Ảo hóa và CPU Virtualization ](Virtualization&Hypervisor-CPUVirtualization.md.md)
+[Tổng quan về Ảo hóa và CPU Virtualization ](Virtualization%26Hypervisor/Virtualization%26Hypervisor-CPUVirtualization.md.md)
