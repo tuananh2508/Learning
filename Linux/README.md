@@ -1,6 +1,6 @@
-# PROJECT LINUX
+# GHI CHÉP KIẾN THỨC VỀ LINUX
 
-## LPIC 1 ( updated )
+
 
 [Tìm hiểu về các loại Shell trong Linux ](PROJECT%20LINUX/LINUX%20SHELL.md)
 
