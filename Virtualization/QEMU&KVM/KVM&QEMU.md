@@ -9,3 +9,5 @@
 [Chương 3 : Migrate VM](KVM&QEMU/Chuong-3-Migrate-VM.md)
 
 [LAB ONLINE MIGRATE](KVM&QEMU/LAB-Migrate-VMs.md)
+
+[Hot plug vCPUs, RAM, Disk trong KVM](KVM&QEMU/Hot-Plug-trong-KVM.md)
