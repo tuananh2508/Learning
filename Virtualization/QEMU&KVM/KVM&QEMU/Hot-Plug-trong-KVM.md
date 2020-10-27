@@ -420,11 +420,10 @@ tuananh@localcomputer:~$ virsh setmem debian10 2G --config
 
 Trước khi đến với việc thêm Disk và Resize Disk với VM, chúng ta cần phải hiểu về các khái niệm như **Thin** và **Thick Provisioning.** 
 
-## 3.1. Thin và Thick Provisioning
 
 **Thin** và **Thick Provisioning** là các kĩ thuật cung cấp không gian bộ nhớ hoạt động dựa trên 2 nguyên lý gần như trái ngược nhau. **Thick Provisioning** được chia làm thêm 2 loại nữa đó là : **Lazy Zeroed Disk** và **Eager Zeoroed Disk**.
 
-## 3.1.1 Thick Provisioning
+## 3.1 Thick Provisioning
 
 **Thick Provision** là kĩ thuật thực hiện ***phân vùng bộ nhớ trước***. Với kĩ thuật này, toàn bộ dung lượng bộ nhớ khi Disk được khởi tạo sẽ được phân vùng ngay lập tức . 
 
@@ -439,7 +438,7 @@ Kĩ thuật này được chia làm 2 loại :
 
 ⇒ Ngoài ra, vì lí do bảo mật nên **Eager Zeoroed Disk** được sử dụng nhiều hơn do đặc điểm của kĩ thuật này là "xóa sạch" toàn bộ dữ liệu trước đó nên đảm bảo được yêu cầu bảo mật. Tránh trường hợp Hacker có thể khôi phục dữ liệu từ lượng dữ liệu còn sót trên Disk.
 
-## 3.1.2 Thin Provisioning
+## 3.2 Thin Provisioning
 
 **Thin Provisioning** là loại kĩ thuật thực hiện phân vùng bộ nhớ tuy nhiên điểm khác biệt với **Thick Provisioning** đó là việc nó chỉ thực hiện chiếm 1 lượng phân vùng bộ nhớ ***bằng với dữ liệu được ghi*** trên nó
 
@@ -455,7 +454,7 @@ Giả sử ta có 4 file và thực hiện xóa 2 File 2 và File 3. Khi thực 
 
 Điểm khác biệt đối với **Lazy Zeroed Disk** đó là việc dung lượng của **Thin Provisioning** sẽ tăng lên chứ không cố định.
 
-## 3.1.3 Đánh giá và nhận xét về Thin Provisioning
+## 3.3 Đánh giá và nhận xét về Thin Provisioning
 
 Từ các đặc điểm cơ bản của 2 kĩ thuật trên thì ta nhận thấy nếu xét về mặt hiệu năng :
 
@@ -465,9 +464,9 @@ Từ các đặc điểm cơ bản của 2 kĩ thuật trên thì ta nhận th�
 
 Ví dụ với 1 bộ nhớ 20GB thì chúng ta có thể sử dụng làm bộ nhớ cho 3 VM với giá trị bộ nhớ là 10GB/1VM ( Tổng là 30GB ) → Overprovisioning. Tuy nhiên, khi dung lượng bộ nhớ gần hết, thì chúng ta cần phải thực hiện tăng dung lượng bộ nhớ hoặc Migrate VM để tránh hiện tượng lỗi không ghi được dữ liệu.
 
-## 3.2. Thêm và tách Virtual Disk vào/ra VM
+## 3.4 Thêm và tách Virtual Disk vào/ra VM
 
-**3.2.1 Thêm Virtual Disk vào VM**
+**3.4.1 Thêm Virtual Disk vào VM**
 
 Trước đó chúng ta đã có cái nhìn cơ bản về các loại Disk, sau đây, chúng ta sẽ thực hiện tìm hiểu cách thêm 1 Virtual Disk vào VM đã có sẵn. Các bước thực hiện bao gồm 2 bước quan trọng :
 
@@ -583,7 +582,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 → Nhận thấy đã xuất hiện `/dev/sdb` chính là Virtual Disk ta đã thêm vào có kích thước 1GB.
 
-**3.2.2 Thực hiện tách ( detach ) Virtual Disk**
+**3.4.2 Thực hiện tách ( detach ) Virtual Disk**
 
 Để thực hiện việc tách Virtual Disk, đầu tiên chúng ta sẽ kiểm tra các Disk hiện thời đang hoạt động trên VM với lệnh:
 
