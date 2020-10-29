@@ -1,6 +1,6 @@
 # Hot Plug trong KVM
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled.png)
+![Hot-Plug-trong-KVM/Untitled.png](Hot-Plug-trong-KVM/Untitled.png)
 
 **Hot Plug** **/ Unplug** là hoạt động thực hiện cung cấp thêm hoặc bỏ bớt các thành phần như  RAM,CPU,VirtualDisk đối với các máy ảo đang chạy trên hệ thống trong khi các VM này đang hoạt động. Việc cung cấp thêm các thanh phần này phải đảm bảo **không gây ảnh hưởng** tới hoạt động hiện tại của VM. 
 
@@ -24,7 +24,7 @@ Sau đây chúng ta sẽ cùng tìm hiểu việc thực hiện việc thay đ�
 
 *Mô hình*
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%201.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%201.png)
+![Hot-Plug-trong-KVM/Untitled%201.png](Hot-Plug-trong-KVM/Untitled%201.png)
 
 Đầu tiên chúng ta sẽ liệt kê các hệ thống máy ảo hiện tại đang có trên Server của chúng ta thông qua cửa sổ Terminal :
 
@@ -39,7 +39,7 @@ tuananh@localcomputer:~$ virsh list --all
 
 # 1. vCPUS
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%202.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%202.png)
+![Hot-Plug-trong-KVM/Untitled%202.png](Hot-Plug-trong-KVM/Untitled%202.png)
 
 ### 1.1 **Thiết lập ban đầu**
 
@@ -264,7 +264,7 @@ Security label: libvirt-6ee38b6f-5c74-4418-acfe-f0cf81700af4 (enforcing)
 root@localcomputer:/etc/libvirt/qemu# virsh console debian10
 ```
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%203.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%203.png)
+![Hot-Plug-trong-KVM/Untitled%203.png](Hot-Plug-trong-KVM/Untitled%203.png)
 
 → *Ta nhận thấy chỉ còn **CPU 0** đang thực hiện hoạt động còn 2 **CPU 1 và 2** đã chuyển sang trạng thái offline* 
 
@@ -304,7 +304,7 @@ Security DOI:   0
 
 # 2. RAM
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%204.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%204.png)
+![Hot-Plug-trong-KVM/Untitled%204.png](Hot-Plug-trong-KVM/Untitled%204.png)
 
 Trước khi thực hiện Hot Plug và Unplug RAM chúng ta cần kiểm tra lượng RAM đang sử dụng và lượng RAM tối đa của VM thông qua lệnh tại cửa sổ Terminal :
 
@@ -418,7 +418,7 @@ tuananh@localcomputer:~$ virsh setmem debian10 2G --config
 
 # 3. Virtual Disk
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%205.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%205.png)
+![Hot-Plug-trong-KVM/Untitled%205.png](Hot-Plug-trong-KVM/Untitled%205.png)
 
 Trước khi đến với việc thêm Disk và Resize Disk với VM, chúng ta cần phải hiểu về các khái niệm như **Thin** và **Thick Provisioning.** 
 
@@ -432,7 +432,7 @@ Trước khi đến với việc thêm Disk và Resize Disk với VM, chúng ta 
 
 Ví dụ : Khi khởi tạo 2 Disk theo dạng **Thick Provisioning ( Disk 1 sử dụng Lazy Zeroed Disk - Disk 2 sử dụng Eager Zeoroed Disk  )** mỗi Disk có giá trị **30GB** ⇒ Tổng dung lượng bộ nhớ bị chiếm là **60GB** và các VM khác **không thể** sử dụng phân vùng này.
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%206.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%206.png)
+![Hot-Plug-trong-KVM/Untitled%206.png](Hot-Plug-trong-KVM/Untitled%206.png)
 
 Kĩ thuật này được chia làm 2 loại :
 
@@ -447,11 +447,11 @@ Kĩ thuật này được chia làm 2 loại :
 
 Ví dụ : Khi khởi 2 Disk với **Thin Provisioning(** Disk 3 và Disk 4 ), giá trị mỗi Disk là 30GB. Trên Disk 3 có dung lượng thực là **10 GB**, trên Disk 4 có dung lượng **10GB** → Giá trị trên bộ nhớ là **20GB** ; còn lại 40GB được coi là bộ nhớ khả dụng cho các VM khác có thể sử dụng ( Mặc dù giá trị Logic của 2 Disk này là 60GB). Giá trị **20GB** này có thể tăng dần theo lượng dữ liệu được ghi vào 2 Disk
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%207.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%207.png)
+![Hot-Plug-trong-KVM/Untitled%207.png](Hot-Plug-trong-KVM/Untitled%207.png)
 
 Khi thực hiện xóa dữ liệu trên Disk sử dụng kĩ thuật **Thin Provisioning** thì hệ điều hành ( OS ) sẽ chỉ thực hiện xóa index của file cần xóa. Và sau đó, OS sẽ coi đây là vùng dữ liệu có thể thực hiện ghi dữ liệu lên ( Mặc dù các bit dữ liệu chưa được chuyển toàn bộ thành 0 - "clean state" ). Ví dụ với hình dưới :
 
-![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%208.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%208.png)
+![Hot-Plug-trong-KVM/Untitled%208.png](Hot-Plug-trong-KVM/Untitled%208.png)
 
 Giả sử ta có 4 file và thực hiện xóa 2 File 2 và File 3. Khi thực hiện xóa. OS sẽ thực hiện xóa Index của File 2 và File 3 và việc xóa sẽ diễn ra rất nhanh chóng. **Tuy nhiên ,** cần chú ý rằng lượng dữ liệu được ghi trên File 2 và 3 vẫn **chưa** được xóa ( 0110....0100 ). OS sẽ cho phép việc ghi dữ liệu lên trên phân vùng được bỏ trống này **nhưng** sẽ ảnh hưởng về mặt hiệu năng do khi ghi dữ liệu thì Disk không ở trạng thái Clean State mà cần phải ghi đè dữ liệu.
 
