@@ -20,7 +20,7 @@ Sau đây chúng ta sẽ cùng tìm hiểu việc thực hiện việc thay đ�
 
     Có thể tham khảo tại 
 
-    [Chương 2: Sử dụng libvrt để quản lý các VM](https://www.notion.so/Ch-ng-2-S-d-ng-libvrt-qu-n-l-c-c-VM-44fefa40773f44789c99bafb3261a9e7)
+    [Chương 2: Sử dụng libvrt để quản lý các VM](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM&QEMU/Chuong-2-Su-dung-libvrt.md)
 
 *Mô hình*
 
