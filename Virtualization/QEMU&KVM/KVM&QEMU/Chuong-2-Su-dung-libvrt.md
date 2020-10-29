@@ -9,7 +9,8 @@ Trong mô hình của hệ thống QEMU-KVM thì *libvrt* nằm tại tầng th�
 Ta thực hiện tải Package `libvrt` trên **Ubuntu 20.04** như sau
 
 ```
-sudo apt-get install libvirt-daemon-system libvirt-clients bridge-utils
+sudo apt-get update
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
 ```
 
 Sau khi cài đặt xong bạn nên tiến hành reboot lại hệ thống để Libvrtd Daemon thực hiện khởi động
@@ -169,7 +170,7 @@ Với các OS khác bạn có thể tham khảo trong mục `--location` trong `
 Thực hiện tải Image từ trên các nguồn trên và cài đặt thông qua việc sử dụng **virt-install** 
 
 ```bash
-virt-install --name ubun --ram 512 --hvm --graphics vnc,listen=192.168.150.128 --extra-args="text console=tty0 utf 8 console=ttyS0,115200" --disk path=/tmp/ubun.img,size=10 --location=http://jp.archive.ubuntu.com/ubuntu/dists/trusty/main/installer-amd64/
+virt-install --name debian --ram 1024 --vcpus 1 --hvm --graphics vnc,listen=192.168.150.136 --extra-args="text console=tty0 utf 8 console=ttyS0,115200" --disk path=/home/tuananh/Desktop/Qemu/kvm1.img,size=5 --location=http://ftp.us.debian.org/debian/dists/stable/main/installer-amd64/
 ```
 
 Trong đó các option có ý nghĩa như sau:
