@@ -60,7 +60,7 @@ root@localcomputer:/home/tuananh/Desktop/Qemu# qemu-img resize kvm1.img +2G
 
 *Ở đây ta thực hiện tăng kích thước ( + ) kích thước của Disk lên G. Các đơn vị được sử dụng khi tăng giảm kích thước với `qemu-img` là :* 
 
- k, M, G, T, P hoặcE tương đương với kilo-, mega-, giga-, tera-, peta- và exabytes.
+ k, M, G, T, P hoặc E tương đương với kilo-, mega-, giga-, tera-, peta- và exabytes.
 
  
 
