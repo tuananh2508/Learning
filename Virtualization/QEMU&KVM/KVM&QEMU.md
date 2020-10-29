@@ -11,3 +11,5 @@
 [LAB ONLINE MIGRATE](KVM&QEMU/LAB-Migrate-VMs.md)
 
 [Hot plug vCPUs, RAM, Disk trong KVM](KVM&QEMU/Hot-Plug-trong-KVM.md)
+
+[Thao tác Resize trong KVM](KVM&QEMU/RESIZE-trong-KVM.md)
