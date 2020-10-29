@@ -1,12 +1,12 @@
 # Hot Plug trong KVM
 
-![Hot-Plug-trong-KVM/Untitled.png](Hot-Plug-trong-KVM/Untitled.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled.png)
 
 **Hot Plug** **/ Unplug** là hoạt động thực hiện cung cấp thêm hoặc bỏ bớt các thành phần như  RAM,CPU,VirtualDisk đối với các máy ảo đang chạy trên hệ thống trong khi các VM này đang hoạt động. Việc cung cấp thêm các thanh phần này phải đảm bảo **không gây ảnh hưởng** tới hoạt động hiện tại của VM. 
 
 Sau đây chúng ta sẽ cùng tìm hiểu việc thực hiện việc thay đổi các thông số bên dưới đối với VM :
 
-1. RAM
+1.RAM
 
 2. vCPU
 
@@ -20,7 +20,11 @@ Sau đây chúng ta sẽ cùng tìm hiểu việc thực hiện việc thay đ�
 
     Có thể tham khảo tại 
 
-    [Chương 2: Sử dụng libvrt để quản lý các VM](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM&QEMU/Chuong-2-Su-dung-libvrt.md)
+    [Chương 2: Sử dụng libvrt để quản lý các VM](https://www.notion.so/Ch-ng-2-S-d-ng-libvrt-qu-n-l-c-c-VM-44fefa40773f44789c99bafb3261a9e7)
+
+*Mô hình*
+
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%201.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%201.png)
 
 Đầu tiên chúng ta sẽ liệt kê các hệ thống máy ảo hiện tại đang có trên Server của chúng ta thông qua cửa sổ Terminal :
 
@@ -33,13 +37,11 @@ tuananh@localcomputer:~$ virsh list --all
 
 *Hiện tại trên hệ thống có 1 VM đang hoạt động tên là **debian10***
 
-
-
 # 1. vCPUS
 
-![Hot-Plug-trong-KVM/Untitled%201.png](Hot-Plug-trong-KVM/Untitled%201.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%202.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%202.png)
 
-## 1.1 **Thiết lập ban đầu**
+### 1.1 **Thiết lập ban đầu**
 
 Nếu VM được khởi tạo tạo lần đầu và đang ở trạng thái hoạt động ( running )  thì tại file config sẽ có dạng như sau và chúng ta sẽ **không** thực hiện được việc hot plug vCPUs do số lượng vCPUs đã được cấu hình ( **allocated** ) sẵn và khi thực hiện việc kiểm tra file cấu hình của VM thì sẽ nhận được dạng như dưới ( File cấu hình VM thường được lưu trữ tại `/etc/libvirt/qemu` :
 
@@ -87,7 +89,7 @@ root@localcomputer:/etc/libvirt/qemu# cat debian10.xml | grep vcpu
 
 *Nhận thấy rằng số **vCPU tối đa** trên VM hiện tại là 4 vCPUs , trong đó số CPU hiện tại **đang sử dụng** là 2. Tại đây bạn có thể thực hiện thay đổi số lượng số lượng vCPU tối đa lên số mong muốn, tuy nhiên, không nên chỉnh sửa **quá số lượng physical CPU** của máy vật lý do điều này sẽ gây ra ảnh hưởng về mặt **hiệu năng** của hệ thống.*
 
-Tiếp đó ta cần thực hiện cài đặt `qemu-guest-agent` để daemon này có thể **nhận lệnh từ Host và thực hiện lệnh** từ bên trong VM :
+Tiếp đó ta cần thực hiện cài đặt `qemu-guest-agent` để daemon này có thể nhận lệnh từ Host và thực hiện lệnh từ bên trong VM :
 
 1. Thực hiện chỉnh sửa file cấu hình của VM :
 
@@ -131,7 +133,7 @@ Tiếp đó ta cần thực hiện cài đặt `qemu-guest-agent` để daemon n
                └─369 /usr/sbin/qemu-ga
     ```
 
-## 1.2 Hot Plug vCPUs
+### 1.2 Hot Plug vCPUs
 
 Sau khi hoàn tất các thiết lập ban đầu ta thực hiện hot plug vCPUs 
 
@@ -216,7 +218,7 @@ Nếu sau khi thực hiện **Hot Plug** vCPUs, ta muốn lưu lại số lượ
 root@localcomputer:/etc/libvirt/qemu# virsh setvcpus debian10 3 --config
 ```
 
-## 1.3 Hot Unplug vCPUs
+### 1.3 H**ot Unplug vCPUs**
 
 ***Yêu cầu :***
 
@@ -262,7 +264,7 @@ Security label: libvirt-6ee38b6f-5c74-4418-acfe-f0cf81700af4 (enforcing)
 root@localcomputer:/etc/libvirt/qemu# virsh console debian10
 ```
 
-![Hot-Plug-trong-KVM/Untitled%202.png](Hot-Plug-trong-KVM/Untitled%202.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%203.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%203.png)
 
 → *Ta nhận thấy chỉ còn **CPU 0** đang thực hiện hoạt động còn 2 **CPU 1 và 2** đã chuyển sang trạng thái offline* 
 
@@ -272,7 +274,7 @@ Nếu sau khi thực hiện **Hot Unplug** vCPUs, ta muốn lưu lại số lư�
 root@localcomputer:/etc/libvirt/qemu# virsh setvcpus debian10 1 --config
 ```
 
-Thông số vCPUs sẽ được cập nhật tai `virsh dominfo` khi ta thực hiện shutdown hoặc destroy VM :
+Thông số vCPUs sẽ được cập nhật lại khi ta thực hiện shutdown hoặc destroy VM :
 
 ```bash
 root@localcomputer:/etc/libvirt/qemu# virsh destroy debian10
@@ -302,7 +304,7 @@ Security DOI:   0
 
 # 2. RAM
 
-![Hot-Plug-trong-KVM/Untitled%203.png](Hot-Plug-trong-KVM/Untitled%203.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%204.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%204.png)
 
 Trước khi thực hiện Hot Plug và Unplug RAM chúng ta cần kiểm tra lượng RAM đang sử dụng và lượng RAM tối đa của VM thông qua lệnh tại cửa sổ Terminal :
 
@@ -343,7 +345,7 @@ error: internal error: process exited while connecting to monitor: 2020-10-25T22
     tuananh@localcomputer:~$ virsh setmaxmem debian10 2G
     ```
 
-    Hoặc bạn cũng có thể chỉnh sửa qua file `***.xml` của VM với lệnh `virsh edit ***`  ( với *** là tên VM của bạn )
+    Hoặc bạn cũng có thể chỉnh sửa qua file `***.xml` của VM với lệnh `virsh edit ***` 
 
 3. Thực hiện kiểm tra lại sự thay đổi sau khi thiết lập với :
 
@@ -364,9 +366,9 @@ error: internal error: process exited while connecting to monitor: 2020-10-25T22
     Security DOI:   0
     ```
 
-    → Nhận thấy sự thay đổi của lượng RAM tối đa ( Max memory ) đã tăng lên **2Gb**
+    → Nhận thấy sự thay đổi của lượng RAM tối đa ( Max memory ) đã tăng lên 2Gb
 
-## 2.1 Thay đổi lượng RAM sử dụng
+### 2.1 Thay đổi lượng RAM sử dụng
 
 Việc thay đổi lượng RAM cung cấp cho VM khá đơn giản và được thực hiện theo lệnh :
 
@@ -416,20 +418,21 @@ tuananh@localcomputer:~$ virsh setmem debian10 2G --config
 
 # 3. Virtual Disk
 
-![Hot-Plug-trong-KVM/Untitled%204.png](Hot-Plug-trong-KVM/Untitled%204.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%205.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%205.png)
 
 Trước khi đến với việc thêm Disk và Resize Disk với VM, chúng ta cần phải hiểu về các khái niệm như **Thin** và **Thick Provisioning.** 
 
+### Thin và Thick Provisioning
 
 **Thin** và **Thick Provisioning** là các kĩ thuật cung cấp không gian bộ nhớ hoạt động dựa trên 2 nguyên lý gần như trái ngược nhau. **Thick Provisioning** được chia làm thêm 2 loại nữa đó là : **Lazy Zeroed Disk** và **Eager Zeoroed Disk**.
 
-## 3.1 Thick Provisioning
+### 3.1.1 Thick Provisioning
 
 **Thick Provision** là kĩ thuật thực hiện ***phân vùng bộ nhớ trước***. Với kĩ thuật này, toàn bộ dung lượng bộ nhớ khi Disk được khởi tạo sẽ được phân vùng ngay lập tức . 
 
 Ví dụ : Khi khởi tạo 2 Disk theo dạng **Thick Provisioning ( Disk 1 sử dụng Lazy Zeroed Disk - Disk 2 sử dụng Eager Zeoroed Disk  )** mỗi Disk có giá trị **30GB** ⇒ Tổng dung lượng bộ nhớ bị chiếm là **60GB** và các VM khác **không thể** sử dụng phân vùng này.
 
-![Hot-Plug-trong-KVM/Untitled%205.png](Hot-Plug-trong-KVM/Untitled%205.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%206.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%206.png)
 
 Kĩ thuật này được chia làm 2 loại :
 
@@ -438,23 +441,23 @@ Kĩ thuật này được chia làm 2 loại :
 
 ⇒ Ngoài ra, vì lí do bảo mật nên **Eager Zeoroed Disk** được sử dụng nhiều hơn do đặc điểm của kĩ thuật này là "xóa sạch" toàn bộ dữ liệu trước đó nên đảm bảo được yêu cầu bảo mật. Tránh trường hợp Hacker có thể khôi phục dữ liệu từ lượng dữ liệu còn sót trên Disk.
 
-## 3.2 Thin Provisioning
+### 3.1.2 Thin Provisioning
 
 **Thin Provisioning** là loại kĩ thuật thực hiện phân vùng bộ nhớ tuy nhiên điểm khác biệt với **Thick Provisioning** đó là việc nó chỉ thực hiện chiếm 1 lượng phân vùng bộ nhớ ***bằng với dữ liệu được ghi*** trên nó
 
 Ví dụ : Khi khởi 2 Disk với **Thin Provisioning(** Disk 3 và Disk 4 ), giá trị mỗi Disk là 30GB. Trên Disk 3 có dung lượng thực là **10 GB**, trên Disk 4 có dung lượng **10GB** → Giá trị trên bộ nhớ là **20GB** ; còn lại 40GB được coi là bộ nhớ khả dụng cho các VM khác có thể sử dụng ( Mặc dù giá trị Logic của 2 Disk này là 60GB). Giá trị **20GB** này có thể tăng dần theo lượng dữ liệu được ghi vào 2 Disk
 
-![Hot-Plug-trong-KVM/Untitled%206.png](Hot-Plug-trong-KVM/Untitled%206.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%207.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%207.png)
 
 Khi thực hiện xóa dữ liệu trên Disk sử dụng kĩ thuật **Thin Provisioning** thì hệ điều hành ( OS ) sẽ chỉ thực hiện xóa index của file cần xóa. Và sau đó, OS sẽ coi đây là vùng dữ liệu có thể thực hiện ghi dữ liệu lên ( Mặc dù các bit dữ liệu chưa được chuyển toàn bộ thành 0 - "clean state" ). Ví dụ với hình dưới :
 
-![Hot-Plug-trong-KVM/Untitled%207.png](Hot-Plug-trong-KVM/Untitled%207.png)
+![Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%208.png](Hot%20Plug%20trong%20KVM%203af4273070874c528a08e5e7e558c89e/Untitled%208.png)
 
 Giả sử ta có 4 file và thực hiện xóa 2 File 2 và File 3. Khi thực hiện xóa. OS sẽ thực hiện xóa Index của File 2 và File 3 và việc xóa sẽ diễn ra rất nhanh chóng. **Tuy nhiên ,** cần chú ý rằng lượng dữ liệu được ghi trên File 2 và 3 vẫn **chưa** được xóa ( 0110....0100 ). OS sẽ cho phép việc ghi dữ liệu lên trên phân vùng được bỏ trống này **nhưng** sẽ ảnh hưởng về mặt hiệu năng do khi ghi dữ liệu thì Disk không ở trạng thái Clean State mà cần phải ghi đè dữ liệu.
 
 Điểm khác biệt đối với **Lazy Zeroed Disk** đó là việc dung lượng của **Thin Provisioning** sẽ tăng lên chứ không cố định.
 
-## 3.3 Đánh giá và nhận xét về Thin Provisioning
+### 3.1.3 Đánh giá và nhận xét về Thin Provisioning
 
 Từ các đặc điểm cơ bản của 2 kĩ thuật trên thì ta nhận thấy nếu xét về mặt hiệu năng :
 
@@ -464,9 +467,9 @@ Từ các đặc điểm cơ bản của 2 kĩ thuật trên thì ta nhận th�
 
 Ví dụ với 1 bộ nhớ 20GB thì chúng ta có thể sử dụng làm bộ nhớ cho 3 VM với giá trị bộ nhớ là 10GB/1VM ( Tổng là 30GB ) → Overprovisioning. Tuy nhiên, khi dung lượng bộ nhớ gần hết, thì chúng ta cần phải thực hiện tăng dung lượng bộ nhớ hoặc Migrate VM để tránh hiện tượng lỗi không ghi được dữ liệu.
 
-## 3.4 Thêm và tách Virtual Disk vào/ra VM
+### 3.2. Thêm và tách Virtual Disk vào/ra VM
 
-**3.4.1 Thêm Virtual Disk vào VM**
+**3.2.1 Thêm Virtual Disk vào VM**
 
 Trước đó chúng ta đã có cái nhìn cơ bản về các loại Disk, sau đây, chúng ta sẽ thực hiện tìm hiểu cách thêm 1 Virtual Disk vào VM đã có sẵn. Các bước thực hiện bao gồm 2 bước quan trọng :
 
@@ -582,7 +585,7 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 
 → Nhận thấy đã xuất hiện `/dev/sdb` chính là Virtual Disk ta đã thêm vào có kích thước 1GB.
 
-**3.4.2 Thực hiện tách ( detach ) Virtual Disk**
+**3.2.2 Thực hiện tách ( detach ) Virtual Disk**
 
 Để thực hiện việc tách Virtual Disk, đầu tiên chúng ta sẽ kiểm tra các Disk hiện thời đang hoạt động trên VM với lệnh:
 
@@ -614,7 +617,7 @@ root@localcomputer:/home/tuananh/Desktop/Qemu# virsh detach-disk debian10 /home/
 
 ---
 
-## Một số lỗi có thể xuất hiện trong quá trình thực hiện
+### Một số lỗi có thể xuất hiện trong quá trình thực hiện
 
 **Lỗi xảy ra khi thực hiện Hot Plug vCPUs**
 
@@ -648,7 +651,7 @@ Disk attached successfully
 
 ---
 
-## Nguồn tham khảo
+### Nguồn tham khảo
 
 [Linux KVM - How to Add/Resize Virtual disk on fly? Part 7 - UnixArena](https://www.unixarena.com/2015/12/linux-kvm-how-to-addresize-virtual-disk-on-fly.html/)
 
