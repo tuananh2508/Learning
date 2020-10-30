@@ -25,7 +25,7 @@
    * [2. Thêm dung lượng vào Snapshot](#2-thêm-dung-lượng-vào-snapshot)
    * [3. Thực hiện Revert quay trở lại Snapshot](#3-thực-hiện-revert-quay-trở-lại-snapshot)
    * [4. Tự động thực hiện mở rộng dung lượng của Snapshot Volume](#4-tự-động-thực-hiện-mở-rộng-dung-lượng-của-snapshot-volume)
-      * [Nguồn tham khảo](#nguồn-tham-khảo)
+   * [Nguồn tham khảo](#nguồn-tham-khảo)
 
 
 # 1. Tạo LVM Snapshot
