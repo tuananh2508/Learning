@@ -21,7 +21,7 @@ Thông qua bài viết này chúng ta sẽ tìm hiểu về cách Resize VM Disk
 **Mục lục**
  * [1. Expand ( Tăng dung lượng )](#1-expand--tăng-dung-lượng-)
  * [2. Reduce ( Giảm dung lượng )](#2-reduce--giảm-dung-lượng-)
-      * [Nguồn tham khảo](#nguồn-tham-khảo)
+ * [Nguồn tham khảo](#nguồn-tham-khảo)
 
 # 1. Expand ( Tăng dung lượng )
 
