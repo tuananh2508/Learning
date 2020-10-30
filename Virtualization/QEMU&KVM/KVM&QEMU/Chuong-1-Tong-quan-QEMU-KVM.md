@@ -1,6 +1,14 @@
 # Chương 1: Tổng quan về QEMU-KVM
 
-# 1. Giới thiệu
+**Mục lục**
+   * [Giới thiệu](#giới-thiệu)
+   * [Tiến hành cài đặt QEMU trên Ubuntu 18.04](#tiến-hành-cài-đặt-qemu-trên-ubuntu-1804)
+   * [Thực hiện tạo Image với qemu-img](#thực-hiện-tạo-image-với-qemu-img)
+   * [Chuẩn bị OS Image cho File](#chuẩn-bị-os-image-cho-file)
+   * [Thực hiện cài đặt OS trên Image với deboostrap](#thực-hiện-cài-đặt-os-trên-image-với-deboostrap)
+   * [Thực hiện chạy VM bằng Virt-manager](#thực-hiện-chạy-vm-bằng-virt-manager)
+
+# Giới thiệu
 
 *Quick Emulator* hay còn được viết tắt là **QEMU** là 1 Hypervisor và là một phần tử chính trong cấu trúc QEMU/KVM. QEMU thực hiện nhiệm vụ ảo hóa phần cứng và mô phỏng CPU. QEMU có thể thực hiện mô phỏng theo 2 kiểu khác nhau:
 
@@ -13,7 +21,7 @@ QEMU kết hợp cùng KVM sẽ tạo nên 1 Hypervisor type 2 giúp tăng tính
 
 Chúng ta sẽ thực hiện tìm hiểu về chức năng mô hình hóa toàn bộ hệ thống của QEMU-KVM trên phiên bản **Ubuntu 18.04**
 
-# 2. Tiến hành cài đặt QEMU trên Ubuntu 18.04
+# Tiến hành cài đặt QEMU trên Ubuntu 18.04
 
 Để đơn giản hóa quá trình cài đặt, chúng ta sẽ thực hiện cài từ Ubuntu Reposite ( Ngoài ra còn 1 cách khác đó là cài từ Source ). Để tiến hành việc cài đặt ta thực hiện việc ta nhập lệnh sau:
 
@@ -54,7 +62,7 @@ ii  qemu-utils                                 1:2.11+dfsg-1ubuntu7.32          
 
 Ngoài ra còn có công cụ và tiện ích đi kèm khác để giúp quản lý các máy ảo: qemu-utils 
 
-# 3. Thực hiện tạo Image với qemu-img
+# Thực hiện tạo Image với qemu-img
 
 Đầu tiên chúng ta cần xác định xem OS hiện tại đang sử dụng QEMU hỗ trợ những loại kiểu định dạng file nào, việc này có thể thực hiện thông qua lệnh sau :
 
@@ -97,7 +105,7 @@ virtual size: 10G (10737418240 bytes) #Kich thuoc ao
 disk size: 0 # Kich thuoc thuc su tren he thong
 ```
 
-# 4. Chuẩn bị OS Image cho File
+# Chuẩn bị OS Image cho File
 
 Ở đây chúng ta sẽ sử dụng 4 công cụ đó là :
 
@@ -203,7 +211,7 @@ root@Computer:~/Desktop/QEMU# file -s example
 example: DOS/MBR boot sector; partition 1 : ID=0x83, start-CHS (0x0,16,17), end-CHS (0x0,17,35), startsector 1024, 82 sectors; partition 2 : ID=0x83, start-CHS (0x0,32,33), end-CHS (0x119,106,17), startsector 2048, 20969472 sectors
 ```
 
-# 5. Thực hiện cài đặt OS trên Image với deboostrap
+# Thực hiện cài đặt OS trên Image với deboostrap
 
 Sau khi có được 2 phân vùng ( partition ) ở bước trên, chúng ta cần thực hiện mount phân vùng sử  dụng làm filesystem vào `/mnt` trên máy host để có thể sử dụng phân vùng na :
 
