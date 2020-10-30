@@ -21,7 +21,6 @@
 ![Snapshot-LVM/Untitled%201.png](Snapshot-LVM/Untitled%201.png)
 
 **Mục lục**
-   * [Tạo Snapshot LVM](#tạo-snapshot-lvm)
    * [1. Tạo LVM Snapshot](#1-tạo-lvm-snapshot)
    * [2. Thêm dung lượng vào Snapshot](#2-thêm-dung-lượng-vào-snapshot)
    * [3. Thực hiện Revert quay trở lại Snapshot](#3-thực-hiện-revert-quay-trở-lại-snapshot)
