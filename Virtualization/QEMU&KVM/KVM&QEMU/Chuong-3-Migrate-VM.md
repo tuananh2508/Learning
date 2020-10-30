@@ -8,6 +8,11 @@ Với khái niệm và việc thiết lập Shared Storage thì chúng ta đã t
 
 [Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md)
 
+**Mục lục**
+ * [Online Migrate với Shared Storage](#online-migrate-với-shared-storage)
+ * [Offline Migrate với Local Image](#offline-migrate-với-local-image)
+ * [Nguồn tham khảo :](#nguồn-tham-khảo-)
+
 # Online Migrate với Shared Storage
 
 Bạn có thể sử dụng nhiều loại Shared Storage khác nhau như : iSCSI, GlusterFS, NFS hay DRBD,... Tại ví dụ này sẽ thực hiện sử dụng NFS Storage. Việc thiết lập NFS Storage có thể xem ví dụ tại chương trước. Ở đây chúng ta thực hiện xét mô hình :
