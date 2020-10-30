@@ -16,7 +16,7 @@
 
 [Cách hệ thống Linux Bootup ](PROJECT%20LINUX/BOOT%20PROCESS.md)
 
-[Tìm hiểu về Logical Volume Management(LVM) ](PROJECT%20LINUX/LVM.md)
+[Tìm hiểu về Logical Volume Management(LVM) ](PROJECT%20LINUX/Logical-Volume-Management.md)
 
 [Quản trị hệ thống bằng cách sử dụng useradd, chgrp và chown , ... ](PROJECT%20LINUX/ADMINISTERING%20SYSTEM.md)
 
