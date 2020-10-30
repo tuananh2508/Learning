@@ -37,6 +37,22 @@ tuananh@localcomputer:~$ virsh list --all
 
 *Hiện tại trên hệ thống có 1 VM đang hoạt động tên là **debian10***
 
+**Mục lục**
+   * [1. vCPUS](#1-vcpus)
+         * [1.1 Thiết lập ban đầu](#11-thiết-lập-ban-đầu)
+         * [1.2 Hot Plug vCPUs](#12-hot-plug-vcpus)
+         * [1.3 Hot Unplug vCPUs](#13-hot-unplug-vcpus)
+   * [2. RAM](#2-ram)
+         * [2.1 Thay đổi lượng RAM sử dụng](#21-thay-đổi-lượng-ram-sử-dụng)
+   * [3. Virtual Disk](#3-virtual-disk)
+         * [Thin và Thick Provisioning](#thin-và-thick-provisioning)
+         * [3.1.1 Thick Provisioning](#311-thick-provisioning)
+         * [3.1.2 Thin Provisioning](#312-thin-provisioning)
+         * [3.1.3 Đánh giá và nhận xét về Thin Provisioning](#313-đánh-giá-và-nhận-xét-về-thin-provisioning)
+         * [3.2. Thêm và tách Virtual Disk vào/ra VM](#32-thêm-và-tách-virtual-disk-vàora-vm)
+   * [Một số lỗi có thể xuất hiện trong quá trình thực hiện](#một-số-lỗi-có-thể-xuất-hiện-trong-quá-trình-thực-hiện)
+   * [Nguồn tham khảo](#nguồn-tham-khảo)
+
 # 1. vCPUS
 
 ![Hot-Plug-trong-KVM/Untitled%202.png](Hot-Plug-trong-KVM/Untitled%202.png)
