@@ -2,6 +2,29 @@
 
 ![Create-Delete-Extend-Reduce-LVM/Untitled.png](Create-Delete-Extend-Reduce-LVM/Untitled.png)
 
+**Mục lục**
+
+
+   * [Create-Delete-Extend-Reduce-LVM](#create-delete-extend-reduce-lvm)
+      * [1. Tổng quan](#1-tổng-quan)
+      * [2. Tạo 1 Logical Volume](#2-tạo-1-logical-volume)
+         * [Bước 1 : Tạo Physical Volume](#bước-1--tạo-physical-volume)
+         * [Bước 2 : Tạo Volume Group :](#bước-2--tạo-volume-group-)
+         * [Bước 3 : Tạo Logical Volume](#bước-3--tạo-logical-volume)
+         * [Bước 4 : Tạo file hệ thống](#bước-4--tạo-file-hệ-thống)
+      * [3. Mở rộng Volume Group và thay đổi kích thước của Logical Volume :](#3-mở-rộng-volume-group-và-thay-đổi-kích-thước-của-logical-volume-)
+         * [Bước 1 : Tạo điểm gắn kết cho quá trình định kích cỡ ( resize ) :](#bước-1--tạo-điểm-gắn-kết-cho-quá-trình-định-kích-cỡ--resize--)
+         * [Bước 2 : Thêm  Physical Volume  vào Group Volume :](#bước-2--thêm--physical-volume--vào-group-volume-)
+      * [4. Giảm kích thước của Logical Volume :](#4-giảm-kích-thước-của-logical-volume-)
+         * [Bước 1 : Unmount](#bước-1--unmount)
+         * [Bước 2 : Kiểm tra lỗi :](#bước-2--kiểm-tra-lỗi-)
+         * [Bước 3 : Thực hiện giảm kích thước file hệ thống](#bước-3--thực-hiện-giảm-kích-thước-file-hệ-thống)
+         * [Bước 4 : Giảm kích thước qua lvreduce](#bước-4--giảm-kích-thước-qua-lvreduce)
+         * [Bước 5: Kiểm tra file hệ thống](#bước-5-kiểm-tra-file-hệ-thống)
+      * [5. Xóa Logical Volume , Volume Group và Physical Group :](#5-xóa-logical-volume--volume-group-và-physical-group-)
+      * [Nguồn tham khảo](#nguồn-tham-khảo)
+
+
 ## 1. Tổng quan
 
 LVM là viết tắt của "Logical Volume Control" được sử dụng để tạo các phân vùng ảo tùy theo nhu cầu của người sử dụng. 
