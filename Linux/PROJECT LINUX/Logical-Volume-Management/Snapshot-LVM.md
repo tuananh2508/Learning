@@ -12,7 +12,7 @@
 
     Có thể tham khảo tại 
 
-    [Create-Delete-Extend-Reduce-LVM](Create-Delete-Extend-Reduce-LVM%20821ad5a4e70f4cc499a4ffe1330a5427.md)
+    [Create-Delete-Extend-Reduce-LVM](Create-Delete-Extend-Reduce-LVM.md)
 
 - 1 Server sử dụng OS Linux : Trong bài viết này sử dụng **Ubuntu Server 20.04 ( có ít nhất 1 Logical Volume )**
 
