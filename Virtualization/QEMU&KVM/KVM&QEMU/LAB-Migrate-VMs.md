@@ -1,7 +1,6 @@
 # LAB Migrate VM với QEMU/KVM kết hợp với Linux Bridge
 
 **Mục lục**
- * [LAB Migrate VM với QEMU/KVM kết hợp với Linux Bridge](#lab-migrate-vm-với-qemukvm-kết-hợp-với-linux-bridge)
  * [Mô hình bài LAB thực hiện :](#mô-hình-bài-lab-thực-hiện-)
  * [Thực hiện bài LAB](#thực-hiện-bài-lab)
       * [Thiết lập Linux Bridge](#thiết-lập-linux-bridge)
