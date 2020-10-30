@@ -4,6 +4,14 @@
 
 Linux Bridge là 1 tiện ích trong nhân Linux, được ra đời để giải quyết vấn đề ảo hóa mạng trong cơ chế ảo hóa đối với các máy vật lý. Về cơ bản thì Linux Bridge sẽ tạo ra 1 Switch ảo trong hệ thống để kết nối hệ thống mạng của các máy ảo ( hiện đang có trên máy vật lý ) với hệ thống đường mạng vật lý. 
 
+**Mục lục**
+   * [Linux Bridge](#linux-bridge)
+   * [Sơ đồ kiến trúc của Linux Bridge](#sơ-đồ-kiến-trúc-của-linux-bridge)
+   * [Các tính năng cơ bản của Linux Bridge](#các-tính-năng-cơ-bản-của-linux-bridge)
+   * [Thực hiện cấu hình cơ bản với Linux Bridge trên Ubuntu 20.04](#thực-hiện-cấu-hình-cơ-bản-với-linux-bridge-trên-ubuntu-2004)
+   * [Thiết lập mức độ ưu tiên trên Linux Bridge trên Ubuntu 20.04](#thiết-lập-mức-độ-ưu-tiên-trên-linux-bridge-trên-ubuntu-2004)
+   * [Nguồn tham khảo](#nguồn-tham-khảo)
+   
 # Sơ đồ kiến trúc của Linux Bridge
 
 ![Linux-Bridge/Untitled%201.png](Linux-Bridge/Untitled%201.png)
