@@ -12,11 +12,10 @@ Trong quá trình sử dụng các VM, sẽ có các trường hợp chúng ta m
          * [Trên Server máy chủ](#trên-server-máy-chủ)
          * [Trên Server Clients :](#trên-server-clients-)
          * [Một số lưu ý với NFS Shared Storage](#một-số-lưu-ý-với-nfs-shared-storage)
-   * [Tận dụng khả năng của DRBD để chia sẻ dữ liệu](#tận-dụng-khả-năng-của-drbd-để-chia-sẻ-dữ-liệu)
-      * [Thực hiện cấu hình DRBD trên Ubuntu 20.04](#thực-hiện-cấu-hình-drbd-trên-ubuntu-2004)
-         * [Trên Server Node Primary :](#trên-server-node-primary-)
-         * [Một số lưu ý đối với DRBD Shared Storage](#một-số-lưu-ý-đối-với-drbd-shared-storage)
-   * [Nguồn tham khảo](#nguồn-tham-khảo)
+ * [Tận dụng khả năng của DRBD để chia sẻ dữ liệu](#tận-dụng-khả-năng-của-drbd-để-chia-sẻ-dữ-liệu)
+      * [Trên Server Node Primary :](#trên-server-node-primary-)
+      * [Một số lưu ý đối với DRBD Shared Storage](#một-số-lưu-ý-đối-với-drbd-shared-storage)
+ * [Nguồn tham khảo](#nguồn-tham-khảo)
 
 # NFS
 
