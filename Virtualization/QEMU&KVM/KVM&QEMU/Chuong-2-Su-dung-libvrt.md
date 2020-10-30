@@ -1,7 +1,6 @@
 # Chương 2: Sử dụng libvrt để quản lý các VM
 
 **Mục lục**
-   * [Chương 2: Sử dụng libvrt để quản lý các VM](#chương-2-sử-dụng-libvrt-để-quản-lý-các-vm)
    * [1. Thực hiện tải package libvrt](#1-thực-hiện-tải-package-libvrt)
    * [2. Sử dụng File XML để tạo 1 VM](#2-sử-dụng-file-xml-để-tạo-1-vm)
    * [3. Thực hiện bật , tắt và xóa VM](#3-thực-hiện-bật--tắt-và-xóa-vm)
