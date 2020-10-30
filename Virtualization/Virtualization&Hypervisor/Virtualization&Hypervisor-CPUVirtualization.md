@@ -22,7 +22,7 @@ Thông qua bài này chúng ta sẽ tìm hiểu 2 khái niệm của công ngh�
       * [4.1 Full Virtualization](#41-full-virtualization)
       * [4.2 Para Virtualization](#42-para-virtualization)
       * [4.3 Hardware Assisted Virtualization](#43-hardware-assisted-virtualization)
-      * [Tham khảo](#tham-khảo)
+   * [Tham khảo](#tham-khảo)
 
 
 # 1. Virtualization
