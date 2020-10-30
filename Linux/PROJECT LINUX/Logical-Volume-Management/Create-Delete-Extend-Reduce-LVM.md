@@ -1,6 +1,6 @@
-# LVM
+# Create-Delete-Extend-Reduce-LVM
 
-![LVM/Untitled.png](LVM/Untitled.png)
+![Create-Delete-Extend-Reduce-LVM/Untitled.png](Create-Delete-Extend-Reduce-LVM/Untitled.png)
 
 ## 1. Tổng quan
 
@@ -10,7 +10,7 @@ LVM là viết tắt của "Logical Volume Control" được sử dụng để t
 
 Cấu tạo chính của LVM được mô tả như hình sau :
 
-![LVM/Untitled%201.png](LVM/Untitled%201.png)
+![Create-Delete-Extend-Reduce-LVM/Untitled%201.png](Create-Delete-Extend-Reduce-LVM/Untitled%201.png)
 
 Trong đó có một số khái niệm cơ bản như :
 
@@ -35,8 +35,8 @@ Sau đây chúng ta sẽ cùng thực hiện 1 số câu lệnh cơ bản để 
   /dev/cl/swap [       1.60 GiB]
   /dev/sda2    [     <19.00 GiB] LVM physical volume
   /dev/sdb     [      16.00 GiB]
-  /dev/sdc     [      16.00 GiB]
-  /dev/sdd     [      16.00 GiB]
+	/dev/sdc     [      16.00 GiB]
+	/dev/sdd     [      16.00 GiB]
   5 disks
   1 partition
   0 LVM physical volume whole disks
@@ -86,7 +86,7 @@ Nếu bạn cần kiểm tra lại trạng thái của `Physical Volume` có th�
 
 ### Bước 2 : Tạo Volume Group :
 
-![LVM/Untitled%202.png](LVM/Untitled%202.png)
+![Create-Delete-Extend-Reduce-LVM/Untitled%202.png](Create-Delete-Extend-Reduce-LVM/Untitled%202.png)
 
 Người sử dụng có thể thực hiện việc ghép các `Physical Volume` thành 1 `Volume Group` thông qua lệnh :
 
@@ -125,7 +125,7 @@ Trong đó PE có ý nghĩa là Physical Extent. Từ đó ta thấy được vi
 
 ### Bước 3 : Tạo Logical Volume
 
-![LVM/Untitled%203.png](LVM/Untitled%203.png)
+![Create-Delete-Extend-Reduce-LVM/Untitled%203.png](Create-Delete-Extend-Reduce-LVM/Untitled%203.png)
 
 Ta thực hiện tạo 2 Volume : Project và Backup, trong đó Project có dung lượng 10Gb và Backup sẽ có dung lượng bằng 100% dung lượng còn lại
 
@@ -136,13 +136,13 @@ Ta thực hiện tạo 2 Volume : Project và Backup, trong đó Project có dun
   Logical volume "backups" created.
 
 ```
-```
-Trong đó :  -n Tên `Logical Volume`
 
-            -L Kích thước cụ thể của Volume
+Trong đó : `-n` Tên `Logical Volume`
 
-            -l Phần trăm kích thước của không gian còn lại trên Volume
-```
+            `-L` Kích thước cụ thể của Volume
+
+       `-l` Phần trăm kích thước của không gian còn lại trên Volume
+
 Thực hiện kiểm tra (nếu muốn xem các thông số cụ thể của Volume thì có thể sử dụng lệnh `lvdisplay` ):
 
 ```bash
@@ -341,7 +341,7 @@ Resizing the filesystem on /dev/vg0/projects to 2621440 (4k) blocks.
 The filesystem on /dev/vg0/projects is now 2621440 blocks long.
 ```
 
-### Bước 4 : Giảm kích t hước qua `lvreduce`
+### Bước 4 : Giảm kích thước qua `lvreduce`
 
 ```bash
 [root@localhost ~]# lvreduce -L 10G /dev/vg0/projects
