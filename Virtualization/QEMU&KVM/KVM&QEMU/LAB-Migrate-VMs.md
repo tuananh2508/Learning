@@ -1,5 +1,14 @@
 # LAB Migrate VM với QEMU/KVM kết hợp với Linux Bridge
 
+**Mục lục**
+ * [LAB Migrate VM với QEMU/KVM kết hợp với Linux Bridge](#lab-migrate-vm-với-qemukvm-kết-hợp-với-linux-bridge)
+ * [Mô hình bài LAB thực hiện :](#mô-hình-bài-lab-thực-hiện-)
+ * [Thực hiện bài LAB](#thực-hiện-bài-lab)
+      * [Thiết lập Linux Bridge](#thiết-lập-linux-bridge)
+      * [Tạo VM từ Image nhận được từ NFS-Server :](#tạo-vm-từ-image-nhận-được-từ-nfs-server-)
+      * [Thực hiện Migrate VM](#3-thực-hiện-migrate-vm)
+ * [Các lỗi có thể gặp phải ( Sẽ tiếp tục Update )](#các-lỗi-có-thể-gặp-phải--sẽ-tiếp-tục-update-)
+
 ### Bài Lab thực hiện Live Mirgrate QEMU/KVM với Shared Storage sử dụng NFS trên Ubuntu 20.04
 
 ## Mô hình bài LAB thực hiện :
@@ -271,7 +280,7 @@ root@localcomputer:/etc/libvirt/qemu# virt-install --name debian10 --ram 1024 --
 
 ---
 
-### 3. Thực hiện Migrate VM
+### Thực hiện Migrate VM
 
 **Tại VM-1**, ta thực hiện truy cập máy ảo được tạo thông qua :
 
