@@ -18,6 +18,11 @@ Thông qua bài viết này chúng ta sẽ tìm hiểu về cách Resize VM Disk
 
 ![RESIZE-trong-KVM/Untitled%201.png](RESIZE-trong-KVM/Untitled%201.png)
 
+**Mục lục**
+ * [1. Expand ( Tăng dung lượng )](#1-expand--tăng-dung-lượng-)
+ * [2. Reduce ( Giảm dung lượng )](#2-reduce--giảm-dung-lượng-)
+      * [Nguồn tham khảo](#nguồn-tham-khảo)
+
 # 1. Expand ( Tăng dung lượng )
 
 Tại mục này chúng ta sẽ thực hiện tăng kích thước cho file hệ thống **qcow2** (Vốn là loại dạng file mặc định của KVM ) . **qcow2** là loại file cho phép việc thực hiện nén cũng như tạo Snapshot VM một cách dễ dàng hơn dạng file **raw.**
