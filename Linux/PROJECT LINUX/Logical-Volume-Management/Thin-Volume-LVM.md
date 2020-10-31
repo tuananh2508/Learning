@@ -1,4 +1,4 @@
-# Thin-Volume-LVM
+# Thin Volume trong LVM
 
 ![Thin-Volume-LVM/Untitled.png](Thin-Volume-LVM/Untitled.png)
 
@@ -26,11 +26,10 @@ Trước khi đến với việc cấu hình **Thin Volume** trong LVM thì chú
 ![Thin-Volume-LVM/Untitled%201.png](Thin-Volume-LVM/Untitled%201.png)
 
 **Mục lục**
-- [Thin-Volume-LVM](#thin-volume-lvm)
 - [1. Thực hiện tạo Thin Volume](#1-thực-hiện-tạo-thin-volume)
 - [2. Thực hiện tạo Thin Volume từ Thin Pool](#2-thực-hiện-tạo-thin-volume-từ-thin-pool)
 - [3. Thể hiện tính năng Overprovisioning](#3-thể-hiện-tính-năng-overprovisioning)
-  - [Nguồn tham khảo](#nguồn-tham-khảo)
+- [Nguồn tham khảo](#nguồn-tham-khảo)
 
 
 # 1. Thực hiện tạo Thin Volume
