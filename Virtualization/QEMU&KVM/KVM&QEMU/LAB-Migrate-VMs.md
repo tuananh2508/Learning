@@ -172,6 +172,7 @@ Tiếp theo đó thực hiện :
 ```bash
 root@client-1:/etc/libvirt/qemu# brctl addbr testbr
 root@client-1:/etc/libvirt/qemu# brctl addif testbr ens38
+root@client-1:/etc/libvirt/qemu# dhclient testbr
 ```
 
 *Trong đó `ens38` (tại VM-2 ) là Interface cùng dải mạng với `ens34`* ( tại VM-1) và **lưu ý tên Linux Bridge tại VM-2 BẮT BUỘC PHẢI CÙNG TÊN với Linux Bridge tại VM-1**
@@ -184,6 +185,33 @@ bridge name	bridge id		         STP enabled	interfaces
 testbr		8000.000c2919da6e        no		        ens38
 virbr0		8000.525400a87b08	     yes		    virbr0-nic
 ```
+
+**Lưu ý: Nếu bạn muốn các thay đổi ở trên tồn tại sau quá trình reboot, thì sau khi thực hiện các bước trên, ta cần thực hiện cấu hình file `/etc/netplan/*`**
+
+*Trong đó, file `*` có thể thay đổi tùy trên máy bạn*
+
+```bash
+root@localcomputer:/home/tuananh# nvim /etc/netplan/01-network-manager-all.yaml 
+```
+
+Rồi thực hiện chỉnh sửa file với nội dung tương tự như sau:
+
+```
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ens33:
+      dhcp4: yes
+  bridges:
+    testbr:
+      dhcp4: yes
+      interfaces:
+             - ens33
+```
+
+*Trong đó, các thông số như `testbr` hay `ens33` có thể thay đổi tùy vào các bước đã được hướng dẫn bên trên ở trên máy của bạn* 
+
 
 **Tại VM-1 và 2, ta thực hiện thiết lập tường lửa** :
 
