@@ -27,10 +27,7 @@ Server có địa chỉ IP : `192.168.98.129` là server mà VM sẽ được ch
 - Thiết lập NFS Storage giữa 2 Server
 
     ( Có thể tham khảo việc thiết lập NFS Shared Storage tại : 
-
-    [Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md)
-
-    )
+[Chương 2.5: Tổng quan về Shared Storage](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/QEMU%26KVM/KVM%26QEMU/Chuong-2.5-Tong-quan-Shared-Storage.md) )
 
 - 1 file Image VM  ( *đã được cấu hình User* ) chứa trên NFS Server
 - Kết nối SSH giữa 2 Server sẽ sử dụng VM
