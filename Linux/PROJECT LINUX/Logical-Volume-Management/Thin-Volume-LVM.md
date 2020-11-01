@@ -21,7 +21,7 @@ Trước khi đến với việc cấu hình **Thin Volume** trong LVM thì chú
 
 - 2 Physical Volume trên OS ( Debian10)  : `/dev/sda3` và  `/dev/sda4/`
 
-**Mô hình Logic LVM**
+**Mô hình Logic trong ví dụ**
 
 ![Thin-Volume-LVM/Untitled%201.png](Thin-Volume-LVM/Untitled%201.png)
 
