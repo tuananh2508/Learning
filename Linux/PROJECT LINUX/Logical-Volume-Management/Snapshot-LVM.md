@@ -30,9 +30,55 @@
 
 # 1. Tạo LVM Snapshot
 
-Để thực hiện tạo Snapshot của 1 LVM Volume, đầu tiên chúng ta cần xác định các Logical Volume (*LV*) hiện tại đang có trên Server thông qua lệnh :
+Đầu tiên, nếu chưa có 1 Logical Volume thì chúng ta sẽ tiên hành thực hiện tạo 1 LV. Ta thực hiện kiểm tra các Disk có thể sử dụng để tạo 1 Physical Volume ( Nếu bạn đã có 1 Logical Volume thì có thể tiếp tục đến phần tạo Snapshot ):
+
+```
+root@debian:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda      8:0    0 1000M  0 disk
+└─sda1   8:1    0  999M  0 part
+sdb      8:16   0 1000M  0 disk
+└─sdb1   8:17   0  999M  0 part
+sdc      8:32   0    6G  0 disk
+├─sdc1   8:33   0    4G  0 part /
+├─sdc2   8:34   0    1K  0 part
+├─sdc3   8:35   0    1G  0 part
+└─sdc5   8:37   0 1022M  0 part [SWAP]
+```
+
+Sau đó tạo các Physical Volume từ các Disk trống :
+
+```
+root@debian:~# pvcreate /dev/sdb1
+  Physical volume "/dev/sdb1" successfully created.
+root@debian:~# pvcreate /dev/sda1
+  Physical volume "/dev/sda1" successfully created.
+root@debian:~# pvcreate /dev/sdc3
+  Physical volume "/dev/sdc3" successfully created.
+```
+
+Kiểm tra việc các PV được thiết lập :
+
+```
+root@debian:~# pvs
+  PV         VG Fmt  Attr PSize   PFree
+  /dev/sda1     lvm2 ---  999.00m 999.00m
+  /dev/sdb1     lvm2 ---  999.00m 999.00m
+  /dev/sdc3     lvm2 ---    1.00g   1.00g
+```
+
+Tiếp đó thực hiện tạo 1 Volume Group tên là `vg0` :
+
+```
+root@debian:~# vgcreate vg0 /dev/sda1 /dev/sdb1 /dev/sdc3
+  Volume group "vg0" successfully created
+```
+
+Sau đó chúng ta sẽ thực hiện tạo 1 Logcial Volume rồi sau đó sẽ tạo 1 Snapshot của Volume này :
 
 ```bash
+root@debian:~# lvcreate -L 1G -n parti3 vg0
+  Logical volume "parti3" created.
 root@debian:/mnt# lvs
   LV     VG  Attr       LSize Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   parti3 vg0 -wi-ao---- 1.00g
