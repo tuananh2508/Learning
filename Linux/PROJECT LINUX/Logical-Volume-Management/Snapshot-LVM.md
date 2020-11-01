@@ -16,7 +16,7 @@
 
 - 1 Server sử dụng OS Linux : Trong bài viết này sử dụng **Ubuntu Server 20.04 ( có ít nhất 1 Logical Volume )**
 
-**Mô hình Logic** 
+**Mô hình Logic trong ví dụ** 
 
 ![Snapshot-LVM/Untitled%201.png](Snapshot-LVM/Untitled%201.png)
 
