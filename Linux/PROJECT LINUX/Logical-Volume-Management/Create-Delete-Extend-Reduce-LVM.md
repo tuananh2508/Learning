@@ -2,6 +2,8 @@
 
 ![Create-Delete-Extend-Reduce-LVM/Untitled.png](Create-Delete-Extend-Reduce-LVM/Untitled.png)
 
+**Các ví dụ dưới được thực hiện với OS Ubuntu 20.04**
+
 **Mục lục**
    * [1. Tổng quan](#1-tổng-quan)
    * [2. Tạo 1 Logical Volume](#2-tạo-1-logical-volume)
@@ -41,6 +43,12 @@ Trong đó có một số khái niệm cơ bản như :
 Ngoài ra còn một khái niệm đó là `Extent` . Đây là một volume thuộc vào `Volume Groups` có kích thước tùy theo quy định của `Volume Group` . Nó thể hiện kích thước nhỏ nhất trên Volume. Extent trên Physical Volume là Physical Extent và tương tự đối với trên Logical volume được gọi là Logical Extent 
 
 Từ đó ta có thể thấy Extent chính là ý tưởng cốt lõi ( core concept ) của LVM. LVM chính là cách ánh xạ giữa Physical và Logical Extent. Các Logical Extent được hợp nhất bởi LVM tạo thành Logical Volume. Nên việc giảm bớt hay thêm vào kích thước của Logical Volume chính là việc thêm hoặc bớt đi các Extent.
+
+Để thực hiện cài đặt các gói liên quan tới LVM , ta sử dụng lệnh sau ( Với Ubuntu ):
+
+```
+sudo apt-get install lvm2
+```
 
 Sau đây chúng ta sẽ cùng thực hiện 1 số câu lệnh cơ bản để có thể xem thống số, thêm , xóa và định cỡ ( resize ) các Logical Volume thông qua LVM. 
 
