@@ -14,7 +14,7 @@
 
     [Create-Delete-Extend-Reduce-LVM](Create-Delete-Extend-Reduce-LVM.md)
 
-- 1 Server sử dụng OS Linux : Trong bài viết này sử dụng **Ubuntu Server 20.04 ( có ít nhất 1 Logical Volume )**
+- 1 Server sử dụng OS Linux : Trong bài viết này sử dụng **Debian 10 ( có ít nhất 1 Logical Volume )**
 
 **Mô hình Logic trong ví dụ** 
 
