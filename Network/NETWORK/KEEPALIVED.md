@@ -84,32 +84,7 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
 
 1. Tạo file cấu hình Keepalived tương tự tại bước 2 :
 
-2. 2. Tạo file cấu hình cho Keepalived
-    1. Trên server số 1 :
-
-        ```bash
-        nvim /etc/keepalived/keepalived.conf
-        ```
-
-        ```bash
-        vrrp_instance com238 {
-          state MASTER
-          interface eth1
-          mcast_src_ip 123.30.234.238
-          priority 200
-          virtual_router_id 100
-          advert_int 1
-          authentication {
-                auth_type PASS
-                auth_pass 1234
-                }
-          virtual_ipaddress {
-             123.30.234.145
-          }
-        }
-        ```
-
-    2. Trên server số 2 :
+2. Tạo file cấu hình cho Keepalived và thực hiện chỉnh sửa như sau 
 
         ```bash
         nvim /etc/keepalived/keepalived.conf
