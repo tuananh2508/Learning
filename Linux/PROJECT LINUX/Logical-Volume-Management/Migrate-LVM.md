@@ -33,7 +33,7 @@ Migrate là 1 chức năng cho phép chúng ta chuyển dung lượng dữ liệ
 Đầu tiên, chúng ta sẽ thực hiện kiểm tra Logical Volume đã có sẵn trên hệ thống để thực hiện Migrate :
 
 ```bash
-root@debian:~# lvscd 
+root@debian:~# lvs
   LV   VG  Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
   lv0  vg0 -wi-a----- 512.00m
 ```
