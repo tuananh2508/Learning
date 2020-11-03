@@ -1,5 +1,7 @@
 # KEEPALIVED
 
+**Mục lục**
+
 # 1. Khái niệm về Keepalived
 
 ![KEEPALIVED/Untitled.png](KEEPALIVED/Untitled.png)
@@ -37,7 +39,6 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
     ```bash
     sudo apt install keepalived
     ```
-
 
 ### Bước 2 : Tiến hành cấu hình trên Server được đặt làm MASTER
 
@@ -83,43 +84,6 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
 ### Bước 3 : Tiến hành được cấu hình trên Server Backup
 
 1. Tạo file cấu hình Keepalived tương tự tại bước 2 :
-
-2. Tạo file cấu hình cho Keepalived và thực hiện chỉnh sửa như sau 
-
-        ```bash
-        nvim /etc/keepalived/keepalived.conf
-        ```
-
-        ```bash
-        vrrp_instance com188 {
-         state BACKUP
-         interface eth1
-         mcast_src_ip 123.30.234.188
-         advert_int 1
-         virtual_router_id 100
-         priority 100
-         authentication {
-                auth_type PASS
-                auth_pass 1234
-                }
-         virtual_ipaddress {
-            123.30.234.145
-          }
-        }
-        ```
-
-        - Trong đó có một số mục cần lưu ý như sau:
-            - `vrrp_instance` : Mục chứa thông tin về 1 server vật lý
-            - `state` : Trạng thái mặc định của Sever ( có thể là MASTER hoặc BACKUP )
-            - `interface` : Giao diện mạng được sử dụng
-            - `mcast_src_ip` : Địa chỉ mạng thực tế của server
-            - `advert_int` : Thời gian gửi bản tin quảng bá
-            - `virtual_router_id` : Định danh cho các router thuộc cùng 1 nhóm VRRP.
-            - `priority` : Mức độ ưu tiên của server
-            - `authentication` : Chỉ định hình thức xác thực trong VRRP. Có thể sử dụng AH hoặc PASS
-            - `virtual_ipaddress` : Địa chỉ IP ảo được thiết lập giữa các server
-3. Chạy tiến trình Keepalived :
-
 
     ```bash
     nvim /etc/keepalived/keepalived.conf
