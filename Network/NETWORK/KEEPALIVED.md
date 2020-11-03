@@ -80,7 +80,7 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
 
     Sau đó lưu lại file cấu hình 
 
-### Bước 3 : Tiến hành được cấ hình trên Server Backup
+### Bước 3 : Tiến hành được cấu hình trên Server Backup
 
 1. Tạo file cấu hình Keepalived tương tự tại bước 2 :
 
