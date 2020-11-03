@@ -205,7 +205,7 @@ Sau đó ta tiến hành kiểm tra lại trạng thái của 2 server
     Các bước được thực hiện như đã trình bày ở trên, tuy nhiên file cấu hình tại các Server có chút thay đổi như sau :
 
     - Tất cả STATE tại các Server được đặt là BACKUP
-    - Có thêm `nopreempt` → Không khôi phục quyền master
+    - Quan trọng nhất là việc có thêm Option  `nopreempt` → Không khôi phục quyền master
     - Vậy trong trường hợp đối với mô hình của ta sẽ có dạng như sau :
         - Tại Server 1
 
