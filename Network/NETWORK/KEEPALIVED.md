@@ -79,7 +79,7 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
 
     - Trong đó có một số mục cần lưu ý như sau:
         - `vrrp_instance` : Mục chứa thông tin về 1 server vật lý
-        - `state` : Trạng thái mặc định của Sever ( có thể là MASTER hoặc BACKUP )
+        - `state` : Trạng thái mặc định của Sever ( Ở đây đang đặt là MASTER )
         - `interface` : Giao diện mạng được sử dụng
         - `mcast_src_ip` : Địa chỉ mạng thực tế của server
         - `advert_int` : Thời gian gửi bản tin quảng bá
@@ -117,8 +117,10 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
       }
     }
     ```
+ 
+*Server đang được cấu hình ở trạng thái BACKUP*
 
-    Sau đó tiến hành lưu file cấu hình lại
+Cuối cùng ta tiến hành lưu file cấu hình lại
 
 ### Bước 4 : Trên cả 2 Server tiến hành bật dịch vụ Keepalived
 
