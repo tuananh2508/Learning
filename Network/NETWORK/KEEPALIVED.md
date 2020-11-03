@@ -38,7 +38,7 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
     sudo apt install keepalived
     ```
 
-<<<<<<< HEAD
+
 ### Bước 2 : Tiến hành cấu hình trên Server được đặt làm MASTER
 
 1. Tạo file cấu hình cho Keepalived do mặc định Keepalived sẽ không tạo file này
@@ -83,7 +83,7 @@ Thực hiện xét mô hình MASTER - BACKUP như sau:
 ### Bước 3 : Tiến hành được cấ hình trên Server Backup
 
 1. Tạo file cấu hình Keepalived tương tự tại bước 2 :
-=======
+
 2. 2. Tạo file cấu hình cho Keepalived
     1. Trên server số 1 :
 
