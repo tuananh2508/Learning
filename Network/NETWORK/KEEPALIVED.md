@@ -1,6 +1,15 @@
 # KEEPALIVED
 
 **Mục lục**
+ * [1. Khái niệm về Keepalived](#1-khái-niệm-về-keepalived)
+ * [2. Cách thức hoạt động của Keepalived](#2-cách-thức-hoạt-động-của-keepalived)
+ * [3. Cách thức cấu hình và cài đặt](#3-cách-thức-cấu-hình-và-cài-đặt)
+     * [Bước 1 : Cài đặt Keepalived trên cả 2 Server](#bước-1--cài-đặt-keepalived-trên-cả-2-server)
+     * [Bước 2 : Tiến hành cấu hình trên Server được đặt làm MASTER](#bước-2--tiến-hành-cấu-hình-trên-server-được-đặt-làm-master)
+     * [Bước 3 : Tiến hành được cấu hình trên Server Backup](#bước-3--tiến-hành-được-cấu-hình-trên-server-backup)
+     * [Bước 4 : Trên cả 2 Server tiến hành bật dịch vụ Keepalived](#bước-4--trên-cả-2-server-tiến-hành-bật-dịch-vụ-keepalived)
+     * [Mở rộng : Trong trường hợp bạn muốn thiết lập mô hình BACKUP - BACKUP](#mở-rộng--trong-trường-hợp-bạn-muốn-thiết-lập-mô-hình-backup---backup)
+ * [Nguồn tham khảo](#nguồn-tham-khảo)
 
 # 1. Khái niệm về Keepalived
 
