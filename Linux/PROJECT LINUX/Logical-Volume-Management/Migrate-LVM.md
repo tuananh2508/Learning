@@ -8,11 +8,9 @@ Migrate là 1 chức năng cho phép chúng ta chuyển dung lượng dữ liệ
 
 - Kiến thức cơ bản và các thao tác với các LVM Volume :
 
-    Có thể tham khảo tại : 
+    Có thể tham khảo tại : [Create-Delete-Extend-Reduce-LVM](https://github.com/tuananh2508/LinuxVcc/blob/master/Linux/PROJECT%20LINUX/Logical-Volume-Management/Create-Delete-Extend-Reduce-LVM.md)
 
-    [Create-Delete-Extend-Reduce-LVM](https://github.com/tuananh2508/LinuxVcc/blob/master/Linux/PROJECT%20LINUX/Logical-Volume-Management/Create-Delete-Extend-Reduce-LVM.md)
-
-- 1 Server sử dụng OS Linux ( Trong bài viết sủ dụng OS Debian 10 )
+- 1 Server sử dụng OS Linux ( Trong bài viết sủ dụng OS **Debian 10** )
 
     1 Logical Volume đã có sẵn trên Server ( Nếu chưa có bạn có thể tham khảo link trên để thực hiện tạo . Trong ví dụ tại bài, LV có tên là `lv0` ) 
 
@@ -22,14 +20,13 @@ Migrate là 1 chức năng cho phép chúng ta chuyển dung lượng dữ liệ
 
 ![Migrate-LVM/Untitled%201.png](Migrate-LVM/Untitled%201.png)
 
-*Dữ liệu ban đầu chứa trên `/dev/sdb1` sẽ được chuyển sang `/dev/sda1`* 
+*Kết quả mong muốn: Dữ liệu ban đầu chứa trên `/dev/sdb1` sẽ được chuyển sang `/dev/sda1`* 
 
 **Mục lục**
-- [Migrate LVM](#migrate-lvm)
 - [1. Thực hiện kiểm tra phân Logical Volume :](#1-thực-hiện-kiểm-tra-phân-logical-volume-)
 - [2. Thực hiện thêm phân vùng mới vào VG](#2-thực-hiện-thêm-phân-vùng-mới-vào-vg)
 - [3. Thực hiện việc Migrate](#3-thực-hiện-việc-migrate)
-  - [Nguồn tham khảo](#nguồn-tham-khảo)
+- [Nguồn tham khảo](#nguồn-tham-khảo)
 
 # 1. Thực hiện kiểm tra phân Logical Volume :
 
