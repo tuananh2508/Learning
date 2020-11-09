@@ -1,6 +1,6 @@
 # LAB DHCP
 
-![LAB%20DHCP/Untitled.png](LAB%20DHCP%20DHCP/Untitled.png)
+![LAB%20DHCP/Untitled.png](LAB%20DHCP/Untitled.png)
 
 # Yêu cầu
 
