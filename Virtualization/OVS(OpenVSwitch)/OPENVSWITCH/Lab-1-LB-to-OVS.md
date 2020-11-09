@@ -1,4 +1,4 @@
-# Lab-1-LB-to-OVS
+# Lab 1 : Thực hiện tạo OVS Bridge giữa 2 VM 
 
 *Bài LAB thực hiện tạo 1 Bridge với OpenVSwitch để kết nối  2 VM trên Bridge → Sau khi thực hiện có thể thực hiện Ping thành công giữa 2 VM*
 
