@@ -72,6 +72,46 @@ root@ubun-server:/#
 
 *Câu lệnh 2 : Thực hiện kiểm tra việc khởi tạo Bridge. Kết quả nhận được đó là 1 Bridge `ovs`*
 
+Sau đó ta cần thực hiện tạo Network cho Bridge này thông qua việc định nghĩa file `*.xml` , ta thực hiện tạo 1 file xml có tên là `ovs.xml`  có nội dung như sau:
+
+```bash
+<network>
+  <name>ovs</name>
+  <forward mode="bridge"/>
+  <bridge name="ovst"/>
+  <virtualport type='openvswitch' />
+</network>
+```
+
+Trong đó : 
+
+- Mục name : là tên của Network chúng ta sẽ sử dụng
+- Mục forward mode : Chế độ chúng ta sử dụng với Network này là chế độ Bridge
+- Mục bridge : Tên của Bridge ta vừa tạo ở bước trên
+- Mục virtualport type : Chỉ định loại Port chúng ta sử dụng
+
+Tiếp tục thực hiện lệnh với `virsh` để tạo và chạy network :
+
+```bash
+root@ubun-server:/etc/libvirt/qemu/networks# virsh net-define ovs.xml
+Network ovs defined from ovs.xml
+
+oot@ubun-server:/etc/libvirt/qemu/networks# virsh net-start ovs
+Network ovs started
+
+root@ubun-server:/etc/libvirt/qemu/networks# virsh net-autostart ovs
+Network ovs marked as autostarted
+
+root@ubun-server:/etc/libvirt/qemu/networks# virsh net-list --all
+ Name      State    Autostart   Persistent
+--------------------------------------------
+ default   active   yes         yes
+ ovs       active   yes         yes
+```
+
+*Thông qua việc sử dụng lệnh thứ nhất, ta sẽ tạo được 1 Network từ file `.xml` ở phía trên vừa khởi tạo. Sau khi đã khởi tạo thành công, ta sẽ tiến hành chạy Network này và bật chế độ tự động khởi động với câu lệnh thứ 2 và thứ 3. Cuôi cùng, sau khi thực hiện các lệnh trên thì ta sẽ thực hiện kiểm tra lại thông qua câu lệnh `virsh` và nhận thấy kết quả là đã có 1 Network tên là `ovs` .*
+
+
 ## Bước 2 : Thêm giao diện mạng vào OVS Bridge
 
 Ta thực hiện việc kiểm thêm giao diện mạng ( Ở đây Interface khả dụng có tên là `ens38` ) vào trong OVS Bridge như sau. Kiểm tra giao diện mạng :
