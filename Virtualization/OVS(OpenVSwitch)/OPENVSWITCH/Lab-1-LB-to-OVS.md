@@ -209,6 +209,25 @@ root@ubun-server:~#
 
 *Tại câu lệnh cuối thực hiện kiểm tra việc khởi tạo của 2 Port OVS .*
 
+Tuy nhiên, nếu muốn sau khi khởi động mà 2 giao diện `vnet0` và `vnet1` vẫn thuộc vào OVS thì ta cần thực hiện chỉnh sửa file cấu hình của VM . Ví dụ việc thực hiện với VM 1 , việc chỉnh sửa cấu hình với VM 2 được thực hiện tương tự : 
+
+```bash
+root@ubun-server:/etc/libvirt/qemu/networks# virsh edit debian
+```
+
+*Trong đó `debian` là tên VM của bạn. Sau khi mở file cấu hình tiến hành tìm mục sau*
+
+```bash
+<interface type='network'>
+      <mac address='52:54:00:79:f0:7a'/>
+      <source network='default'/>
+      <model type='e1000'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
+    </interface>
+```
+
+→ Thực hiện chỉnh sửa mục `source network` từ `default` thành `ovs` ( `ovs` là tên Network ta đã tạo ở bước 1, tránh nhầm lẫn với tên của Bridge ). Sau đó tiến hành lưu lại cấu hình của VM , sau đó tại mỗi lần reboot thì 2 giao diện `vnet0` và `vnet1` vẫn sẽ thuộc vào Bridge `ovs`.
+
 ## Bước 4 : Yêu cầu địa chỉ IP mới cho các VM
 
 Sau khi đã thực hiện tất cả các bước trên, thì bước tiếp theo chúng ta cần làm là yêu cầu địa chỉ IP mới cho các VM. .Việc này được thực hiện như sau
