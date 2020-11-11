@@ -19,6 +19,11 @@
 - 1 dải mạng khả dụng trên server Host  ( Trong bài LAB này là `ens38` )
 
 **Mục lục**
+* [Thực hành bài LAB](#thực-hành-bài-lab)
+    * [Bước 1 : Thực hiện tạo 1 Bridge bằng OpenVSwitch](#bước-1--thực-hiện-tạo-1-bridge-bằng-openvswitch)
+    * [Bước 2 : Thực hiện thêm các port của VM vào VLAN thông qua OVS](#bước-2--thực-hiện-thêm-các-port-của-vm-vào-vlan-thông-qua-ovs)
+    * [Bước 3 : Thực hiện Ping giữa 2 VM](#bước-3--thực-hiện-ping-giữa-2-vm)
+* [Nguồn tham khảo:](#nguồn-tham-khảo)
 
 # Thực hành bài LAB
 
