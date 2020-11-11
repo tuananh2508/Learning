@@ -1,5 +1,4 @@
-# Ly-thuyet-OVS
-
+# Lý thuyết về OVS
 ![Ly-thuyet-OVS/Untitled.png](Ly-thuyet-OVS/Untitled.png)
 
 Tại bài này chúng ta sẽ thực hiện tìm hiểu về **OpenvSwitch** . Là 1 trong 3 công nghệ được sử dụng để giải quyết vấn đề ảo hóa Network.
