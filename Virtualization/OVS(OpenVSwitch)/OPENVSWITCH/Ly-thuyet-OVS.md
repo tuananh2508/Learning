@@ -199,7 +199,7 @@ root@ubun-server-2:~# ovs-vsctl show
 Để thực hiện việc liệt kê các Port đang được kết nối với Bridge, ta thực hiện lệnh sau với :
 
 ```bash
-root@ubun-server-2:~# ovs-ofctl list-ports ovs
+root@ubun-server-2:~# ovs-vsctl list-ports ovs
 ens38
 ```
 
