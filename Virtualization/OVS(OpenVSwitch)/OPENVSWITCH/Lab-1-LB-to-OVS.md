@@ -78,7 +78,7 @@ Sau đó ta cần thực hiện tạo Network cho Bridge này thông qua việc 
 <network>
   <name>ovs</name>
   <forward mode="bridge"/>
-  <bridge name="ovst"/>
+  <bridge name="ovs"/>
   <virtualport type='openvswitch' />
 </network>
 ```
