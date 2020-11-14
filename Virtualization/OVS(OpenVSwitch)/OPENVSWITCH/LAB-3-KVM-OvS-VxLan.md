@@ -121,7 +121,7 @@ root@ubun-server:~# ovs-vsctl add-port ovs0 vxl0 -- set interface vxl0 type=vxla
 
 - *Với câu lệnh thứ 1, chúng ta thực hiện tạo 1 OvS có tên là `ovs0`*
 - Với câu lệnh thứ 2 và thứ 3, ta lần lượt thêm các port là `vnet0` và `ens38` vào Bridge `ovs0`
-- Sau đó, tại câu lệnh thứ 4 và thứ 5, việc cấp địa chỉ IP cho Bridge `ovs0` ( bạn cũng có thể đặt địa chỉ IP tĩnh, nếu thực hiện theo cách này, không cần thêm Port `ens38`) được diễn ra ; sau khi có được địa chỉ IP ta sẽ thực hiện xóa địa chỉ IP của `ens38`
+- Sau đó, tại câu lệnh thứ 4 và thứ 5, việc cấp địa chỉ IP và thực hiện thiết lập trạng thái Up cho Bridge `ovs0` ( bạn cũng có thể đặt địa chỉ IP tĩnh, nếu thực hiện theo cách này, không cần thêm Port `ens38`) được diễn ra ; sau khi có được địa chỉ IP ta sẽ thực hiện xóa địa chỉ IP của `ens38` và chuyển trạng thái của Interface này sang trạng thái UP tại câu lệnh 6 và 7
 - Cuối cùng, chúng ta thêm một port VxLAN là `vxl0` vào Bridge có địa chỉ Remote IP là `192.168.26.128`
 
 Tại Server 2, công việc tương tự được lặp lại
@@ -151,7 +151,7 @@ root@ubun-server:~# ip a f ens39
 root@ubun-server:~# ip link set ens39 up
 ```
 
-*Tại câu lệnh thứ nhất, ta thực hiện thêm 1 Bridge là `ovs1` sau đó thêm vào Port này giao diện mạng `ens39` . Cuối cùng là công việc yêu cầu địa chỉ IP ( hoặc bạn cũng có thể đặt IP tĩnh, nếu bạn sử dụng cách này thì không cần thêm Port `ens39` ) và xóa địa chỉ IP mạng hiện tại của `ens39`*
+*Tại câu lệnh thứ nhất, ta thực hiện thêm 1 Bridge là ovs1 sau đó thêm Port  `ens39`  vào Bridge `ovs1`. Ta yêu cầu địa chỉ IP cho Bridge  Tiếp theo là công việc yêu cầu địa chỉ IP ( hoặc bạn cũng có thể đặt IP tĩnh, nếu bạn sử dụng cách này thì không cần thêm Port `ens39` ) và chuyển trạng thái hoạt động sang UP. Cuối cùng là xóa địa chỉ IP mạng hiện tại của `ens39` và chuyển trạng thái giao diện sang UP.*
 
 Công việc tương tự được thực hiện tại Server thứ 2 :
 
