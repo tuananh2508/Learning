@@ -38,6 +38,11 @@ Trong đó có các thông số sau :
 ***Mục đích: Sau khi thực hiện các thiết lập thông số, chúng ta có thể thực hiện ping từ VM1 sang VM2***
 
 **Mục lục**
+* [1. Thực hiện tạo Bridge ovs0 và ovs1](#1-thực-hiện-tạo-bridge-ovs0-và-ovs1)
+    * [1.1 Thực hiện xóa Interface của VM khỏi Linux Bridge](#11-thực-hiện-xóa-interface-của-vm-khỏi-linux-bridge)
+    * [1.2 Tạo Network tại 2 Server](#12-tạo-network-tại-2-server)
+    * [1.3 Thực hiện tạo 2 OvS Bridge ovs0 và ovs1](#13-thực-hiện-tạo-2-ovs-bridge-ovs0-và-ovs1)
+* [2. Thực hiện việc kiểm tra ping giữa 2 VM](#2-thực-hiện-việc-kiểm-tra-ping-giữa-2-vm)
 
 # 1. Thực hiện tạo Bridge `ovs0` và `ovs1`
 
