@@ -284,6 +284,27 @@ root@ubun-server-2:~# ovs-vsctl add-port ovs0 ens38
 root@ubun-server-2:~# dhclient ovs0
 root@ubun-server-2:~# ip a f ens38
 root@ubun-server-2:~# ovs-vsctl add
+
+----
+root@ubun-server-2:~# ovs-vsctl add-br ovs0
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 vnet0
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 vxl0 -- set interface vxl0 type=vxlan options:remote_ip=192.168.26.129
+root@ubun-server-2:~# ip a s ens39
+4: ens39: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:ba:26:27 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.26.128/24 brd 192.168.26.255 scope global dynamic ens39
+       valid_lft 1530sec preferred_lft 1530sec
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 ens38
+root@ubun-server-2:~# dhclient ovs0
+root@ubun-server-2:~# ip a f ens38
+root@ubun-server-2:~# ovs-vsctl add-br ovs1
+root@ubun-server-2:~# ovs-vsctl add-port ovs1 ens39
+root@ubun-server-2:~# dhclient ovs1
+root@ubun-server-2:~# dhclient ovs1
+RTNETLINK answers: File exists
+root@ubun-server-2:~# ip a f ens39
+root@ubun-server-2:~# virsh console centos
+
 ```
 
 ![LAB-3-KVM-OvS-VxLan/Untitled%201.png](LAB-3-KVM-OvS-VxLan/Untitled%201.png)
