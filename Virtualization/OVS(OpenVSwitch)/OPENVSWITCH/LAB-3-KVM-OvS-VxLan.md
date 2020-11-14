@@ -259,7 +259,32 @@ rtt min/avg/max/mdev = 0.682/0.940/1.199/0.260 ms
 
 ---
 
-bug
+BUG
+Re-Occur
+```
+root@ubun-server-2:~# brctl delif virbr0 vnet0
+root@ubun-server-2:~# ovs-vsctl add-br0
+ovs-vsctl: unknown command 'add-br0'; use --help for help
+root@ubun-server-2:~# ovs-vsctl add-br ovs0
+root@ubun-server-2:~# ovs-vsctl add-port vnet0
+ovs-vsctl: 'add-port' command requires at least 2 arguments
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 vnet0
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 vxlan0 -- set interface vxl0 type=vxlan0 options:remote_ip=192.168.26.129
+ovs-vsctl: no row "vxl0" in table Interface
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 vxl0 -- set interface vxl0 type=vxlan0 options:remote_ip=192.168.26.129
+ovs-vsctl: Error detected while setting up 'vxl0': could not open network device vxl0 (Address family not supported by protocol).  See ovs-vswitchd log for details.
+ovs-vsctl: The default log directory is "/var/log/openvswitch".
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 vxl0 -- set interface vxl0 type=vxlan options:remote_ip=192.168.26.129
+ovs-vsctl: cannot create a port named vxl0 because a port named vxl0 already exists on bridge ovs0
+root@ubun-server-2:~# ovs-vsctl del-port ovs0 vxl0
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 vxl0 -- set interface vxl0 type=vxlan options:remote_ip=192.168.26.129
+root@ubun-server-2:~# ovs-vsctl add-port ens38
+ovs-vsctl: 'add-port' command requires at least 2 arguments
+root@ubun-server-2:~# ovs-vsctl add-port ovs0 ens38
+root@ubun-server-2:~# dhclient ovs0
+root@ubun-server-2:~# ip a f ens38
+root@ubun-server-2:~# ovs-vsctl add
+```
 
 ![LAB-3-KVM-OvS-VxLan/Untitled%201.png](LAB-3-KVM-OvS-VxLan/Untitled%201.png)
 
