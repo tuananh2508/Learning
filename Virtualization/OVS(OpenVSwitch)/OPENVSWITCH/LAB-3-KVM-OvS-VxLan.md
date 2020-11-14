@@ -1,4 +1,4 @@
-# LAB-3-KVM-OvS-VxLan
+# LAB 3 : Thực hành ứng dụng VxLAN qua OpenVSwitch
 
 *Bài Lab thực hiện kết hợp ứng dụng và lý thuyết về VxLAN và OpenvSwitch dựa trên nền kiến thức ảo hóa QEMU/KVM.*
 
