@@ -28,7 +28,7 @@ Migrate là 1 chức năng cho phép chúng ta chuyển dung lượng dữ liệ
 - [3. Thực hiện việc Migrate](#3-thực-hiện-việc-migrate)
 - [Nguồn tham khảo](#nguồn-tham-khảo)
 
-# 1. Thực hiện kiểm tra phân Logical Volume :
+# 1. Thực hiện kiểm tra Logical Volume :
 
 Đầu tiên, chúng ta sẽ thực hiện kiểm tra Logical Volume đã có sẵn trên hệ thống để thực hiện Migrate :
 
