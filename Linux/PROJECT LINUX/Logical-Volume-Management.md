@@ -9,4 +9,4 @@
 [Cách thực hiện Migrate trên LVM Volume ](Logical-Volume-Management/Migrate-LVM.md)
 
 
-[Thực hiện Restore Metadata, Data trên Logical Volume của LVM ](Logical-Volume-Management/Migrate-LVM.md)
+[Thực hiện Restore Metadata, Data trên Logical Volume của LVM ](Logical-Volume-Management/Restore-LVM-Part.md)
