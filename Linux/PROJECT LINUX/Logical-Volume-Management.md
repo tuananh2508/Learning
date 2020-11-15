@@ -7,3 +7,6 @@
 [Các thao tác cơ bản với LVM Thin Volume](Logical-Volume-Management/Thin-Volume-LVM.md)
 
 [Cách thực hiện Migrate trên LVM Volume ](Logical-Volume-Management/Migrate-LVM.md)
+
+
+[Thực hiện Restore Metadata, Data trên Logical Volume của LVM ](Logical-Volume-Management/Migrate-LVM.md)
