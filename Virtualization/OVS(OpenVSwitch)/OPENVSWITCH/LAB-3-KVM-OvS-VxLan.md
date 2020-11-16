@@ -22,13 +22,13 @@ Trong đó có các thông số sau :
 
 - 2 Server để thực hiện tạo 1 máy ảo trên mỗi Server (Trong bài sử dụng **Ubuntu Server 20.04**). Trên cả 2 Server đã tiến hành cài đặt các Package liên quan tới OvS
     - Server 1 có địa chỉ các dải mạng
-        - ens33 : `192.168.150.144`
-        - ens38 : `192.168.98.138`
-        - ens39 : `192.168.26.129`
+        - ens33 : `192.168.150.144` ( Được sử dụng để SSH tới Server ) 
+        - ens38 : `192.168.98.138` ( Private Host Network )
+        - ens39 : `192.168.26.129` ( Private Host Network )
     - Server 2 có địa chỉ các dải mạng
-        - ens33 : `192.168.150.147`
-        - ens38 : `192.168.98.146`
-        - ens39 : `192.168.26.128`
+        - ens33 : `192.168.150.147` ( Được sử dụng để SSH tới Server ) 
+        - ens38 : `192.168.98.146` ( Private Host Network )
+        - ens39 : `192.168.26.128` ( Private Host Network )
 - VM sử dụng trên Ubuntu Server 1 có tên `debian` ( Sử dụng OS Debian10)
 - VM sử dụng trên Ubuntu Server 2 có tên `centos` ( Sử dụng OS Centos7)
 
