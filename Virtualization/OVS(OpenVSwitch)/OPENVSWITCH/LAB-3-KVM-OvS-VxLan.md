@@ -44,7 +44,7 @@ Trong đó có các thông số sau :
 
 # 1. Thực hiện tạo Bridge `ovs0` và `ovs1`
 
-Trong bài LAB này, chúng ta sẽ thực hiện tạo 2 Bridge `ovs0` và `ovs1` trên cả 2 Server. Với `ovs0` sẽ thực hiện kết nối VM, port VxLan là `vxl0` tới Bridge ảo này. Trong khi đó, đối với `ovs1` sẽ thực hiện việc tạo 1 Tunnel giữa 2 Server để có thể kết nối 2 VxLAN này với nhau. Ý nghĩa của port này chính là việc tách biệt lưu lượng của Hypervisor và lưu lượng của VxLAN. 
+Trong bài LAB này, chúng ta sẽ thực hiện tạo 2 Bridge `ovs0` và `ovs1` trên cả 2 Server. Với `ovs0` sẽ thực hiện kết nối VM, port VxLan là `vxl0` tới Bridge ảo này. Trong khi đó, đối với `ovs1` sẽ thực hiện việc tạo 1 Tunnel giữa 2 Server để có thể kết nối 2 VxLAN này với nhau. Ý nghĩa của port này chính là sử dụng để làm VTEP ( Virtual Tunnel End Point ) và tách biệt lưu lượng của Hypervisor với lưu lượng của VxLAN. 
 
 ## 1.1 Thực hiện xóa Interface của VM khỏi Linux Bridge
 
