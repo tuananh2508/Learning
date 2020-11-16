@@ -3,7 +3,6 @@
 ![Ly-thuyet-VxLan/Untitled.png](Ly-thuyet-VxLan/Untitled.png)
 
 **Mục lục**
-- [Ly-thuyet-VxLan](#ly-thuyet-vxlan)
 - [1. Tổng quan về VxLan](#1-tổng-quan-về-vxlan)
 - [2. Các khái niệm cơ bản trong VxLAN](#2-các-khái-niệm-cơ-bản-trong-vxlan)
   - [2.1 VNI ( VxLAN Network Identifier) và VNI Frame Format :](#21-vni--vxlan-network-identifier-và-vni-frame-format-)
