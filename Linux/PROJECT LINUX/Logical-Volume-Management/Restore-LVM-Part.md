@@ -15,8 +15,6 @@ Trong quá trình sử dụng, đôi khi chúng ta sẽ gặp phải các trư�
 ![Restore-LVM-Part/Untitled.png](Restore-LVM-Part/Untitled.png)
 
 **Mục lục**
- * [1. Tạo Physical Volume, Volume Group và Logical Volume](#1-tạo-physical-volume-volume-group-và-logical-volume)
-- [Restore-LVM-Part](#restore-lvm-part)
 - [1. Tạo Physical Volume, Volume Group và Logical Volume](#1-tạo-physical-volume-volume-group-và-logical-volume)
 - [2. Trong trường hợp LVM Volume mất Metadata](#2-trong-trường-hợp-lvm-volume-mất-metadata)
   - [2.1 Khôi phục Physical Volume](#21-khôi-phục-physical-volume)
