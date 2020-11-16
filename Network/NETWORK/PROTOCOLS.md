@@ -1,7 +1,6 @@
 # PROTOCOLS
 
 **Muc Luc**
-- [PROTOCOLS](#protocols)
 - [1. HTTP](#1-http)
   - [1.1 HTTP Request](#11-http-request)
     - [1.1.1 HTTP method](#111-http-method)
