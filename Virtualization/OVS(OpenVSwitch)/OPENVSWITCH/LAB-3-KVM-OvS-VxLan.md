@@ -12,8 +12,7 @@
 - Kiến thức về cách hoạt dộng của VxLAN
 
     Tham khảo tại:
-
-    []()
+ [tuananh2508/LinuxVcc](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/OVS(OpenVSwitch)/OPENVSWITCH/Ly-thuyet-VxLan.md)
 
 **Mô hình**
 
