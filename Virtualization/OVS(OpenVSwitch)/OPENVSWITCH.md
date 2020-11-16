@@ -10,4 +10,6 @@
 
 [Bài LAB số 3 : Thực hiện tạo VxLAN qua OVS](OPENVSWITCH/LAB-3-KVM-OvS-VxLan.md)
 
+[Ghi chép lý thuyết tổng quan về GRE](OPENVSWITCH/Ly-thuyet-GRE.md)
 
+[Bài LAB số 4 : Ứng dụng lý thuyết GRE](OPENVSWITCH/LAB-4-GRE.md)
