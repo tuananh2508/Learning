@@ -99,7 +99,7 @@ bridge name     bridge id               STP enabled     interfaces
 virbr0          8000.525400379997       yes             virbr0-nic
 ```
 
-Tiếp theo, ta sẽ thêm các Port VM vào Bridge `ovs0` :
+Tiếp theo, ta sẽ thêm các Port VM và thêm 1 Port GRE vào Bridge `ovs0` :
 
 ```bash
 root@ubun-server:/# ovs-vsctl add-port ovs0 vnet0
