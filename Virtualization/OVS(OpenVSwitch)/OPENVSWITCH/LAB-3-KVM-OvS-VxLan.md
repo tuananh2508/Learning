@@ -7,9 +7,7 @@
 - Kiến thức về QEMU/KVM và thành thạo các thao tác quản lý Network với công cụ `virsh`
 - Kiến thức về OVS, cài đặt các package của OvS và thành thạo các thao tác cơ bản với `ovs-vsctl`
 
-    Tham khảo tại:
-
-    [tuananh2508/LinuxVcc](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/OVS(OpenVSwitch)/OPENVSWITCH/Ly-thuyet-OVS.md)
+    Tham khảo tại: [tuananh2508/LinuxVcc](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/OVS(OpenVSwitch)/OPENVSWITCH/Ly-thuyet-OVS.md)
 
 - Kiến thức về cách hoạt dộng của VxLAN
 
