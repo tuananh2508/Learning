@@ -25,6 +25,12 @@
 ![LAB-GRE/Untitled.png](LAB-GRE/Untitled.png)
 
 **Mục Lục**
+- [LAB số 4 : Ứng dụng lý thuyết GRE](#lab-số-4--ứng-dụng-lý-thuyết-gre)
+- [1. Cấu hình tại Server 1](#1-cấu-hình-tại-server-1)
+- [2. Cấu hình tại Server 2](#2-cấu-hình-tại-server-2)
+- [3. Tạo Network tại 2 Server](#3-tạo-network-tại-2-server)
+- [4. Kiểm tra việc Ping giữa 2 VM và xem bản tin tại Wireshark](#4-kiểm-tra-việc-ping-giữa-2-vm-và-xem-bản-tin-tại-wireshark)
+- [Nguồn tham khảo](#nguồn-tham-khảo)
 
 # 1. Cấu hình tại Server 1
 
