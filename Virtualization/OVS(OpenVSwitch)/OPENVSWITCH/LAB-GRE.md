@@ -144,7 +144,7 @@ root@ubun-server-2:/etc/libvirt/qemu/networks# virsh net-list --all
 
 **Công việc này được lặp lại tại Server 1**!
 
-# 4. Kiểm tra việc Ping giữa 2 VM và xem bản tin tại Wireshark
+# 4. Kiểm tra việc Ping giữa 4 VM và xem bản tin tại Wireshark
 
 Thực hiện truy cập vào 2 VM đặt địa chỉ IP tĩnh
 
