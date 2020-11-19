@@ -4,7 +4,6 @@
 Tại bài này chúng ta sẽ thực hiện tìm hiểu về **OpenvSwitch** . Là 1 trong 3 công nghệ được sử dụng để giải quyết vấn đề ảo hóa Network.
 
 **Mục Lục**
-- [Ly-thuyet-OVS](#ly-thuyet-ovs)
 - [1. Tổng quan](#1-t-ng-quan)
   * [1.1 Khái niệm về OVS ( OpenvSwitch)](#11-kh-i-ni-m-v--ovs---openvswitch-)
   * [1.2 Kiến trúc của OvS](#12-ki-n-tr-c-c-a-ovs)
