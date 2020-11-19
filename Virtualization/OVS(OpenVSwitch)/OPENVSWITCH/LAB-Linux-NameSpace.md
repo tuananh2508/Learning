@@ -1,7 +1,6 @@
 # LAB số 5 : Ứng dụng lý thuyết về Linux Network Namespace
 
 **Mục lục**
-- [LAB-Linux-NameSpace](#lab-linux-namespace)
 - [Bài LAB 1: Thực hiện kết nối 2 Namespace thông qua Virtual Ethernet](#bài-lab-1-thực-hiện-kết-nối-2-namespace-thông-qua-virtual-ethernet)
   - [1. Thiết lập Linux Network Namspace](#1-thiết-lập-linux-network-namspace)
   - [2. Thêm đường liên kết Virtual Ethernet và gán các Interface vào Linux Namespace tương ứng](#2-thêm-đường-liên-kết-virtual-ethernet-và-gán-các-interface-vào-linux-namespace-tương-ứng)
