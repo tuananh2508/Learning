@@ -1,7 +1,6 @@
-# Linux-network-namespace
+# Lý thuyết về Linux Network Namespace
 
 **Mục lục**
-- [Linux-network-namespace](#linux-network-namespace)
 - [1. Giới thiệu về Linux Network Namespace](#1-giới-thiệu-về-linux-network-namespace)
 - [2. Các câu lệnh cơ bản đối với Linux Network Namespace](#2-các-câu-lệnh-cơ-bản-đối-với-linux-network-namespace)
   - [2.1 Thêm một Network Namespace](#21-thêm-một-network-namespace)
