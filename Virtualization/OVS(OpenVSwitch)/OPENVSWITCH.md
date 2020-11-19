@@ -13,3 +13,7 @@
 [Ghi chép lý thuyết tổng quan về GRE](OPENVSWITCH/Ly-thuyet-GRE.md)
 
 [Bài LAB số 4 : Thực hiện tạo GRE Tunnel qua OVS](OPENVSWITCH/LAB-GRE.md)
+
+[Ghi chép lý thuyết tổng quan về Linux Network Namespace](OPENVSWITCH/Linux-network-namespace.md)
+
+[Bài LAB số 5 : Ứng dụng lý thuyết của Linux Network Namespace ](OPENVSWITCH/LAB-Linux-NameSpace.md)
