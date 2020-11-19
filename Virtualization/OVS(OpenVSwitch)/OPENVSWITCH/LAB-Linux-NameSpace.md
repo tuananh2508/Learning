@@ -25,15 +25,11 @@
 - Một hệ thống sử dụng OS Linux ( Trong ví dụ sử dụng **Ubuntu Server 20.04** )
 - Trên hệ thống đã cài đặt OpenvSwitch và biết thực hiện các thao tác cơ bản với OVS
 
-    Tham khảo tại :
-
-    [tuananh2508/LinuxVcc](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/OVS(OpenVSwitch)/OPENVSWITCH/Ly-thuyet-OVS.md)
+    Tham khảo tại : [tuananh2508/LinuxVcc](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/OVS(OpenVSwitch)/OPENVSWITCH/Ly-thuyet-OVS.md)
 
 - Lý thuyết cơ bản về Linux Namespace và các thao tác cơ bản  :
 
-    Tham khảo tại :
-
-    []()
+    Tham khảo tại : [tuananh2508/LinuxVcc](https://github.com/tuananh2508/LinuxVcc/blob/master/Virtualization/OVS(OpenVSwitch)/OPENVSWITCH/Linux-network-namespace.md)
 
 **Mô hình**
 
