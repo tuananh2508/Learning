@@ -1,6 +1,22 @@
 # ADMINISTERING SYSTEM
 
 ![ADMINISTERING%20SYSTEM/Untitled.png](ADMINISTERING%20SYSTEM/Untitled.png)
+**Table of Contents**
+- [ADMINISTERING SYSTEM](#administering-system)
+- [1. Quản lý User và Group](#1-quản-lý-user-và-group)
+  - [1.2 Các thao tác với User](#12-các-thao-tác-với-user)
+    - [1.2.1 Tạo User trên hệ thống](#121-tạo-user-trên-hệ-thống)
+    - [1.2.2 Xóa User trên hệ thống](#122-xóa-user-trên-hệ-thống)
+  - [1.3 Quản lý các Group :](#13-quản-lý-các-group-)
+    - [1.3.1 Thực hiện thêm user vào Group :](#131-thực-hiện-thêm-user-vào-group-)
+    - [1.3.2 Thực hiện xóa 1 Group :](#132-thực-hiện-xóa-1-group-)
+- [2. Các lệnh thay đổi quyền sở hữu](#2-các-lệnh-thay-đổi-quyền-sở-hữu)
+  - [2.1 Lệnh `Chown` và `Chgrp` :](#21-lệnh-chown-và-chgrp-)
+  - [3. Crontab :](#3-crontab-)
+  - [5. Backup hệ thống `rsnapshot` `rsync`](#5-backup-hệ-thống-rsnapshot-rsync)
+    - [5.1 `rsync`](#51-rsync)
+    - [5.2 `rsnapshot` :](#52-rsnapshot-)
+  - [Nguồn tham khảo](#nguồn-tham-khảo)
 
 Ngày nay, các quản trị viên ngày càng cần phải chú trọng đến quy trình quản lý hệ thống cùng với đó là những công cụ hỗ trợ quản lý để tạo sự thiện tiện cũng như tiết kiệm thời gian. Thông qua bài viết này chúng ta sẽ có cái nhìn cơ bản về quản lý user, group trên hệ thống và 1 vài công cụ backup hỗ trợ cho nguời quản trị.
 
