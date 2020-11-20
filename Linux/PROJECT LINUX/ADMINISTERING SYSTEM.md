@@ -2,7 +2,6 @@
 
 ![ADMINISTERING%20SYSTEM/Untitled.png](ADMINISTERING%20SYSTEM/Untitled.png)
 **Table of Contents**
-- [ADMINISTERING SYSTEM](#administering-system)
 - [1. Quản lý User và Group](#1-quản-lý-user-và-group)
   - [1.2 Các thao tác với User](#12-các-thao-tác-với-user)
     - [1.2.1 Tạo User trên hệ thống](#121-tạo-user-trên-hệ-thống)
@@ -16,7 +15,7 @@
   - [5. Backup hệ thống `rsnapshot` `rsync`](#5-backup-hệ-thống-rsnapshot-rsync)
     - [5.1 `rsync`](#51-rsync)
     - [5.2 `rsnapshot` :](#52-rsnapshot-)
-  - [Nguồn tham khảo](#nguồn-tham-khảo)
+- [Nguồn tham khảo](#nguồn-tham-khảo)
 
 Ngày nay, các quản trị viên ngày càng cần phải chú trọng đến quy trình quản lý hệ thống cùng với đó là những công cụ hỗ trợ quản lý để tạo sự thiện tiện cũng như tiết kiệm thời gian. Thông qua bài viết này chúng ta sẽ có cái nhìn cơ bản về quản lý user, group trên hệ thống và 1 vài công cụ backup hỗ trợ cho nguời quản trị.
 
