@@ -12,10 +12,10 @@
     - [1.3.2 Thực hiện xóa 1 Group :](#132-thực-hiện-xóa-1-group-)
 - [2. Các lệnh thay đổi quyền sở hữu](#2-các-lệnh-thay-đổi-quyền-sở-hữu)
   - [2.1 Lệnh `Chown` và `Chgrp` :](#21-lệnh-chown-và-chgrp-)
-  - [3. Crontab :](#3-crontab-)
-  - [5. Backup hệ thống `rsnapshot` `rsync`](#5-backup-hệ-thống-rsnapshot-rsync)
-    - [5.1 `rsync`](#51-rsync)
-    - [5.2 `rsnapshot` :](#52-rsnapshot-)
+- [3. Crontab :](#3-crontab-)
+- [4. Backup hệ thống `rsnapshot` `rsync`](#5-backup-hệ-thống-rsnapshot-rsync)
+    - [4.1 `rsync`](#51-rsync)
+    - [4.2 `rsnapshot` :](#52-rsnapshot-)
 - [Nguồn tham khảo](#nguồn-tham-khảo)
 
 Ngày nay, các quản trị viên ngày càng cần phải chú trọng đến quy trình quản lý hệ thống cùng với đó là những công cụ hỗ trợ quản lý để tạo sự thiện tiện cũng như tiết kiệm thời gian. Thông qua bài viết này chúng ta sẽ có cái nhìn cơ bản về quản lý user, group trên hệ thống và 1 vài công cụ backup hỗ trợ cho nguời quản trị.
@@ -234,13 +234,13 @@ Sau khi hoàn tất nhập các lệnh trên thì chúng ta cần khởi động
 
 Thông qua 2 ví dụ trên chúng ta đã có nhìn tổng quan về chức năng của Crontab cũng như cách hoạt động của nó !
 
-## 5. Backup hệ thống `rsnapshot` `rsync`
+## 4. Backup hệ thống `rsnapshot` `rsync`
 
 ![ADMINISTERING%20SYSTEM/Untitled%202.png](ADMINISTERING%20SYSTEM/Untitled%202.png)
 
 `rsync` là một công cụ vô cùng hữu ích bất kể với người dùng Linux mới bắt đầu hay với người đã sử dụng thành thạo có kinh nghiệm. `rsync` có rất nhiều công dụng khác nhau mà chúng ta sẽ cùng đi tìm hiểu. Nó tiết kiệm rất nhiều thiều gian cho người sử dụng hơn so với việc copy backup thủ công. Và đồng thời giữa 2 hệ thống có băng thông không được lớn thì việc sử dụng `rsync` sẽ vô cùng nhanh. Trong 1 thử nghiệm của `Chris Titus Tech` thì việc backup 100GB thì dữ liệu từ server remote chỉ mất hơn 5 phút. `rsync` thường được cài đặt sẵn trên rất nhiều bản Linux hiện nay. Và cùng với đó chúng ta sẽ tìm hiểu thêm cả vê `rsnapshot` ( dựa trên công nghệ của `rsync` ) 
 
-### 5.1 `rsync`
+### 4.1 `rsync`
 
 Nếu server của bạn chưa có `rsync` thì có thể cài thông qua lệnh sau:
 
@@ -349,7 +349,7 @@ ls: backup.tar: No such file or directory
 
 ---
 
-### 5.2 `rsnapshot` :
+### 4.2 `rsnapshot` :
 
 ![ADMINISTERING%20SYSTEM/Untitled%203.png](ADMINISTERING%20SYSTEM/Untitled%203.png)
 
