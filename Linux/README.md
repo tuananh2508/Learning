@@ -10,7 +10,7 @@
 
 [Tìm hiểu về tiến trình ForeGround,BackGround và Daemon](PROJECT%20LINUX/MANAGE%20PROCESSES.md)
 
-[Tìm hiểu các trình quản lý gói tin như dpkg, apt, ...](PROJECT%20LINUX/MANAGE%20SOFTWARE.md)
+[Tìm hiểu các trình quản lý gói tin như dpkg, apt và cách cài đặt ứng dụng từ Source](PROJECT%20LINUX/MANAGE%20SOFTWARE.md)
 
 [Cách thức hoạt động và sử dụng Iptable cơ bản ](PROJECT%20LINUX/IPTABLES.md)
 
