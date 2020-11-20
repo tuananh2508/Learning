@@ -3,7 +3,6 @@
 ![LINUX%20SHELL/Untitled.png](LINUX%20SHELL/Untitled.png)
 
 **Table of contents**
-- [LINUX SHELL](#linux-shell)
   - [1. Giới thiệu cơ bản](#1-giới-thiệu-cơ-bản)
   - [2. Lõi `Kernel` :](#2-lõi-kernel-)
   - [3. Shell :](#3-shell-)
