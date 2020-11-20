@@ -4,6 +4,23 @@ Việc tìm hiểu về 2 mô hình lý thuyết và thực tế là OSI và TCP
 
 ![OSI%20TCP%20IP/Untitled.png](OSI%20TCP%20IP/Untitled.png)
 
+**Table of contents**
+- [1. Mô hình OSI ( Open System Interconnection )](#1-mô-hình-osi--open-system-interconnection-)
+    - [7. Application ( Lớp ứng dụng )](#7-application--lớp-ứng-dụng-)
+    - [6. Presentation ( Lớp trình diễn )](#6-presentation--lớp-trình-diễn-)
+    - [5. Session ( Lớp phiên )](#5-session--lớp-phiên-)
+    - [4. Transport ( Lớp vận chuyển )](#4-transport--lớp-vận-chuyển-)
+    - [3.  Network ( Lớp mạng )](#3--network--lớp-mạng-)
+    - [2. Data Link ( Lớp liên kết dữ liệu )](#2-data-link--lớp-liên-kết-dữ-liệu-)
+    - [1. Physical ( Lớp vật lý )](#1-physical--lớp-vật-lý-)
+- [2. Mô hình TCP/IP](#2-mô-hình-tcpip)
+    - [4. Application ( Lớp ứng dụng )](#4-application--lớp-ứng-dụng-)
+    - [3. Transport ( Lớp vận chuyển )](#3-transport--lớp-vận-chuyển-)
+    - [2. Internet ( Lớp mạng )](#2-internet--lớp-mạng-)
+    - [1. Network Access ( Truy cập mạng )](#1-network-access--truy-cập-mạng-)
+- [Tại sao mô hình OSI không được áp dụng trong thực tế ?](#tại-sao-mô-hình-osi-không-được-áp-dụng-trong-thực-tế-)
+- [Nguồn tham khảo](#nguồn-tham-khảo)
+
 ## 1. Mô hình OSI ( Open System Interconnection )
 
 Đây là 1 mô hình hệ thống mạng mang tính lý thuyết cao. Tuy không có tính áp dụng thực tế cao nhưng bù lại đó là khả năng phân tích kĩ, phân tách nhiệm vụ của từng tiến trình từ đó giúp người học sẽ hiểu hơn về quá trình các gói tin được tạo ra và hợp lại như thế nào trong hệ thống mạng. 
