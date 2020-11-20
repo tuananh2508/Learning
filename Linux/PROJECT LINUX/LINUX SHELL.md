@@ -2,6 +2,19 @@
 
 ![LINUX%20SHELL/Untitled.png](LINUX%20SHELL/Untitled.png)
 
+**Table of contents**
+- [LINUX SHELL](#linux-shell)
+  - [1. Giới thiệu cơ bản](#1-giới-thiệu-cơ-bản)
+  - [2. Lõi `Kernel` :](#2-lõi-kernel-)
+  - [3. Shell :](#3-shell-)
+    - [3.1 Shell Prompt :](#31-shell-prompt-)
+    - [3.2 Các loại Shell cơ bản](#32-các-loại-shell-cơ-bản)
+  - [4. Shell script :](#4-shell-script-)
+  - [5. Các lệnh cơ bản làm việc với Shell :](#5-các-lệnh-cơ-bản-làm-việc-với-shell-)
+  - [6. Shell enviroment:](#6-shell-enviroment)
+  - [Script Tham khảo](#script-tham-khảo)
+  - [Tài liệu tham khảo :](#tài-liệu-tham-khảo-)
+
 ## 1. Giới thiệu cơ bản
 
 Ngày nay có rất nhiều phiên bản OS ( hệ điều hành ) hoạt động dựa trên lõi Kernel, 1 số ví dụ tiêu biểu như: MacOS, Ubuntu, Debian, .... Vậy câu hỏi đặt ra là: khi chúng ta thực thi các câu lệnh thì thực sự điều gì đang diễn ra ở bên trong lõi hệ điều hành.
