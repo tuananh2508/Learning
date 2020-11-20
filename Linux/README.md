@@ -6,7 +6,7 @@
 
 [Tìm hiểu về các khái niệm cơ bản STDIN , STDOUT, STDERR](PROJECT%20LINUX/STREAM,%20REDIRECTION%20,%20PIPES.md)
 
-[Các câu lệnh được sử dụng để chỉnh sửa file Text](PROJECT%20LINUX/PROCESSING%20TEXT.md)
+[Các câu lệnh được sử dụng để chỉnh sửa file Text như grep, cat, join, paste, less, head, ...](PROJECT%20LINUX/PROCESSING%20TEXT.md)
 
 [Tìm hiểu về tiến trình ForeGround,BackGround và Daemon](PROJECT%20LINUX/MANAGE%20PROCESSES.md)
 
