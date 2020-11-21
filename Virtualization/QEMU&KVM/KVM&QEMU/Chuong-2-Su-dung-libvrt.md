@@ -17,7 +17,7 @@ Ta thực hiện tải Package `libvrt` trên **Ubuntu 20.04** như sau
 
 ```
 sudo apt-get update
-sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils libguestfs-tools virtins virt-manager
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils libguestfs-tools virtinst virt-manager
 ```
 
 Sau khi cài đặt xong bạn nên tiến hành reboot lại hệ thống để Libvrtd Daemon thực hiện khởi động
