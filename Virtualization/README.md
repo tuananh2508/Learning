@@ -4,6 +4,6 @@
 
 [Ghi chép kiến thức về QEMU-KVM ](QEMU&KVM/KVM%26QEMU.md)
 
-[Ghi chép kiến thức về Linux Bridge ](LinuxBridge/Linux-Bridge.md)
+[Ghi chép kiến thức về Linux Bridge ](LinuxBridge/LinuxBridge.md)
 
 [Ghi chép kiến thức về OpenVSwitch](OVS(OpenVSwitch)/OPENVSWITCH.md)

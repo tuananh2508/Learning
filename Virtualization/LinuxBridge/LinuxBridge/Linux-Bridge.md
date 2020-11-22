@@ -1,17 +1,17 @@
-# Linux Bridge
+# Linux-Bridge
 
 ![Linux-Bridge/Untitled.png](Linux-Bridge/Untitled.png)
 
 Linux Bridge là 1 tiện ích trong nhân Linux, được ra đời để giải quyết vấn đề ảo hóa mạng trong cơ chế ảo hóa đối với các máy vật lý. Về cơ bản thì Linux Bridge sẽ tạo ra 1 Switch ảo trong hệ thống để kết nối hệ thống mạng của các máy ảo ( hiện đang có trên máy vật lý ) với hệ thống đường mạng vật lý. 
 
-**Mục lục**
-   * [Sơ đồ kiến trúc của Linux Bridge](#sơ-đồ-kiến-trúc-của-linux-bridge)
-   * [Các tính năng cơ bản của Linux Bridge](#các-tính-năng-cơ-bản-của-linux-bridge)
-   * [Thực hiện cấu hình cơ bản với Linux Bridge trên Ubuntu 20.04](#thực-hiện-cấu-hình-cơ-bản-với-linux-bridge-trên-ubuntu-2004)
-   * [Thiết lập mức độ ưu tiên trên Linux Bridge trên Ubuntu 20.04](#thiết-lập-mức-độ-ưu-tiên-trên-linux-bridge-trên-ubuntu-2004)
-   * [Nguồn tham khảo](#nguồn-tham-khảo)
-   
-# Sơ đồ kiến trúc của Linux Bridge
+**Table of Content**
+- [Linux-Bridge](#linux-bridge)
+- [1. Sơ đồ kiến trúc của Linux Bridge](#1-sơ-đồ-kiến-trúc-của-linux-bridge)
+- [3. Thực hiện cấu hình cơ bản với Linux Bridge](#3-thực-hiện-cấu-hình-cơ-bản-với-linux-bridge)
+- [4. Thiết lập mức độ ưu tiên trên Linux Bridge](#4-thiết-lập-mức-độ-ưu-tiên-trên-linux-bridge)
+- [Nguồn tham khảo](#nguồn-tham-khảo)
+
+# 1. Sơ đồ kiến trúc của Linux Bridge
 
 ![Linux-Bridge/Untitled%201.png](Linux-Bridge/Untitled%201.png)
 
@@ -21,7 +21,7 @@ Trong đó có một số các khái niệm cơ bản như sau:
 - `tap0` : Tượng trưng cho các cổng (Port) của Switch ảo . Các máy ảo khi kết nối tới Swtich ảo sẽ được kết nối tới các Port này.
 - `eth0` : Tượng trung cho các giao diện mạng vật lý có trên máy vật lý được kết nối tới Switch ảo
 
-# Các tính năng cơ bản của Linux Bridge
+#2. Các tính năng cơ bản của Linux Bridge
 
 Các chức năng được cung cấp bởi Linux Bridge
 
@@ -29,7 +29,7 @@ Các chức năng được cung cấp bởi Linux Bridge
 2. FDB : Thực hiện gửi tin theo Database → tăng tốc độ truyền dẫn của Switch
 3. Vlan : Có thể thực hiện cấu hình chia các máy ảo làm các Vlan để quản lý dễ hơn
 
-# Thực hiện cấu hình cơ bản với Linux Bridge trên Ubuntu 20.04
+# 3. Thực hiện cấu hình cơ bản với Linux Bridge
 
 Ta thực hiện xét mô hình dưới để thực hiện cấu hình Linux bridge :
 
@@ -57,9 +57,9 @@ Yêu cầu
 
 ```jsx
 root@localcomputer:/home/tuananh# brctl show
-bridge name	  bridge id		         STP enabled	 interfaces
-virbr0		  8000.5254005d2d4b	         yes		 virbr0-nic
-							         vnet0
+bridge name	bridge id		         STP enabled	 interfaces
+virbr0		  8000.5254005d2d4b	   yes		       virbr0-nic
+							                                 vnet0
 ```
 
 *Do ở đây mình đã tiến hành cài sẵn 1 máy ảo với QEMU-KVM nên trên đây sẽ xuất hiện mạng ảo của VM là `vnet0`*
@@ -100,8 +100,7 @@ root@localcomputer:/home/tuananh# brctl addif test ens34
 Giải thích:
 
 - Đầu tiên chúng ta sẽ thực hiện xóa interface `vnet0` khỏi Linux Bridge `virbr0`
-- Tiếp đó chúng ta tạo ra 1 Linux Bridge mới với câu lệnh thứ 2 ( Nếu 
-muốn thay đổi tên Bridge thì có thể thực hiện đổi `test` thành tên mong muốn )
+- Tiếp đó chúng ta tạo ra 1 Linux Bridge mới với câu lệnh thứ 2 ( Nếu bạn muốn thay đổi tên Bridge thì có thể thực hiện đổi `test` thành tên mong muốn )
 - Cuối cùng chúng ta thực hiện thêm interface `vnet0` và `ens34` vào Linux Bridge `test`
 
 Kết quả nhận được :
@@ -109,9 +108,9 @@ Kết quả nhận được :
 ```jsx
 root@localcomputer:/home/tuananh# brctl show
 bridge name	   bridge id		         STP enabled	interfaces
-test		   8000.fe5400c4ee18	         no		vnet0
-                                                                ens34
-virbr0		   8000.5254005d2d4b	         yes		virbr0-nic
+test		       8000.fe5400c4ee18	   no		        vnet0
+                                                  ens34
+virbr0		     8000.5254005d2d4b	   yes		      virbr0-nic
 ```
 
 → *Nhận thấy có 1 Linux Bridge mới đã được thêm*
@@ -156,7 +155,6 @@ root@localcomputer:/home/tuananh# ip a s
 *Ta có thể thấy :*
 
 - Địa chỉ MAC của interface `ens34` đã trùng với Bridge `test` : 00:0c:29:30:2f:c0
-- Địa chỉ của Tap Interface của VM là : fe:54:00:c4:ee:18 brd
 
 Cuối cùng là các thao tác trên máy ảo để thực hiện nhận địa chỉ IP mới. Chúng ta sẽ thực hiện đăng nhập sử dụng console của máy ảo :
 
@@ -197,7 +195,7 @@ Do đã thiết lập thành công Linux Bridge từ các bước trước, vậ
     root@debian:~# dhclient ens3
     ```
 
-    *Đầu tiên chúng ta thực hiện xóa địa chỉ hiện tại ( Flush ) của giao diện mạng `ens3` ( có thể thay đổi tùy trên VM của bạn)
+    *Đầu tiên chúng ta thực hiện xóa địa chỉ hiện tại ( Flush ) của giao diện mạng `ens3` ( có thể thay đổi tùy trên VM của bạn*
 
     *Tiếp đó là yêu cầu IP từ DHCP Server*
 
@@ -235,7 +233,7 @@ rtt min/avg/max/mdev = 0.376/0.973/2.078/0.782 ms
 
 *Vậy quá trình thiết lập Linux Bridge đã thành công !*
 
-# Thiết lập mức độ ưu tiên trên Linux Bridge trên Ubuntu 20.04
+# 4. Thiết lập mức độ ưu tiên trên Linux Bridge
 
 Nếu hệ thống của bạn có nhiều hơn 1 Interface, chúng ta có thể tiến hành thiết lập các mức độ ưu tiên để VM sử dụng các Interface này . Ta thực hiện xét mô hình tương tự ở trên :
 
@@ -248,10 +246,10 @@ Sau khi thực hiện lại thành công việc thêm 2 Interface, ta nhậ đư
 ```jsx
 root@localcomputer:/home/tuananh# brctl show
 bridge name	   bridge id		         STP enabled	interfaces
-test		   8000.fe5400c4ee18	         no		vnet0
-                                                                ens34
-                                                                ens39
-virbr0		   8000.5254005d2d4b	          yes		virbr0-nic
+test		       8000.fe5400c4ee18	   no		        vnet0
+                                                  ens34
+                                                  ens39
+virbr0		     8000.5254005d2d4b	   yes		      virbr0-nic
 ```
 
 *Trong đó `ens34` và `ens39` là 2 giao diện mạng trên máy Host*
