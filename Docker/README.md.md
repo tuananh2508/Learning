@@ -16,4 +16,4 @@
 
 [Ghi chép kiến thức về Dockerfile](Docker/Dockerfile.md)
 
-[Ghi chép kiến  thức về Docker ](Docker/Docker-Compose.md)
+[Ghi chép kiến  thức về Docker Compose](Docker/Docker-Compose.md)
