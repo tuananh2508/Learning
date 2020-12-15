@@ -39,7 +39,7 @@ Docker Compose hoạt động dựa trên 3 bước cơ bản là :
 Các ứng dụng của Docker Compose :
 
 - Cho phép tạo ra các môi trường độc lập với nhau trên cùng 1 Host
-- Cho phép các Container mới sử dụng lại dữ liệu của các Container trước đó ( Trong trường hợp Container cũ không tồn tại nữa ). 
+- Cho phép các Container mới sử dụng lại dữ liệu của các Container trước đó ( Trong trường hợp Container cũ không tồn tại nữa ). Khi sử dụng lệnh `docker-compose up` thì nó sẽ thực hiện tìm kiếm lại các Data Volume từ các container cũ và sẽ được sử dụng cho Container mới. 
 - Khi tiến hành Reboot Cluster thì chỉ tạo lại các Container đã bị thay đổi ( như là bị remove ), còn đối với các Container thì sẽ tiến hành sử dụng luôn
 
 Để cài đặt Docker Compose ta thực hiện như sau
