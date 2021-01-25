@@ -70,7 +70,7 @@ Trên hệ thống Linux, thông thường sẽ bao gồm các Namespace sau :
 
 # 3. Các câu lệnh cơ bản với Namespace
 
-## 2.1 Liệt kê các Namespace trên hệ thống
+## 3.1 Liệt kê các Namespace trên hệ thống
 
 Để liệt kê các Namespace đang có trên hệ thống :
 
@@ -88,7 +88,7 @@ tuananh@localcomputer:~$ lsns
 
 → Như vậy chúng ta đã biết về các namespace , thể loại , PID , được thực hiện bởi User nào. 
 
-## 2.2 Thực hiện chạy 1 Process trong 1 Namespace
+## 3.2 Thực hiện chạy 1 Process trong 1 Namespace
 
 Để thực hiện tạo 1 Process và gán nó vào một Namespace cụ thể, ta thưc hiện :
 
@@ -103,7 +103,7 @@ tuananh@localcomputer:~$ sudo nsenter --pid --uts --ipc --mount -t 2605 sh
 - ipc : Cho phép truy cập vào IPC Namespace của Process `sh`
 - mount : Cho phép truy cập vào Mount Namespace của Process `sh`
 
-## 2.3 Xem các Namespace của 1 Process
+## 3.3 Xem các Namespace của 1 Process
 
 Thông thường, các Process sẽ thuộc vào các Namespace xác định, để tiến hành xem các Namespace của Process đó, ta cần truy cập vào thư mực `/proc`  :
 
