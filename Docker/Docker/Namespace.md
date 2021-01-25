@@ -7,9 +7,9 @@
 - [1. Khái niệm Namespace](#1-khái-niệm-namespace)
 - [2. Các loại Namespace](#2-các-loại-namespace)
 - [3. Các câu lệnh cơ bản với Namespace](#3-các-câu-lệnh-cơ-bản-với-namespace)
-  - [2.1 Liệt kê các Namespace trên hệ thống](#21-liệt-kê-các-namespace-trên-hệ-thống)
-  - [2.2 Thực hiện chạy 1 Process trong 1 Namespace](#22-thực-hiện-chạy-1-process-trong-1-namespace)
-  - [2.3 Xem các Namespace của 1 Process](#23-xem-các-namespace-của-1-process)
+  - [3.1 Liệt kê các Namespace trên hệ thống](#21-liệt-kê-các-namespace-trên-hệ-thống)
+  - [3.2 Thực hiện chạy 1 Process trong 1 Namespace](#22-thực-hiện-chạy-1-process-trong-1-namespace)
+  - [3.3 Xem các Namespace của 1 Process](#23-xem-các-namespace-của-1-process)
 - [Nguồn tham khảo](#nguồn-tham-khảo)
 
 # 1. Khái niệm Namespace
