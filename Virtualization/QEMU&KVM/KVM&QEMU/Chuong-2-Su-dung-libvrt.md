@@ -163,7 +163,7 @@ virsh undefine debian
 
 ```
 
-			 Debian
+       Debian
            <http://ftp.us.debian.org/debian/dists/stable/main/installer-amd64/>
 
        Ubuntu
